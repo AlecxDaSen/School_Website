@@ -1,9 +1,11 @@
-*,*::before,*::after {
+*,
+*::before,
+*::after {
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial;
 
 }
 
@@ -24,27 +26,26 @@
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     z-index: -1;
-    
+
 
 }
 
 
 .hrccbadge {
-    
+
     width: 150px;
-    height: 200px;
+    height: 210px;
     margin-top: 20px;
-    margin-left: 10px;
     margin-bottom: 20px;
-    padding: 10px;
     position: relative;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0);
 }
 
 .content {
-    
-    background-color:transparent;
+
+    background-color: transparent;
     backdrop-filter: blur(20px);
-    background-image: linear-gradient(120deg,rgba(255, 255, 255, 0.4),rgb(0, 0, 0,0.5));
+    background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.4), rgb(0, 0, 0, 0.5));
     border-radius: 30px;
     color: #fff;
     position: absolute;
@@ -66,20 +67,19 @@
 
 /* head start */
 
-.head{
+.head {
 
-    background-color:rgba(151, 8, 22, 0.664);
+    background-color: rgba(129, 5, 19, 0.7);
     backdrop-filter: blur(30px);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-    border-radius: 10px;    
-
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
-.hrccicon{
+.hrccicon {
 
     width: 70px;
     height: 100px;
-  margin-top: 10px;
+    margin-top: 10px;
     position: absolute;
 }
 
@@ -91,16 +91,16 @@ nav ul {
     list-style: none;
 }
 
-nav li{
+nav li {
 
     height: 50px;
-    
+
 }
 
-nav a{
+nav a {
 
     height: 100%;
-    padding:  30px;
+    padding: 30px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -110,25 +110,25 @@ nav a{
 
 }
 
-nav a:hover{
+nav a:hover {
 
-    background-color:rgba(78, 78, 78, 0.3);
+    background-color: rgba(78, 78, 78, 0.3);
     color: #FDB52D;
 }
 
-nav i{
+nav i {
     font-size: 20px;
     padding: 10px;
 
 }
 
-.nav1 li:first-child{
+.nav1 li:first-child {
     margin-right: auto;
 
 }
 
 
-.sidebar{
+.sidebar {
 
     position: fixed;
     top: 0;
@@ -147,13 +147,13 @@ nav i{
 
 }
 
-.sidebar li{
+.sidebar li {
 
     width: 100%;
 
 }
 
-.sidebar li{
+.sidebar li {
 
     width: 100%;
 
@@ -162,73 +162,76 @@ nav i{
 /* head end */
 
 /* slider_1 */
-
-.swiper{
+.swiper {
 
     width: 100%;
-    padding: 50px 0;
-    
-}
-
-.swiper-slide{
-position: absolute;
-border-radius: 14px;
-aspect-ratio: 16/9;
-border : 1px solid rgba(177,177,177,0.4);
-
+    padding-bottom: 40px;
+    padding-top: 10px;
 
 }
 
-.swiper-slide img{
+.swiper-slide {
+    position: relative;
+    width: 370px;
+    height: 550px;
+    aspect-ratio: 3/4;
+    border-radius: 14px;
+    border: 1px solid rgba(117, 116, 102, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+
+.swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-size: contain;
+    /* object-fit: fill; */
     border-radius: inherit;
     user-select: none;
 }
 
-.title{
-position: absolute;
-bottom: 5px;
-left: 25%;
-transform: translateX(-50%,-20%);
--ms-transform: translate(-50%,-20%);
-width: max-content;
-text-align: center;
-padding: 10px 18px;
-background:rgba(49, 36, 36, 0.3);
-border-radius: 8px;
-border: 2px solid rgba(177,177,177,0.4);
-box-shadow: 0 4px 30px rgba(0,0,0,0.3);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-transition: all 0.5s linear;
+.title {
+    position: absolute;
+    top:5px;
+    left: 25%;
+    color: #fff;
+    transform: translateX(-50%, -20%);
+    -ms-transform: translate(-50%, -20%);
+    width: max-content;
+    text-align: center;
+    padding: 10px 18px;
+    background: rgba(49, 36, 36, 0.3);
+    border-radius: 8px;
+    border: 2px solid rgba(177, 177, 177, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.5s linear;
 
 }
 
-.title span{
+.title span {
 
     font-size: 1.2rem;
     font-weight: 600;
 
 }
 
-.swiper-slide-active .title{
+.swiper-slide-active .title {
 
-    bottom: -10px;
-    box-shadow: 0 20px 30px 2px rgba(255, 181, 36,0.6);
-
-}
-
-.swiper-pagination{
-
-    --swipper-pagination-bottom: -6px;
+    top: -10px;
+    box-shadow: 0 6px 6px 2px rgba(122, 122, 122, 0.6);
 
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination {
+    --swipper-pagination-bottom: -50px;
 
-    background-color: #fff;
+}
+
+.swiper-pagination-bullet {
+
+    background-color: #ffcc00;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -236,18 +239,10 @@ transition: all 0.5s linear;
 
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     width: 32px;
     background-color: #ffcc00;
     border-radius: 14px;
 }
 
-.particles{
-
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
 /* slider_1 */
