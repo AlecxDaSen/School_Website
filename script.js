@@ -56,6 +56,39 @@ var swiper = new Swiper(".swiper", {
 
 });
 
+// Wait for the entire page to load
+window.addEventListener('load', () => {
+    // Select the loader
+    const loader = document.getElementById('page-loader');
+    
+    // Ensure the loader exists in the DOM
+    if (loader) {
+        // Fade out the loader
+        loader.style.opacity = '0';
+        
+        // Wait for the fade-out animation to complete before hiding
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500); // Match this duration to the CSS transition time
+    } else {
+        console.error('Loader element not found.');
+    }
+
+    // Initialize the Lottie animation
+    const lottieLogo = document.getElementById('lottie-logo');
+    if (lottieLogo) {
+        lottie.loadAnimation({
+            container: lottieLogo, // Container for the animation
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'path-to-lottie-file.json', // Replace with the actual path to your Lottie JSON
+        });
+    } else {
+        console.error('Lottie logo container not found.');
+    }
+});
+
 
 // slide2
 
