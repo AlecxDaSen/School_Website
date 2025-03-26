@@ -10,15 +10,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <link rel="icon" href="resources/hrccbadge.png" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
 
-<body>
+<body >
 
     <div id="page-loader">
         <img src="images/hrccbadge.png" alt="Company Logo" id="loader-logo">
@@ -27,9 +25,9 @@
 
     <div class="background">
         <div class="col-12 text-center pt-lg-5">
-            <h1 class="text-uppercase text-white " style="margin-top: 100px;">welcome to </h1>
+            <h1 class="text-uppercase text-white main-t1">welcome to </h1>
             <img src="images/hrccbadge.png" class="hrccbadge ">
-            <h1 class="text-uppercase fw-bold text-white" style="font-size: 72px;">Rajasinghe Central College </h1>
+            <h1 class="text-uppercase fw-bold text-white main-t2">Rajasinghe Central College </h1>
         </div>
 
     </div>
@@ -38,28 +36,75 @@
 
         <!-- navigator -->
 
-        <div class="col-lg-12  head fixed-top pt-2 pb-2">
+        <div class="col-lg-12  head fixed-top">
             <div class="row ">
-                <div class="col-1 my-auto text-center">
-                    <a href="">
-                        <i class="bi bi-list fs-1 fw-bold text-white"></i>
-                    </a>
-                </div>
 
-                <div class="col-1 text-center ">
+
+                <div class="col-lg-1 text-center ">
                     <img src="images/hrccbadge.png" alt="Hrcc Badge" class="hrccicon mt-lg-2">
                 </div>
-                <div class="col-3 my-auto">
-                    <h5 class="text-white text-start fs-4 ">Rajasinghe Central College</h5>
+                <div class="col-lg-3 my-auto text-center">
+                    <h5 class="text-white fs-4 ">Rajasinghe Central College</h5>
                 </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <nav class="">
+                        <ul class="sidebar" >
+                            <li class="" onclick="closeSideBar();" id="close">
+                                <a href="#"><i class="bi bi-x-lg fs-2  fw-bold "></i></a>
+                            </li>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#">Events</a>
+                            </li>
+                            <li>
+                                <a href="#">Academic</a>
+                            </li>
+                            <li>
+                                <a href="#">Clubs & Societies</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                      
+                      
+                        </ul>
 
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#">Events</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bi bi-search fs-4 fw-bold"></i></a>
+                            </li>
+                            <li class="d-lg-none d-sm-block" onclick="showSideBar();" id="show" >
+                                <a href="#"><i class="bi bi-list fs-2  fw-bold "></i></a>
+                            </li>
+                      
 
-                <div class="col-lg-1 offset-lg-6 my-auto text-center">
-                    <a href="">
-                        <i class="bi bi-search fs-3 fw-bold text-white"></i>
-                    </a>
+                        </ul>
+                    </nav>
+            
+
                 </div>
-
+        <div class="col-lg-2 d-grid text-center my-auto">
+                                  <select class="form-select bg-transparent text-secondary border-secondary " id="">
+                                    <option value="0">More...</option>
+                                    <option value="0">Academic</option>
+                                    <option value="0">Clubs & Societies</option>
+                                    <option value="0">About Us</option>
+                                </select>
+                    </div>
 
             </div>
         </div>
@@ -96,7 +141,7 @@
                 <div class="col-12 d-flex flex-column justify-content-end">
 
                     <h2 class="text-danger fw-bold text-uppercase pt-5 pb-3">History</h2>
-                    <span class="fs-4 text-dark">The school was established in 1886 and was initially
+                    <span class="fs-5 text-dark">The school was established in 1886 and was initially
                         named Hanwella Bilingual School.It was later renamed Hanwella Madhya Maha
                         Vidyalaya when free education was introduced from primary level to university by
                         Dr. C.W.W. Kannangara.The school motto, "With Faith and Strength," reflects its
@@ -106,8 +151,8 @@
                         sons and daughters of Mother Rajasinghe.
                     </span>
 
-                    <div class="col-lg-2 offset-lg-5 d-grid mt-lg-5 ">
-                        <button class="btn btn-secondary text-white fw-bold rounded-pill">Read More...</button>
+                    <div class="col-lg-2 offset-lg-5 d-grid mt-5 mb-1 ">
+                        <a href="#" class="btn btn-secondary text-white fw-bold rounded-pill">Read More...</a>
                     </div>
 
                     <img src="images/warrior.jpg" alt="" class="warrior d-lg-block d-sm-none mb-0">
@@ -121,18 +166,14 @@
 
         <!-- slide1 start -->
 
-        <div class="col-lg-12  mt-lg-5 ">
+        <div class="col-lg-12 mt-lg-5 ">
 
             <div class="col-12 text-center mb-3" style="margin-top: 100px;">
                 <h2 class="text-secondary text-uppercase">HOT News</h2>
                 <p class="fs-5">Recently updated news and Regular activities.</p>
             </div>
 
-
-
-        </div>
-
-        <!-- slide1 start -->
+                <!-- slide1 start -->
         <!-- Slider main container -->
         <div class="swiper">
             <!-- Additional required wrapper -->
@@ -202,12 +243,99 @@
 
 
         </div>
+
+
+        </div>
+
+    
+
+        <!-- clubs & societies -->
+
+        <div class="col-lg-12 text-center mt-5 mb-5">
+            <h2 class="text-secondary fw-bold ">Clubs & Societies</h2>
+            <p class="fs-5 text-black-50">Clubs & Societies that student can develop their knowledge & quality</p>
+
+
+            <div class="timeline col-12 p-2">
+
+
+                <div class="timeline-container l-container">
+                    <img src="images/hrccbadgeicon.png" class="shadow "/>
+                    <div class="text-center text-box">
+                        <h2 class="text-secondary p-0">Cadet Group</h2>
+                        <small class="text-light fw-bold fs-5">Since - 1988</small>
+                        <p class="text-white "> School Cadet Society is a disciplined and structured organization that instills leadership, teamwork, and a sense of responsibility in students. It provides training in basic military drills, physical fitness, and survival skills while promoting patriotism and community service. </p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+                
+                
+                <div class="timeline-container r-container">
+                    <img src="images/hrccbadgeicon.png" class="shadow "/>
+                    <div class="text-center text-box">
+                        <h2 class="text-secondary p-0">Scout Group</h2>
+                        <small class="text-light fw-bold fs-5">Since - 1988</small>
+                        <p class="text-white "> School Cadet Society is a disciplined and structured organization that instills leadership, teamwork, and a sense of responsibility in students. It provides training in basic military drills, physical fitness, and survival skills while promoting patriotism and community service. </p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+
+                <div class="timeline-container l-container">
+                    <img src="images/hrccbadgeicon.png" class="shadow "/>
+                    <div class="text-center text-box">
+                        <h2 class="text-secondary p-0">Photography Club</h2>
+                        <small class="text-light fw-bold fs-5">Since - 1988</small>
+                        <p class="text-white "> School Cadet Society is a disciplined and structured organization that instills leadership, teamwork, and a sense of responsibility in students. It provides training in basic military drills, physical fitness, and survival skills while promoting patriotism and community service. </p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+                
+                <div class="timeline-container r-container">
+                    <img src="images/hrccbadgeicon.png" class="shadow "/>
+                    <div class="text-center text-box">
+                        <h2 class="text-secondary p-0">Nature Club</h2>
+                        <small class="text-light fw-bold fs-5">Since - 1988</small>
+                        <p class="text-white "> School Cadet Society is a disciplined and structured organization that instills leadership, teamwork, and a sense of responsibility in students. It provides training in basic military drills, physical fitness, and survival skills while promoting patriotism and community service. </p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-2 col-sm-2  d-lg-grid offset-lg-5 offset-md-5 offset-sm-0 mt">
+           <a href="#" class="btn btn-secondary rounded-pill text-white fw-bold p-2">View All</a>
+       </div>
+
+           
+        </div>
+
+        <!-- clubs & societies -->
+
+
+        <!-- school Leader Info -->
+
+            <!-- <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-1 col-sm-12 text-center shadow rounded">
+
+                        <img src="images/principle.jpg" class="person-img" alt="">
+                        <h2 class="text-black-50">Mr. Jagath Priyashantha Surasena</h2>
+                        <span>Our presant Principle </span>
+
+                        </div>
+                </div>
+
+            </div> -->
+
+
+        <!-- school Leader Info -->
+
+
         <!-- slide1 end -->
 
 
         <!-- slider2 -->
 
-        <div class="container">
+        <!-- <div class="container">
 
      
         <div class="slide">
@@ -277,7 +405,7 @@
             
         </div>
 
-        </div> -->
+        </div>  -->
         <!-- slider2 -->
 
 
