@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Statistics Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .spacer {
+            height: 500px; /* Just for scrolling effect */
+        }
+        .dashboard {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .circle {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        svg {
+            transform: rotate(-90deg);
+        }
+        circle {
+            fill: none;
+            stroke-width: 10;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 1s ease-in-out;
+        }
+        .background {
+            stroke: #ddd;
+        }
+        .progress {
+            stroke: #4CAF50;
+            stroke-dasharray: 314;
+            stroke-dashoffset: 314;
+        }
+        .label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="spacer">Scroll Down ⬇️</div>
+
+    <div class="dashboard">
+        <div class="circle" data-value="75">
+            <svg width="150" height="150">
+                <circle class="background" cx="75" cy="75" r="50"></circle>
+                <circle class="progress" cx="75" cy="75" r="50"></circle>
+            </svg>
+            <div class="label">0</div>
+        </div>
+        <div class="circle" data-value="50">
+            <svg width="150" height="150">
+                <circle class="background" cx="75" cy="75" r="50"></circle>
+                <circle class="progress" cx="75" cy="75" r="50"></circle>
+            </svg>
+            <div class="label">0</div>
+        </div>
+        <div class="circle" data-value="30">
+            <svg width="150" height="150">
+                <circle class="background" cx="75" cy="75" r="50"></circle>
+                <circle class="progress" cx="75" cy="75" r="50"></circle>
+            </svg>
+            <div class="label">0</div>
+        </div>
+    </div>
+
+    <script>
+        function animateCircle(element, value) {
+            let progress = element.querySelector('.progress');
+            let label = element.querySelector('.label');
+            let count = 0;
+
+            let interval = setInterval(() => {
+                if (count >= value) {
+                    clearInterval(interval);
+                } else {
+                    count++;
+                    label.textContent = count;
+                    progress.style.strokeDashoffset = 314 - (314 * count) / 100;
+                }
+            }, 20);
+        }
+
+        // Intersection Observer API
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let element = entry.target;
+                    let value = element.getAttribute('data-value');
+                    
+                    if (!element.classList.contains('animated')) {
+                        animateCircle(element, value);
+                        element.classList.add('animated');
+                    }
+
+                    // Fade in effect
+                    element.style.opacity = 1;
+                    element.style.transform = "translateY(0px)";
+                }
+            });
+        }, { threshold: 0.6 });
+
+        document.querySelectorAll('.circle').forEach(circle => {
+            observer.observe(circle);
+        });
+    </script>
+
+</body>
+</html>
