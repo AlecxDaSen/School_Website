@@ -38,6 +38,7 @@
     margin-bottom: 20px;
     position: relative;
     box-shadow: 3px 3px 10px rgba(0, 0, 0);
+    animation-delay: 0.5s;
 }
 
 
@@ -56,6 +57,7 @@
 
 .head {
 
+    height: 60px;
     background-color: rgba(129, 5, 19, 0.7);
     backdrop-filter: blur(30px);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
@@ -68,6 +70,7 @@
     margin-top: 10px;
     position: absolute;
 }
+
 
 nav ul {
     width: 100%;
@@ -400,6 +403,31 @@ nav li {
     /* opacity: 80%; */
 }
 
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-text, .hrccbadge, .college-name {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.welcome-text {
+    animation-delay: 0.2s;
+}
+
+.college-name {
+    animation-delay: 0.8s;
+}
+
 /* Logo Animation */
 #loader-logo {
     width: 150px;
@@ -672,3 +700,62 @@ nav li {
 }
 
 /* responsive codes */
+
+/* fotter message */ 
+.form {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  }
+  
+  .form .title1 {
+    color: royalblue;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form input {
+    outline: 0;
+    border: 1px solid rgb(219, 213, 213);
+    padding: 8px 14px;
+    border-radius: 8px;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .form textarea {
+    border-radius: 8px;
+    height: 100px;
+    width: 100%;
+    resize: none;
+    outline: 0;
+    padding: 8px 14px;
+    border: 1px solid rgb(219, 213, 213);
+  }
+  
+  .form button {
+    align-self: flex-end;
+    padding: 8px;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  
