@@ -112,3 +112,8 @@ $prev.addEventListener(
     },
 );
 // slide2
+
+
+
+
+
