@@ -813,12 +813,24 @@ nav li {
 }
 
 .stat-box {
-    text-align: center;
+    /* text-align: center;
     padding: 20px;
     border: 2px solid #3498db;
     border-radius: 10px;
     width: 200px;
-    margin-left: 40px;
+    margin-left: 40px; */
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 255, 255, 0.5);
 }
 
 h2 {
