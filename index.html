@@ -28,12 +28,14 @@
             <source src="images/course-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="overlay"></div> <!-- Darkening Overlay -->
         <div class="col-12 text-center pt-lg-5 content">
             <h1 class="text-uppercase text-white welcome-text" style="margin-top: 100px;">Welcome to </h1>
             <img src="images/hrccbadge.png" class="hrccbadge">
             <h1 class="text-uppercase fw-bold text-white college-name" style="font-size: 72px;">Rajasinghe Central College</h1>
         </div>        
     </div>
+    
     
 
     <!-- <div class="background">
@@ -45,14 +47,9 @@
 
     </div> -->
 
-    
+            <!-- navigator -->
 
-
-    <div class="container-fluid">
-
-        <!-- navigator -->
-
-        <div class="col-lg-12  head fixed-top ">
+        <!-- <div class="col-lg-12  head fixed-top ">
             
             <div class="row ">
 
@@ -113,7 +110,7 @@
                     </nav>
 
 
-                </div>
+                </div> -->
 
                 
           
@@ -127,12 +124,51 @@
                     </select>
                 </div> -->
 
+            <!-- </div>
+        </div> -->
+
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/hrccbadge.png" alt="Hrcc Badge">
+                <h5>Rajasinghe Central College</h5>
+            </div>
+        
+            <div class="nav-links ">
+                <a href="#" class="nav-hide">Home</a>
+                <a href="#"class="nav-hide">Gallery</a>
+                <a href="#"class="nav-hide">Events</a>
+                <a href="#"class="nav-hide">Academic</a>
+                <a href="#"class="nav-hide">Clubs & Societies</a>
+                <a href="#"class="nav-hide">Others</a>
+                <a href="#"class="nav-hide">About Us</a>
+            </div>
+        
+            <!-- Mobile Menu Button -->
+            <div class="menu-toggle" onclick="openSidebar();">
+                <i class="bi bi-list"></i>
             </div>
         </div>
-        <!-- navigator -->
+        
+        <!-- Sidebar (Mobile Navigation) -->
+        <div class="sidebar" id="sidebar">
+            <span class="close-btn" onclick="closeSidebar();">&times;</span>
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">Events</a>
+            <a href="#">Academic</a>
+            <a href="#">Clubs & Societies</a>
+            <a href="#">Others</a>
+            <a href="#">About Us</a>
+        </div>
+
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar();"></div>
+
+        
+    <!-- navigator -->
 
 
-
+    <div class="container-fluid">
 
         <div class="col-lg-12 text-center mt-5  ">
 

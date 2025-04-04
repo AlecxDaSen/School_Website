@@ -44,19 +44,46 @@
 }
 
 .background-video {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -1; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keep it behind everything */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Start transparent */
+    z-index: 0; /* Keep it above the video */
+    animation: darken 1.5s forwards ease-in-out; /* Darkens during animation */
+}
+
+@keyframes darken {
+    0% {
+        background: rgba(0, 0, 0, 0); /* Transparent at start */
+    }
+    100% {
+        background: rgba(0, 0, 0, 0.6); /* Darker overlay after animation */
+    }
 }
 
 .content {
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Keep text & logo above overlay */
 }
 
 
@@ -108,6 +135,144 @@
 }
 
 
+/* new nav bar */
+
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    backdrop-filter: blur(10px); /* Glass effect */
+    background: #bb2d3ba3; /* Transparent white */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+/* Logo Section */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar .logo h5 {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffcc00; /* Highlight color */
+}
+
+/* Mobile Menu (Hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    display: none;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+/* Close Button Style */
+.close-btn {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 15px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #ffcc00;
+}
+
+/* Close Button */
+.sidebar .close-btn {
+    font-size: 30px;
+    color: white;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .nav-hide {
+        display: none; /* Hide nav links on small screens */
+    }
+
+    .menu-toggle{
+        display: block; /* Show menu icon */
+    }
+}
+
+
+/* new nav bar */
+
 nav ul {
     width: 100%;
     display: flex;
@@ -155,7 +320,7 @@ nav li {
                -15px -15px 30px #ffffff;
 }
 
-.sidebar {
+/* .sidebar {
 
     position: fixed;
     top: 0;
@@ -172,13 +337,13 @@ nav li {
     justify-content: flex-start;
     align-items: flex-start;
 
-}
+} */
 
-.sidebar li {
+/* .sidebar li {
 
     width: 100%;
 
-}
+} */
 
 
 /* head end */

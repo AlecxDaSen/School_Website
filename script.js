@@ -1,22 +1,22 @@
 // side_bar
 
-function showSideBar() {
+// function showSideBar() {
 
-    var sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'flex';
+//     var sidebar = document.querySelector('.sidebar');
+//     sidebar.style.display = 'flex';
 
-    var show = document.getElementById('show');
-    show.style.display = 'none';
-}
+//     var show = document.getElementById('show');
+//     show.style.display = 'none';
+// }
 
-function closeSideBar() {
+// function closeSideBar() {
 
-    var sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'none';
+//     var sidebar = document.querySelector('.sidebar');
+//     sidebar.style.display = 'none';
 
-    var show = document.getElementById('show');
-    show.style.display = 'flex';
-}
+//     var show = document.getElementById('show');
+//     show.style.display = 'flex';
+// }
 // side_bar
 
 // slide_!
@@ -115,5 +115,21 @@ $prev.addEventListener(
 
 
 
+  // Open Sidebar and hide nav links on mobile
+  function openSidebar() {
+      document.getElementById("sidebar").classList.add("open");
+      document.querySelector(".nav-links").classList.add("hide-nav-links");
+  }
 
+  // Close Sidebar and show nav links again
+  function closeSidebar() {
+      document.getElementById("sidebar").classList.remove("open");
+      document.querySelector(".nav-links").classList.remove("hide-nav-links");
+  }
+
+  // Toggle nav links visibility when hamburger is clicked
+  document.querySelector(".menu-toggle").addEventListener("click", function() {
+      document.querySelector(".nav-links").classList.add("hide-nav-links");
+  });
+  
 
