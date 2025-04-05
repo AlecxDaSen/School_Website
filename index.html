@@ -16,7 +16,7 @@
 </head>
 
 
-<body>
+<body class="main-body" >
 
     <div id="page-loader">
         <img src="images/hrccbadge.png" alt="Company Logo" id="loader-logo">
@@ -24,29 +24,43 @@
     </div>
 
     <div class="background">
-        <div class="col-12 text-center pt-lg-5">
-            <h1 class="text-uppercase text-white main-t1">welcome to </h1>
-            <img src="images/hrccbadge.png" class="hrccbadge ">
-            <h1 class="text-uppercase fw-bold text-white main-t2">Rajasinghe Central College </h1>
-        </div>
-
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="images/course-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div> <!-- Darkening Overlay -->
+        <div class="col-12 text-center pt-lg-5 content">
+            <h1 class="text-uppercase text-white welcome-text" style="margin-top: 100px;">Welcome to </h1>
+            <img src="images/hrccbadge.png" class="hrccbadge">
+            <h1 class="text-uppercase fw-bold text-white college-name" style="font-size: 72px;">Rajasinghe Central College</h1>
+        </div>        
     </div>
+    
+    
 
-    <div class="container-fluid">
+    <!-- <div class="background">
+        <div class="col-12 text-center pt-lg-5">
+            <h1 class="text-uppercase text-white welcome-text" style="margin-top: 100px;">Welcome to </h1>
+            <img src="images/hrccbadge.png" class="hrccbadge">
+            <h1 class="text-uppercase fw-bold text-white college-name" style="font-size: 72px;">Rajasinghe Central College</h1>
+        </div>        
 
-        <!-- navigator -->
+    </div> -->
 
-        <div class="col-lg-12  head fixed-top ">
+            <!-- navigator -->
+
+        <!-- <div class="col-lg-12  head fixed-top ">
+            
             <div class="row ">
 
 
-                <div class="col-lg-1 text-center ">
+                <div class="col-lg-1 text-center">
                     <img src="images/hrccbadge.png" alt="Hrcc Badge" class="hrccicon mt-lg-2">
                 </div>
                 <div class="col-lg-3 my-auto text-center ">
-                    <h5 class="text-white fs-4 ">Rajasinghe Central College</h5>
+                    <h5 class="font fatext-white mt-3 fs-4 mainTitle">Rajasinghe Central College</h5>
                 </div>
-                <div class="col-lg-5 offset-lg-1">
+                <div class="col-lg-5 offset-lg-3">
                     <nav class="">
                         <ul class="sidebar">
                             <li class="" onclick="closeSideBar();" id="close">
@@ -87,7 +101,7 @@
                             <li>
                                 <a href="#"><i class="bi bi-search fs-4 fw-bold"></i></a>
                             </li>
-                            <li class="d-lg-none d-sm-block" onclick="showSideBar();" id="show">
+                            <li class="" onclick="showSideBar();" id="show">
                                 <a href="#"><i class="bi bi-list fs-2  fw-bold "></i></a>
                             </li>
 
@@ -96,9 +110,11 @@
                     </nav>
 
 
-                </div>
+                </div> -->
+
+                
           
-                <div class="col-lg-2 d-grid text-center my-auto">
+                <!-- <div class="col-lg-2 d-grid text-center my-auto">
                     <select class="form-select bg-transparent text-secondary border-secondary " id="">
                         <option value="0">More...</option>
                         <option value="0">Academic</option>
@@ -106,23 +122,62 @@
                         <option value="0">Clubs & Societies</option>
                         <option value="0">About Us</option>
                     </select>
-                </div>
+                </div> -->
 
+            <!-- </div>
+        </div> -->
+
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/hrccbadge.png" alt="Hrcc Badge">
+                <h5>Rajasinghe Central College</h5>
+            </div>
+        
+            <div class="nav-links ">
+                <a href="#" class="nav-hide">Home</a>
+                <a href="#"class="nav-hide">Gallery</a>
+                <a href="#"class="nav-hide">Events</a>
+                <a href="#"class="nav-hide">Academic</a>
+                <a href="#"class="nav-hide">Clubs & Societies</a>
+                <a href="#"class="nav-hide">Others</a>
+                <a href="#"class="nav-hide">About Us</a>
+            </div>
+        
+            <!-- Mobile Menu Button -->
+            <div class="menu-toggle" onclick="openSidebar();">
+                <i class="bi bi-list"></i>
             </div>
         </div>
-        <!-- navigator -->
+        
+        <!-- Sidebar (Mobile Navigation) -->
+        <div class="sidebar" id="sidebar">
+            <span class="close-btn" onclick="closeSidebar();">&times;</span>
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">Events</a>
+            <a href="#">Academic</a>
+            <a href="#">Clubs & Societies</a>
+            <a href="#">Others</a>
+            <a href="#">About Us</a>
+        </div>
+
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar();"></div>
+
+        
+    <!-- navigator -->
 
 
+    <div class="container-fluid">
 
-
-        <div class="col-lg-12 text-center mt-5 ">
+        <div class="col-lg-12 text-center mt-5  ">
 
             <div class="col-10 offset-1 d-flex flex-column rounded shadow-lg p-5 ">
-                <img src="images/lion.png" alt="" class="lion">
-<!-- 
+                <!-- <img src="images/lion.png" alt="" class="lion">  -->
+
                 <h2 class="fw-bold text-secondary pt-5 pb-3 text-uppercase">School Motto</h2>
 
-                <span class="fs-4 text-dark ">With Faith and Strength</span> -->
+                <span class="fs-4 text-dark ">With Faith and Strength</span>
                 <h2 class="fw-bold text-secondary pt-5 pb-3 text-uppercase">Our Vision</h2>
 
                 <span class="fs-4 text-dark ">To produce excellent, virtuous, and knowledgeable sons and
@@ -161,13 +216,61 @@
                         <a href="#" class="btn btn-outline-danger fw-bold rounded-pill">Read More...</a>
                     </div>
 
-                    <img src="images/warrior.jpg" alt="" class="warrior d-lg-block d-sm-none mb-0">
+                    <!-- <img src="images/warrior.jpg" alt="" class="warrior d-lg-block d-sm-none mb-0"> -->
                 </div>
 
 
             </div>
 
         </div>
+
+        <div class="col-10 offset-1 mt-4 counter">
+            <div class="col-12">
+                <section class="stats row">
+                    <div class="col-3">
+                        <div class="stat-box">
+                            <h2 data-target="3000">0</h2>
+                            <div class="label">
+                                <p class="text">Students</p>
+                            </div>
+                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="stat-box">
+                            <h2 data-target="2500">0</h2>
+                            <div class="label">
+                                <p class="text">Teachers</p>
+                            </div>
+                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="stat-box">
+                            <h2 data-target="1800">0</h2>
+                            <div class="label">
+                                <p class="text">Graduates</p>
+                            </div>
+                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="stat-box">
+                            <h2 data-target="1800">0</h2>
+                            <div class="label">
+                                <p class="text">Graduates</p>
+                            </div>
+                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+        </div>
+    
         
         <!-- latest news -->
   
@@ -374,8 +477,41 @@
 
         </div>
 
+        <div class="col-10 offset-1">
+            <div class="cardlms">
+                <div class="cardlms1">
+                    <div class="cardContent">
+                        <div class="row">
+                            <div class="col-md-4 cardImage">
+                              <img src="images/lms.png" alt="">
+                            </div>
+                            <div class="col-md-7">
+                              <h1 class="mt-3" style="color: #ffb524; font-family: Verdana, Geneva, Tahoma, sans-serif;">HRCC E Learning Platform</h1>
+                              <p class="fs-6">"Our School Learning Management System (LMS) is a centralized platform designed to 
+                                            support and enrich the educational journey. It offers features such as online assignments, access to learning materials, 
+                                            progress tracking, and seamless communication between students, teachers, and parents. By embracing technology, we aim to create a collaborative and engaging 
+                                            environment for learning, ensuring that education remains accessible and efficient for all members of our school community."</p>
 
-        <div class="col-12 text-center">
+                                <div class="col-12 d-flex flex-column align-items-center mt-3">
+                                    <div class="loader col-4 text-center">Coming Soon</div>
+                                    <section class="dots-container col-6 d-flex justify-content-center mt-3">
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                    </section>
+                                </div>
+                            
+  
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 mt-5 text-center">
             <h3 class="text-danger text-uppercase">Visit our School </h3>
             <span class="text-black-50 fs-5 fw-bold mb-3">Here's the location of paradise all willing to be a son or daughter</span>
 
@@ -397,8 +533,8 @@
 
         <!-- footer -->
                 <div class="row bg-dark">
-                    <div class="col-12 bg-secondary p-2"></div>
-                    <div class="col-12 bg-danger p-1"></div>
+                    <div class="col-12 p-2" style="background-color: #ffb524;"></div>
+                    <div class="col-12 p-1" style="background-color: #bb2d3b;"></div>
 
                     <div class="col-10 offset-1  mt-5">
                         <div class="row">
@@ -407,25 +543,63 @@
                             </div>
                             <div class="col-lg-4 col-sm-12 text-start ">
                                       <span class="fs-4 text-secondary">Rajasinghe Central College</span><br>
-                        <p class="text-white ">Paradise of brave students...</p> 
+                                <p class="text-white ">Paradise of brave students...</p> 
+
+                                <div class="">
+                                    <div class="text-center text-md-start">
+                
+                                    <h5 class="text-uppercase text-light fw-bold mt-2 mb-2">Follow us on</h5>
+                
+                                        <ul class="list-unstyled list-inline">
+                
+                                            <li class="list-inline-item">
+                                                <a href="#" class="form-floating text-white">
+                                                <img src="images/socialmedia/5296499_fb_facebook_facebook logo_icon.png" width="35px" height="35px"  />
+                                                </a>
+                                            </li>
+                
+                                            <!-- <li class="list-inline-item">
+                                                <a href="#" class="form-floating text-white">
+                                                <img src="images/socialmedia/317720_social media_tweet_twitter_social_icon.png" width="35px" height="35px"  />
+                                                </a>
+                                            </li>
+                
+                                            <li class="list-inline-item">
+                                                <a href="#" class="form-floating text-white">
+                                                <img src="images/socialmedia/3225179_app_logo_media_popular_social_icon.png" width="35px" height="35px" />
+                                                </a>
+                                            </li> -->
+                                            
+                                            <!-- <li class="list-inline-item">
+                                                <a href="#" class="form-floating text-white">
+                                                <img src="images/socialmedia/3057688_in_linked_media_social_icon.png" width="35px" height="35px" />
+                                                </a>
+                                            </li> -->
+                
+                                            <li class="list-inline-item">
+                                                <a href="#" class="form-floating text-white">
+                                                <img src="images/socialmedia/4362951_youtube_logo_social media_icon.png" width="35px" height="35px"  />
+                                                </a>
+                                            </li>
+                
+                                        </ul>
+                
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-5 col-sm-12 d-grid">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control rounded-pill p-3" placeholder="Your Idea" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                    <button class="btn btn-outline-primary rounded-pill p-3" type="button" id="button-addon2">Submit</button>
-                                  </div>
-                            </div>
+                            
+                            <!-- <div class="col-lg-5 col-sm-12 ">
+
+                                
+                            </div> -->
                         
-                            <div class="col-lg-2 col-sm-12 text-center ">
-                                <a href="#" class="btn btn-outline-secondary rounded-circle">
-                                    <i class="bi bi-youtube fs-4 "></i>&nbsp;
-                                </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle">
-                                    <i class="bi bi-facebook fs-4 "></i>&nbsp;
-                                </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle">
-                                    <i class="bi bi-twitter fs-4 "></i>&nbsp;
-                                </a>
+                            <div class="col-lg-4 offset-3 mb-3">
+                                <h5 class="text-light">Feedback</h5>
+                                <form>
+                                    <input type="email" placeholder="Your email" class="form-control mb-2">
+                                    <textarea placeholder="Your message" class="form-control mb-2"></textarea>
+                                    <button class="btn btn-danger w-100">Submit</button>
+                                </form>
                             </div>
                         </div>
                  
@@ -436,7 +610,7 @@
                         <div class="row mb-3 footerd2" >
                             <div class="col-lg-3">
                                 <h4 class="text-white mt-4  ">About !</h4>
-                                <span class="text-white-50 p-1">The paradise of most excellent and proud people are born and  step 
+                                <span class="text-white-50">The paradise of most excellent and proud people are born and  step 
                                     to the Society with high quality abilities. <br> Navigators of past and presant are move our school day by day to the victory.
                                 </span>
                             </div>
@@ -469,27 +643,67 @@
                         </div>
                     </div>
 
-
-                    <div class="bg-danger p-1"></div>
+                    <div class="col-12 col-md-3 col-lg-3 mx-auto  text-sm-center fw-bold" >
+                        <p class="ecrint">&copy; ECRINT 2025 | All Rights Reserved</p>        
+                    </div>
+    
+                    <div class="p-1" style="background-color: #bb2d3b;"></div>
                 </div>
         
         <!-- footer -->
 
     </div>
+
+
     <script>
+
         document.addEventListener("DOMContentLoaded", function() {
-    const timelineContainers = document.querySelectorAll(".timeline-container");
+            const timelineContainers = document.querySelectorAll(".timeline-container");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.4 }); // Trigger when 40% is visible
+
+            timelineContainers.forEach(container => observer.observe(container));
         });
-    }, { threshold: 0.4 }); // Trigger when 40% is visible
 
-    timelineContainers.forEach(container => observer.observe(container));
-});
+        function animateCounter(counter) {
+            const target = +counter.getAttribute('data-target');
+            let start = 0;
+            const duration = 2000; // 2 seconds
+            const stepTime = 10;
+            const increment = target / (duration / stepTime);
+
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    counter.innerText = Math.ceil(start);
+                    setTimeout(updateCounter, stepTime);
+                } else {
+                    counter.innerText = target; // Ensure it ends at target
+                }
+            }
+
+            updateCounter();
+        }
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target); // Stop observing after animation
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-box h2').forEach(counter => {
+            observer.observe(counter);
+        });
+
 
     </script>
     <script src="script.js"></script>

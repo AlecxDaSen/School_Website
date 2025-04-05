@@ -9,11 +9,15 @@
 
 }
 
-
+/* .main-body{
+    background-image: url(../images/3332.jpg);
+    background-size: cover;
+    --bs-bg-opacity: .75;
+} */
 
 /* background with content start  */
 
-.background {
+/* .background {
 
     position: relative;
     top: 0;
@@ -27,6 +31,65 @@
     z-index: -1;
 
 
+} */
+
+.background {
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-video {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keep it behind everything */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Start transparent */
+    z-index: 0; /* Keep it above the video */
+    animation: darken 1.5s forwards ease-in-out; /* Darkens during animation */
+}
+
+@keyframes darken {
+    0% {
+        background: rgba(0, 0, 0, 0); /* Transparent at start */
+    }
+    100% {
+        background: rgba(0, 0, 0, 0.6); /* Darker overlay after animation */
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Keep text & logo above overlay */
+}
+
+
+.mainTitle{
+    font-family: "The Hoca";
+    color: white;
 }
 
 
@@ -38,6 +101,7 @@
     margin-bottom: 20px;
     position: relative;
     box-shadow: 3px 3px 10px rgba(0, 0, 0);
+    animation-delay: 0.5s;
 }
 
 
@@ -56,6 +120,7 @@
 
 .head {
 
+    height: 60px;
     background-color: rgba(129, 5, 19, 0.7);
     backdrop-filter: blur(30px);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
@@ -68,6 +133,145 @@
     margin-top: 10px;
     position: absolute;
 }
+
+
+/* new nav bar */
+
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    backdrop-filter: blur(10px); /* Glass effect */
+    background: #bb2d3ba3; /* Transparent white */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+/* Logo Section */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar .logo h5 {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffcc00; /* Highlight color */
+}
+
+/* Mobile Menu (Hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    display: none;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+/* Close Button Style */
+.close-btn {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 15px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #ffcc00;
+}
+
+/* Close Button */
+.sidebar .close-btn {
+    font-size: 30px;
+    color: white;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .nav-hide {
+        display: none; /* Hide nav links on small screens */
+    }
+
+    .menu-toggle{
+        display: block; /* Show menu icon */
+    }
+}
+
+
+/* new nav bar */
 
 nav ul {
     width: 100%;
@@ -93,6 +297,7 @@ nav a {
 
 
 
+
 }
 
 nav a:hover {
@@ -106,8 +311,16 @@ nav li {
 
 }
 
+.card{
+    /* width: 190px;
+    height: 254px; */
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+}
 
-.sidebar {
+/* .sidebar {
 
     position: fixed;
     top: 0;
@@ -124,13 +337,13 @@ nav li {
     justify-content: flex-start;
     align-items: flex-start;
 
-}
+} */
 
-.sidebar li {
+/* .sidebar li {
 
     width: 100%;
 
-}
+} */
 
 
 /* head end */
@@ -398,6 +611,31 @@ nav li {
     align-items: center;
     z-index: 9999;
     /* opacity: 80%; */
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-text, .hrccbadge, .college-name {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.welcome-text {
+    animation-delay: 0.2s;
+}
+
+.college-name {
+    animation-delay: 0.8s;
 }
 
 /* Logo Animation */
@@ -672,3 +910,220 @@ nav li {
 }
 
 /* responsive codes */
+
+/* fotter message */ 
+.form {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  }
+  
+  .form .title1 {
+    color: royalblue;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form input {
+    outline: 0;
+    border: 1px solid rgb(219, 213, 213);
+    padding: 8px 14px;
+    border-radius: 8px;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .form textarea {
+    border-radius: 8px;
+    height: 100px;
+    width: 100%;
+    resize: none;
+    outline: 0;
+    padding: 8px 14px;
+    border: 1px solid rgb(219, 213, 213);
+  }
+  
+  .form button {
+    align-self: flex-end;
+    padding: 8px;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  
+
+.counter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat-box {
+    /* text-align: center;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    width: 200px;
+    margin-left: 40px; */
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 255, 255, 0.5);
+}
+
+h2 {
+    font-size: 40px;
+    color: #3498db;
+    margin: 0;
+}
+
+.label p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.ecrint{
+    cursor: pointer;
+}
+
+
+
+.cardlms {
+    height: 354px;
+    background-image: linear-gradient(163deg, #ffb524 0%, #bb2d3b 100%);
+    border-radius: 20px;
+    transition: all .3s;
+  }
+  
+  .cardlms1 {
+    height: 354px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    transition: all .2s;
+  }
+  
+  .cardlms1:hover {
+    transform: scaleX(0.996) scaleY(0.98);
+    border-radius: 20px;
+  }
+  
+  .cardlms:hover {
+    box-shadow: 0px 0px 30px 1px #bb3b47;
+  }
+
+  .cardImage img {
+    max-width: 100%; /* Ensures the image doesn't overflow */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 300px; /* Adjust as needed to make the image smaller */
+    display: block; /* Removes any extra spacing */
+    margin: auto; /* Centers the image */
+    margin-top: 25px;
+}
+
+/* coming soon */ 
+.dots-container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #ffb524;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  .dot:last-child {
+    margin-right: 0;
+  }
+  
+  .dot:nth-child(1) {
+    animation-delay: -0.3s;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: -0.1s;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.1s;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      background-color: #ffb524;
+      box-shadow: 0 0 0 0 #cc901c;
+    }
+  
+    50% {
+      transform: scale(1.2);
+      background-color: #ffb524;
+      box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+    }
+  
+    100% {
+      transform: scale(0.8);
+      background-color: #ffb524;
+      box-shadow: 0 0 0 0 #cc901c;
+    }
+  }
+
+  /* coming soon */ 
+@keyframes animate8345 {
+    0%,100% {
+      filter: hue-rotate(0deg);
+    }
+  
+    50% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .loader {
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to right, #bb2d3b, #ffb524);
+    font-size: 30px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate8345 9s linear infinite;
+    font-weight: bold;
+  }
