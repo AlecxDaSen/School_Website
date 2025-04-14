@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajasinghe Central college</title>
     <link rel="icon" href="images/hrccbadgeicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -16,12 +15,12 @@
 </head>
 
 
-<body class="main-body" >
+<body class="main-body">
 
-    <div id="page-loader">
+    <!-- <div id="page-loader">
         <img src="images/hrccbadge.png" alt="Company Logo" id="loader-logo">
         <div id="lottie-logo"></div>
-    </div>
+    </div> -->
 
     <div class="background">
         <video autoplay muted loop playsinline class="background-video">
@@ -32,156 +31,34 @@
         <div class="col-12 text-center pt-lg-5 content">
             <h1 class="text-uppercase text-white welcome-text" style="margin-top: 100px;">Welcome to </h1>
             <img src="images/hrccbadge.png" class="hrccbadge">
-            <h1 class="text-uppercase fw-bold text-white college-name" style="font-size: 72px;">Rajasinghe Central College</h1>
-        </div>        
+            <h1 class="text-uppercase fw-bold text-white college-name">Rajasinghe Central College</h1>
+        </div>
     </div>
-    
-    
 
-    <!-- <div class="background">
-        <div class="col-12 text-center pt-lg-5">
-            <h1 class="text-uppercase text-white welcome-text" style="margin-top: 100px;">Welcome to </h1>
-            <img src="images/hrccbadge.png" class="hrccbadge">
-            <h1 class="text-uppercase fw-bold text-white college-name" style="font-size: 72px;">Rajasinghe Central College</h1>
-        </div>        
-
-    </div> -->
-
-            <!-- navigator -->
-
-        <!-- <div class="col-lg-12  head fixed-top ">
-            
-            <div class="row ">
-
-
-                <div class="col-lg-1 text-center">
-                    <img src="images/hrccbadge.png" alt="Hrcc Badge" class="hrccicon mt-lg-2">
-                </div>
-                <div class="col-lg-3 my-auto text-center ">
-                    <h5 class="font fatext-white mt-3 fs-4 mainTitle">Rajasinghe Central College</h5>
-                </div>
-                <div class="col-lg-5 offset-lg-3">
-                    <nav class="">
-                        <ul class="sidebar">
-                            <li class="" onclick="closeSideBar();" id="close">
-                                <a href="#"><i class="bi bi-x-lg fs-2  fw-bold "></i></a>
-                            </li>
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">Gallery</a>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                            </li>
-                            <li>
-                                <a href="#">Academic</a>
-                            </li>
-                            <li>
-                                <a href="#">Clubs & Societies</a>
-                            </li>
-                            <li>
-                                <a href="#">Others</a>
-                            </li>
-                            <li>
-                                <a href="#">About Us</a>
-                            </li>
-
-
-                        </ul>
-
-                        <ul>
-                            <li>
-                                <a href="#">Gallery</a>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="bi bi-search fs-4 fw-bold"></i></a>
-                            </li>
-                            <li class="" onclick="showSideBar();" id="show">
-                                <a href="#"><i class="bi bi-list fs-2  fw-bold "></i></a>
-                            </li>
-
-
-                        </ul>
-                    </nav>
-
-
-                </div> -->
-
-                
-          
-                <!-- <div class="col-lg-2 d-grid text-center my-auto">
-                    <select class="form-select bg-transparent text-secondary border-secondary " id="">
-                        <option value="0">More...</option>
-                        <option value="0">Academic</option>
-                        <option value="0">Clubs & Societies</option>
-                        <option value="0">Clubs & Societies</option>
-                        <option value="0">About Us</option>
-                    </select>
-                </div> -->
-
-            <!-- </div>
-        </div> -->
-
-
-        <div class="navbar">
-            <div class="logo">
-                <img src="images/hrccbadge.png" alt="Hrcc Badge">
-                <h5>Rajasinghe Central College</h5>
-            </div>
-        
-            <div class="nav-links ">
-                <a href="#" class="nav-hide">Home</a>
-                <a href="#"class="nav-hide">Gallery</a>
-                <a href="#"class="nav-hide">Events</a>
-                <a href="#"class="nav-hide">Academic</a>
-                <a href="#"class="nav-hide">Clubs & Societies</a>
-                <a href="#"class="nav-hide">Others</a>
-                <a href="#"class="nav-hide">About Us</a>
-            </div>
-        
-            <!-- Mobile Menu Button -->
-            <div class="menu-toggle" onclick="openSidebar();">
-                <i class="bi bi-list"></i>
-            </div>
-        </div>
-        
-        <!-- Sidebar (Mobile Navigation) -->
-        <div class="sidebar" id="sidebar">
-            <span class="close-btn" onclick="closeSidebar();">&times;</span>
-            <a href="#">Home</a>
-            <a href="#">Gallery</a>
-            <a href="#">Events</a>
-            <a href="#">Academic</a>
-            <a href="#">Clubs & Societies</a>
-            <a href="#">Others</a>
-            <a href="#">About Us</a>
-        </div>
-
-        <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar();"></div>
-
-        
-    <!-- navigator -->
+    <?php include("header.php"); ?>
 
 
     <div class="container-fluid">
 
         <div class="col-lg-12 text-center mt-5  ">
 
-            <div class="col-10 offset-1 d-flex flex-column rounded shadow-lg p-5 ">
-                <!-- <img src="images/lion.png" alt="" class="lion">  -->
+            <div class="col-10 offset-1  rounded shadow-lg p-5 ">
 
-                <h2 class="fw-bold text-secondary pt-5 pb-3 text-uppercase">School Motto</h2>
+                <div class="row my-auto ">
+                    <div class="col-lg-6 col-sm-12 text-center">
+                        <h2 class="fw-bold text-secondary pt-5 pb-3 text-uppercase">School Motto</h2>
 
-                <span class="fs-4 text-dark ">With Faith and Strength</span>
-                <h2 class="fw-bold text-secondary pt-5 pb-3 text-uppercase">Our Vision</h2>
+                        <span class="fs-4 text-dark ">With Faith and Strength</span>
+                    </div>
+                    <div class="col-lg-6 text-center">
 
-                <span class="fs-4 text-dark ">To produce excellent, virtuous, and knowledgeable sons and
-                    daughters of Mother Rajasinghe</span>
+                        <h2 class="fw-bold text-secondary pt-5 pb-3 text-uppercase">Our Vision</h2>
+
+                        <span class="fs-4 text-dark ">To produce excellent, virtuous, and knowledgeable sons and
+                            daughters of Mother Rajasinghe</span>
+                    </div>
+                </div>
+
 
                 <h2 class="fw-bold text-secondary pt-5 pb-3 text-uppercase">Mission</h2>
 
@@ -211,12 +88,11 @@
                         The school's vision is to produce excellent, dignified, virtuous, and knowledgeable
                         sons and daughters of Mother Rajasinghe.
                     </span>
-                    
+
                     <div class="col-lg-2 offset-lg-5 d-grid mt-5 mb-1 ">
                         <a href="#" class="btn btn-outline-danger fw-bold rounded-pill">Read More...</a>
                     </div>
 
-                    <!-- <img src="images/warrior.jpg" alt="" class="warrior d-lg-block d-sm-none mb-0"> -->
                 </div>
 
 
@@ -224,10 +100,11 @@
 
         </div>
 
-        <div class="col-10 offset-1 mt-4 counter">
+        <div class="col-lg-10 offset-lg-1 mt-5 counter">
             <div class="col-12">
                 <section class="stats row">
-                    <div class="col-3">
+
+                    <div class="col-lg-3 col-sm-6 gap-1 mb-3">
                         <div class="stat-box">
                             <h2 data-target="3000">0</h2>
                             <div class="label">
@@ -237,7 +114,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-6 gap-1 mb-3">
                         <div class="stat-box">
                             <h2 data-target="2500">0</h2>
                             <div class="label">
@@ -247,7 +124,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-6 gap-1 mb-3">
                         <div class="stat-box">
                             <h2 data-target="1800">0</h2>
                             <div class="label">
@@ -257,7 +134,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-lg-3 col-sm-6 gap-1 mb-3">
                         <div class="stat-box">
                             <h2 data-target="1800">0</h2>
                             <div class="label">
@@ -266,14 +143,14 @@
                             <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
                         </div>
                     </div>
-                    
+
                 </section>
             </div>
         </div>
-    
-        
+
+
         <!-- latest news -->
-  
+
         <div class="col-lg-12 mt-5 mb-5">
 
             <div class="col-12 text-center mb-3" style="margin-top: 100px;">
@@ -281,9 +158,9 @@
                 <p class="fs-5">Recently updated news and Regular activities.</p>
             </div>
 
-         
+
             <!-- Slider main container -->
-            <div class="swiper">
+            <div class="swiper col-lg-12 col-sm-10">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -357,7 +234,7 @@
 
         <!-- latest news -->
 
-        
+
         <!-- school Leader Info -->
 
 
@@ -366,12 +243,12 @@
                 <h1 class="text-secondary " style="text-shadow: 2px 2px 15px rgba(233, 168, 30, 0.74);">School
                     Navigators</h1>
             </div>
-            <div class="row">
+            <div class="row ">
 
-                <div class="col-lg-4 offset-lg-1 col-sm-12 text-center shadow-lg p-2 mb-3 mt-3 rounded">
+                <div class="col-lg-4 offset-lg-1 col-sm-10 offset-sm-1 text-center shadow-lg p-2 mb-3 mt-3 rounded mycard">
                     <h3 class="text-black-50 ">Our Principal</h3>
                     <img src="images/principle.jpg" class="person-img" alt="">
-                    <h2 class="text-black-50 mb-2">Mr. Jagath Priyashantha Surasena</h2>
+                    <h2 class="text-black-50 mb-2">Mr. Jagath Surasena</h2>
                     <span>Our respected principal has led our school with dedication and wisdom for 15 years, shaping it
                         into a place of excellence. His commitment to education, discipline,
                         and student growth has inspired countless young minds. With his strong leadership and kindness,
@@ -380,7 +257,7 @@
 
                 </div>
 
-                <div class="col-lg-4 offset-lg-2 col-sm-12 text-center shadow-lg p-2 mb-3 mt-3 rounded">
+                <div class="col-lg-4 offset-lg-2 col-sm-10  offset-sm-1 text-center shadow-lg p-2 mb-3 mt-3 rounded mycard">
                     <h3 class="text-black-50 ">Wise Principal</h3>
                     <img src="images/wiseprinciple.png" class="person-img" alt="">
                     <h2 class="text-black-50 mb-2">Mr.Ananda </h2>
@@ -417,9 +294,16 @@
 
 
                 <div class="timeline-container l-container">
-                    <img src="images/hrccbadgeicon.png" class="shadow " />
+                    <img src="images/hrccbadgeicon.png" class="shadow" />
                     <div class="text-center text-box">
-                        <h2 class="text-secondary p-0">Cadet Group</h2>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12">
+                                <img src="images/cadets.png" alt="">
+                            </div>
+                            <div class="col-lg-8 col-sm-12">
+                                <h2 class="text-secondary p-0">Cadets</h2>
+                            </div>
+                        </div>
                         <small class="text-light fw-bold fs-5">Since - 1988</small>
                         <p class="text-white "> School Cadet Society is a disciplined and structured organization that
                             instills leadership, teamwork, and a sense of responsibility in students. It provides
@@ -433,7 +317,7 @@
                 <div class="timeline-container r-container">
                     <img src="images/hrccbadgeicon.png" class="shadow " />
                     <div class="text-center text-box">
-                        <h2 class="text-secondary p-0">Scout Group</h2>
+                        <h2 class="text-secondary p-0">Scouts </h2>
                         <small class="text-light fw-bold fs-5">Since - 1988</small>
                         <p class="text-white "> School Cadet Society is a disciplined and structured organization that
                             instills leadership, teamwork, and a sense of responsibility in students. It provides
@@ -446,7 +330,7 @@
                 <div class="timeline-container l-container">
                     <img src="images/hrccbadgeicon.png" class="shadow " />
                     <div class="text-center text-box">
-                        <h2 class="text-secondary p-0">Photography Club</h2>
+                        <h2 class="text-secondary p-0">Photography</h2>
                         <small class="text-light fw-bold fs-5">Since - 1988</small>
                         <p class="text-white "> School Cadet Society is a disciplined and structured organization that
                             instills leadership, teamwork, and a sense of responsibility in students. It provides
@@ -459,7 +343,7 @@
                 <div class="timeline-container r-container">
                     <img src="images/hrccbadgeicon.png" class="shadow " />
                     <div class="text-center text-box">
-                        <h2 class="text-secondary p-0">Nature Club</h2>
+                        <h2 class="text-secondary p-0">Nature </h2>
                         <small class="text-light fw-bold fs-5">Since - 1988</small>
                         <p class="text-white "> School Cadet Society is a disciplined and structured organization that
                             instills leadership, teamwork, and a sense of responsibility in students. It provides
@@ -483,17 +367,17 @@
                     <div class="cardContent">
                         <div class="row">
                             <div class="col-md-4 cardImage">
-                              <img src="images/lms.png" alt="">
+                                <img src="images/lms.png" alt="">
                             </div>
-                            <div class="col-md-7">
-                              <h1 class="mt-3" style="color: #ffb524; font-family: Verdana, Geneva, Tahoma, sans-serif;">HRCC E Learning Platform</h1>
-                              <p class="fs-6">"Our School Learning Management System (LMS) is a centralized platform designed to 
-                                            support and enrich the educational journey. It offers features such as online assignments, access to learning materials, 
-                                            progress tracking, and seamless communication between students, teachers, and parents. By embracing technology, we aim to create a collaborative and engaging 
-                                            environment for learning, ensuring that education remains accessible and efficient for all members of our school community."</p>
+                            <div class="col-md-7 col-sm-12 text-center">
+                                <h1 class="mt-3" style="color: #ffb524; font-family: Verdana, Geneva, Tahoma, sans-serif;">HRCC E Learning Platform</h1>
+                                <p class="fs-6">"Our School Learning Management System (LMS) is a centralized platform designed to
+                                    support and enrich the educational journey. It offers features such as online assignments, access to learning materials,
+                                    progress tracking, and seamless communication between students, teachers, and parents. By embracing technology, we aim to create a collaborative and engaging
+                                    environment for learning, ensuring that education remains accessible and efficient for all members of our school community."</p>
 
                                 <div class="col-12 d-flex flex-column align-items-center mt-3">
-                                    <div class="loader col-4 text-center">Coming Soon</div>
+                                    <div class="loader col-lg-4 col-sm-12 text-center">Coming Soon</div>
                                     <section class="dots-container col-6 d-flex justify-content-center mt-3">
                                         <div class="dot"></div>
                                         <div class="dot"></div>
@@ -502,10 +386,10 @@
                                         <div class="dot"></div>
                                     </section>
                                 </div>
-                            
-  
+
+
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -517,146 +401,26 @@
 
             <div class="col-10 offset-1 ">
                 <iframe class="shadow border-dark rounded mb-4 mt-4"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.6356694311858!2d80.08790474210592!3d6.908798724211914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae254a5f23fd9a9%3A0xbb14d696456a6ca1!2sHanwella%20Rajasinghe%20Central%20College!5e0!3m2!1sen!2slk!4v1743058903583!5m2!1sen!2slk" 
-                width="100%" 
-                height="600" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.6356694311858!2d80.08790474210592!3d6.908798724211914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae254a5f23fd9a9%3A0xbb14d696456a6ca1!2sHanwella%20Rajasinghe%20Central%20College!5e0!3m2!1sen!2slk!4v1743058903583!5m2!1sen!2slk"
+                    width="100%"
+                    height="600"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
 
         <!-- clubs & societies -->
 
 
-        <!-- footer -->
-                <div class="row bg-dark">
-                    <div class="col-12 p-2" style="background-color: #ffb524;"></div>
-                    <div class="col-12 p-1" style="background-color: #bb2d3b;"></div>
-
-                    <div class="col-10 offset-1  mt-5">
-                        <div class="row">
-                            <div class="col-lg-1 text-center">
-                                <img src="images/hrccbadge.png" style="height: 80px;width: auto;" alt="">
-                            </div>
-                            <div class="col-lg-4 col-sm-12 text-start ">
-                                      <span class="fs-4 text-secondary">Rajasinghe Central College</span><br>
-                                <p class="text-white ">Paradise of brave students...</p> 
-
-                                <div class="">
-                                    <div class="text-center text-md-start">
-                
-                                    <h5 class="text-uppercase text-light fw-bold mt-2 mb-2">Follow us on</h5>
-                
-                                        <ul class="list-unstyled list-inline">
-                
-                                            <li class="list-inline-item">
-                                                <a href="#" class="form-floating text-white">
-                                                <img src="images/socialmedia/5296499_fb_facebook_facebook logo_icon.png" width="35px" height="35px"  />
-                                                </a>
-                                            </li>
-                
-                                            <!-- <li class="list-inline-item">
-                                                <a href="#" class="form-floating text-white">
-                                                <img src="images/socialmedia/317720_social media_tweet_twitter_social_icon.png" width="35px" height="35px"  />
-                                                </a>
-                                            </li>
-                
-                                            <li class="list-inline-item">
-                                                <a href="#" class="form-floating text-white">
-                                                <img src="images/socialmedia/3225179_app_logo_media_popular_social_icon.png" width="35px" height="35px" />
-                                                </a>
-                                            </li> -->
-                                            
-                                            <!-- <li class="list-inline-item">
-                                                <a href="#" class="form-floating text-white">
-                                                <img src="images/socialmedia/3057688_in_linked_media_social_icon.png" width="35px" height="35px" />
-                                                </a>
-                                            </li> -->
-                
-                                            <li class="list-inline-item">
-                                                <a href="#" class="form-floating text-white">
-                                                <img src="images/socialmedia/4362951_youtube_logo_social media_icon.png" width="35px" height="35px"  />
-                                                </a>
-                                            </li>
-                
-                                        </ul>
-                
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- <div class="col-lg-5 col-sm-12 ">
-
-                                
-                            </div> -->
-                        
-                            <div class="col-lg-4 offset-3 mb-3">
-                                <h5 class="text-light">Feedback</h5>
-                                <form>
-                                    <input type="email" placeholder="Your email" class="form-control mb-2">
-                                    <textarea placeholder="Your message" class="form-control mb-2"></textarea>
-                                    <button class="btn btn-danger w-100">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                 
-                    </div>
-
-                    <hr class="bg-secondary mt-2 mb-2">
-                    <div class="col-10  offset-1">
-                        <div class="row mb-3 footerd2" >
-                            <div class="col-lg-3">
-                                <h4 class="text-white mt-4  ">About !</h4>
-                                <span class="text-white-50">The paradise of most excellent and proud people are born and  step 
-                                    to the Society with high quality abilities. <br> Navigators of past and presant are move our school day by day to the victory.
-                                </span>
-                            </div>
-
-                            <div class="col-lg-3 ">
-                                <h4 class="text-white mt-4  ">Site Info</h4>
-                                <a href="#" >Gallery</a><br>
-                                <a href="#" >Events</a><br>
-                                <a href="#" >Gallery</a><br>
-                                <a href="#" >Academic</a><br>
-                                <a href="#" >Clubs & Socities</a><br>
-                                <a href="#" >Others</a>
-                            </div>
-                            
-                            <div class="col-lg-3">
-                                <h4 class="text-white mt-4  ">Account</h4>
-                                <a href="#" >Profile</a><br>
-                                <a href="#" >Exam Result Search</a><br>
-                                <a href="#" >Feedbacks</a><br>
-                                <a href="#" >Ticket Booking</a><br>
-                                <a href="#" >Donations</a><br>
-                            </div>
-
-                            <div class="col-lg-3 ">
-                                <h4 class="text-white mt-4  ">Contact</h4>
-                                <a href="">Email us : <u>rajians@gmail.com</u></a><br>
-                                <a href="">Contacts : +(94) 77 0231 221</a><br>
-                                <a href="">Address us : Rajasinghe Central College , Hanwella</a><br>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-3 col-lg-3 mx-auto  text-sm-center fw-bold" >
-                        <p class="ecrint">&copy; ECRINT 2025 | All Rights Reserved</p>        
-                    </div>
-    
-                    <div class="p-1" style="background-color: #bb2d3b;"></div>
-                </div>
-        
-        <!-- footer -->
 
     </div>
 
+    <?php include("footer.php"); ?>
 
     <script>
-
         document.addEventListener("DOMContentLoaded", function() {
             const timelineContainers = document.querySelectorAll(".timeline-container");
 
@@ -666,7 +430,9 @@
                         entry.target.classList.add("show");
                     }
                 });
-            }, { threshold: 0.4 }); // Trigger when 40% is visible
+            }, {
+                threshold: 0.4
+            }); // Trigger when 40% is visible
 
             timelineContainers.forEach(container => observer.observe(container));
         });
@@ -698,16 +464,15 @@
                     observer.unobserve(entry.target); // Stop observing after animation
                 }
             });
-        }, { threshold: 0.5 });
+        }, {
+            threshold: 0.5
+        });
 
         document.querySelectorAll('.stat-box h2').forEach(counter => {
             observer.observe(counter);
         });
-
-
     </script>
-    <script src="script.js"></script>
-    <script src="bootstrap.js"></script>
+
 </body>
 
 </html>

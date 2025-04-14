@@ -1,23 +1,4 @@
-// side_bar
 
-// function showSideBar() {
-
-//     var sidebar = document.querySelector('.sidebar');
-//     sidebar.style.display = 'flex';
-
-//     var show = document.getElementById('show');
-//     show.style.display = 'none';
-// }
-
-// function closeSideBar() {
-
-//     var sidebar = document.querySelector('.sidebar');
-//     sidebar.style.display = 'none';
-
-//     var show = document.getElementById('show');
-//     show.style.display = 'flex';
-// }
-// side_bar
 
 // slide_!
 
@@ -90,28 +71,6 @@ window.addEventListener('load', () => {
 });
 
 
-// slide2
-
-const $next = document.querySelector('.next');
-const $prev = document.querySelector('.prev');
-
-$next.addEventListener(
-    'click',
-    ()=>{
-        const items = document.querySelectorAll('.item');
-        document.querySelector('.slide').appendChild(items[0]);
-   
-    },
-);
-
-$prev.addEventListener(
-    'click',
-    ()=>{
-        const items = document.querySelectorAll('.item');
-        document.querySelector('.slide').prepend(items[items.length -1]);
-    },
-);
-// slide2
 
 
 
@@ -133,3 +92,8 @@ $prev.addEventListener(
   });
   
 
+// gallery page codes
+
+
+
+// gallery page codes
