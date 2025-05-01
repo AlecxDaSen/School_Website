@@ -94,6 +94,9 @@ window.addEventListener('load', () => {
 
 // gallery page codes
 
-
+$('#toggle').click(function() {
+    $(this).toggleClass('active');
+    $('#overlay').toggleClass('open');
+   });
 
 // gallery page codes

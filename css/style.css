@@ -1042,6 +1042,76 @@ swiper-container {
 }
 
 
+.evtbody {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+  background: url('images/banner1.jpg') center center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+}
+
+.event-card {
+  background-color: #222;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.event-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #e91e63;
+}
+
+.btn-event {
+  background-color: #e91e63;
+  border: none;
+}
+
+.btn-event:hover {
+  background-color: #c2185b;
+}
+
+
+.fade-in2 {
+    opacity: 0;
+    animation: fadeIn2 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn2 {
+    to {
+        opacity: 1;
+    }
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
 
 
 /* responsive codes */

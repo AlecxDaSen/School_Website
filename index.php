@@ -17,10 +17,8 @@
 
 <body class="main-body">
 
-    <!-- <div id="page-loader">
-        <img src="images/hrccbadge.png" alt="Company Logo" id="loader-logo">
-        <div id="lottie-logo"></div>
-    </div> -->
+    <?php include("loadingScreen.php"); ?>
+
 
     <div class="background">
         <video autoplay muted loop playsinline class="background-video">
@@ -421,21 +419,6 @@
     <?php include("footer.php"); ?>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const timelineContainers = document.querySelectorAll(".timeline-container");
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
-                });
-            }, {
-                threshold: 0.4
-            }); // Trigger when 40% is visible
-
-            timelineContainers.forEach(container => observer.observe(container));
-        });
 
         function animateCounter(counter) {
             const target = +counter.getAttribute('data-target');

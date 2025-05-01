@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <title>Clubs & Societies | HRCC</title>
 </head>
 
 <body>
+    <?php include("loadingScreen.php"); ?>
     <?php include("header.php"); ?>
     <div class="col-12">
-        <div class="col-12">
+        <div class="col-12 fade-in2">
             <swiper-container class="mySwiper" autoplay="true" speed="3000"  loop="true" space-between="30" effect="fade" >
             <swiper-slide>
                 <div class="g_title text-center"><h1>Stay under the Night sky <br>with <br>Unfogetable memos ! </h1></div>
