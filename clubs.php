@@ -15,6 +15,7 @@
 <body>
     <?php include("loadingScreen.php"); ?>
     <?php include("header.php"); ?>
+    
     <div class="col-12">
         <div class="col-12 fade-in2">
             <swiper-container class="mySwiper" autoplay="true" speed="3000"  loop="true" space-between="30" effect="fade" >

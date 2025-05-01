@@ -20,11 +20,11 @@
         <div class="col-12">
 
             <!-- Gallery -->
-            <div class="scrollblock container fade-in2" style="margin-top: 100px; margin-bottom: 25px;">
+            <div class="scrollblock container fade-in2">
                 <div class="container-fluid pt-10">
                     <div class="row justify-content-md-center ">
                     <div class="col-md-10 col-sm-12">
-                        <div class="card-columns">
+                        <div class="card-columns" style="margin-top: 100px; margin-bottom: 25px;">
                             <div class="card card-hover h-100" >
                        
                                 <a href="index.html">
