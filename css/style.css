@@ -66,9 +66,10 @@
 
 
 .mainTitle{
-    font-family: "The Hoca";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
+
 
 
 .hrccbadge {
@@ -1043,7 +1044,7 @@ swiper-container {
 
 
 .evtbody {
-  background-color: #111;
+  background-color: #ffffff;
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -1112,6 +1113,281 @@ swiper-container {
     transition: 0.3s;
 }
 
+@keyframes fadeIn2 {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 
+
+
+
+
+.enrollment-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 40px auto;
+    max-width: 1000px;
+    transition: transform 0.3s ease;
+  }
+  
+  .enrollment-section:hover {
+    transform: translateY(-5px);
+  }
+  
+   
+  .image-section {
+    flex: 1 1 50%;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-section {
+    flex: 1 1 50%;
+    padding: 40px;
+    /* background-color: rgba(142, 0, 0, 0.7); */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .text-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  .text-section p {
+    font-size: 18px;
+    color: #1e1e1e;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* .text-section button {
+    background-color: #ffb524;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+  } */
+  
+  /* .text-section button:hover {
+    background-color: #e64a19;
+  } */
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .enrollment-section {
+      flex-direction: column;
+    }
+  
+    .image-section, .text-section {
+      flex: 1 1 100%;
+    }
+  
+    .text-section {
+      padding: 30px 20px;
+    }
+  
+    .text-section h1 {
+      font-size: 26px;
+    }
+  
+    .text-section p {
+      font-size: 16px;
+    }
+  }
+  
+
+
+  /* download button*/ 
+.download-btn {
+    height: 45px;
+    width: 95px;
+    cursor: pointer;
+    background: white;
+    border: none;
+    background: #ffc045;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .button-content {
+    transform: translateY(-45px);
+    transition: all 250ms ease-in-out;
+  }
+  
+  .svg-container,
+  .text-container {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-container .text {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    opacity: 1;
+    transition: opacity ease-in-out 250ms;
+  }
+  
+  .download-icon {
+    height: 25px;
+    width: 25px;
+    fill: #fff;
+    opacity: 0;
+    transition: opacity ease-in-out 250ms;
+  }
+  
+  /* hover state for the button */
+  .download-btn:hover .button-content {
+    transform: translateY(0px);
+  }
+  
+  .download-btn:hover .text {
+    opacity: 0;
+  }
+  
+  .download-btn:hover .download-icon {
+    opacity: 1;
+  }
+  
+  .download-btn:focus .download-icon {
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+  }
+  
+  @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
+
+  
+  
+  /* download button */
+  
+
+  .grade-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab-btn {
+    background-color: #ffffff22;
+    color: #9da8aa;
+    border: 2px solid #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-btn.active {
+    background-color: #fff;
+    color: #8e0000;
+  }
+  
+  .download-section {
+    display: none;
+    animation: fadeIn1 0.3s ease-in;
+  }
+  
+  .download-section.active {
+    display: block;
+  }
+  
+  @keyframes fadeIn1 {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
 /* responsive codes */

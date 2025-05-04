@@ -13,7 +13,7 @@
     <title>Gallery | HRCC</title>
 </head>
 
-<body style="background-image: url('images/1111.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+<body style="background-image: url('images/redBackground.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
     <?php include("loadingScreen.php"); ?>
     <?php include("header.php"); ?>
     <div class="col-12">

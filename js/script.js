@@ -100,3 +100,7 @@ $('#toggle').click(function() {
    });
 
 // gallery page codes
+
+function ecrintWeb(){
+    window.open("#", "_blank", "noopener,noreferrer");
+}

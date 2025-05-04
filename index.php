@@ -233,11 +233,34 @@
         <!-- latest news -->
 
 
-        <!-- school Leader Info -->
 
+
+    </div>
+
+    <!-- principle's message -->
+    <section class="position-relative text-white" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('images/hrccbg1.jpeg') center/cover no-repeat; padding: 100px 0;">
+        <div class="container d-flex flex-column flex-md-row align-items-center gap-5">
+            <div class="col-md-5 text-center">
+                <img src="images/principle2.jpg" alt="Principal" class="img-fluid rounded-circle shadow-lg" style="max-width: 250px;">
+                <h4 class="mt-3 text-warning">Mr. Jagath Priyashantha Soorasena</h4>
+                <p class="text-light mb-0">Principal, HRCC</p>
+            </div>
+            <div class="col-md-7">
+                <h2 class="fw-bold text-warning mb-3">Principal's Message</h2>
+                <p class="lead text-light">
+                    Welcome to HRCC — where we nurture minds and shape the future. As principal, I'm proud to lead a community grounded in integrity, creativity, and excellence. 
+                    Join us as we build a vibrant environment where every student can shine.
+                </p>
+                <a href="#" class="btn btn-outline-warning mt-3 rounded-pill px-4">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <div class="container-fluid">
 
         <div class="col-12 mt-5">
-            <div class="col-12 text-center">
+            <!-- <div class="col-12 text-center">
                 <h1 class="text-secondary " style="text-shadow: 2px 2px 15px rgba(233, 168, 30, 0.74);">School
                     Navigators</h1>
             </div>
@@ -272,7 +295,7 @@
                 <a href="#" class="btn btn-outline-danger rounded-pill fw-bold">View All</a>
             </div>
 
-        </div>
+        </div> -->
 
 
 
@@ -393,6 +416,64 @@
             </div>
         </div>
 
+        <section class="enrollment-section">
+        <div class="image-section">
+            <img src="images/gallery1.jpg" alt="Students enrolling at a campus">
+        </div>
+        <div class="text-section">
+            <h1>Student Applications</h1>
+            <p>
+            Take the first step toward your bright future. Join our vibrant student community, access quality education, and start shaping your tomorrow today.
+            </p>
+
+            <!-- Grade Selection Tabs -->
+            <div class="grade-tabs">
+            <button class="tab-btn active" onclick="showGrade('grade6')">Grade 6</button>
+            <button class="tab-btn" onclick="showGrade('AL')">Advanced Level</button>
+            </div>
+
+            <!-- Grade 6 Download -->
+            <div id="grade6" class="download-section active">
+            <button class="download-btn pixel-corners">
+                <div class="button-content">
+                <div class="svg-container">
+                    <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z">
+                    </path>
+                    </svg>
+                </div>
+                <div class="text-container">
+                    <div class="text">Download</div>
+                </div>
+                </div>
+            </button>
+            </div>
+
+            <!-- Advanced Level Download -->
+            <div id="AL" class="download-section">
+            <button class="download-btn pixel-corners">
+                <div class="button-content">
+                <div class="svg-container">
+                    <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z">
+                    </path>
+                    </svg>
+                </div>
+                <div class="text-container">
+                    <div class="text">Download</div>
+                </div>
+                </div>
+            </button>
+            </div>
+        </div>
+        </section>
+
+
+
         <div class="col-12 mt-5 text-center">
             <h3 class="text-danger text-uppercase">Visit our School </h3>
             <span class="text-black-50 fs-5 fw-bold mb-3">Here's the location of paradise all willing to be a son or daughter</span>
@@ -413,7 +494,7 @@
         <!-- clubs & societies -->
 
 
-
+        </div>
     </div>
 
     <?php include("footer.php"); ?>
@@ -454,6 +535,19 @@
         document.querySelectorAll('.stat-box h2').forEach(counter => {
             observer.observe(counter);
         });
+
+        function showGrade(gradeId) {
+            const tabs = document.querySelectorAll(".tab-btn");
+            const sections = document.querySelectorAll(".download-section");
+
+            tabs.forEach(tab => tab.classList.remove("active"));
+            sections.forEach(sec => sec.classList.remove("active"));
+
+            document.getElementById(gradeId).classList.add("active");
+            document.querySelector(`[onclick="showGrade('${gradeId}')"]`).classList.add("active");
+        }
+
+
     </script>
 
 </body>

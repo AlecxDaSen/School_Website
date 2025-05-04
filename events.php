@@ -14,89 +14,125 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        .hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+        }
+
+        .badge {
+            font-size: 0.9rem;
+            padding: 0.5em 0.75em;
+        }
+
+    </style>
 
 </head>
 
 <body class="evtbody">
     <?php include("loadingScreen.php"); ?>
+
     <?php include("header.php"); ?>
 
-    <div class="col-12" >
+    <div class="col-12 fade-in2">
         <div class="col-12" >
 
-            <!-- Main Content -->
-            <div class="container fade-in2" style="margin-bottom: 25px;">
-                <div class="row" >
-                    <!-- Welcome Text -->
-                    <div class="col-md-6 mb-4" style="margin-top: 100px;">
-                        <h2 class="fw-bold text-primary">Welcome to Our Events</h2>
-                        <p class="text-muted">
-                            Stay up to date with our latest community events. 
-                        </p>
-                        <a href="#" class="btn btn-outline-primary mt-3">Learn More</a>
-                    </div>
+            <!-- Hero Section -->
+            <section class="position-relative text-white" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/gallery6.jpg') center/cover no-repeat; height: 70vh; ">
+                <div class="container h-100 d-flex flex-column justify-content-center align-items-start text-start">
+                    <h1 class="display-4 fw-bold text-warning">Explore Our Events</h1>
+                    <p class="lead">Stay in the loop with exciting community and school activities.</p>
+                    <a href="#" class="btn btn-warning px-4 py-2 mt-3 rounded-pill">See What's Coming</a>
+                </div>
+            </section>
 
-                    <!-- Latest Events -->
-                    <div class="col-md-6" style="margin-top: 100px;">
-                        <h2 class="fw-bold mb-4">Latest Events</h2>
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action mb-2 rounded">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Sectiom match</h5>
-                                    <small>30 August</small>
+            <!-- Latest Events Section -->
+            <section class="py-5">
+                <div class="container ">
+                    <h2 class="fw-bold text-center text-warning mb-5">Latest Highlights</h2>
+                    <div class="row g-4">
+
+                        <!-- Event Card -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card shadow-sm h-100 border-0 hover-effect rounded-4">
+                                <img src="images/gallery1.jpg" class="card-img-top rounded-top-4" alt="Section Match">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-semibold" >Section Match</h5>
+                                    <p class="card-text text-muted">An epic match between classes in the section.</p>
+                                    <span class="badge bg-warning text-dark mb-2">30 August</span><br>
+                                    <a href="#" class="text-primary fw-semibold">View Details</a>
                                 </div>
-                                <p class="mb-1">An epic matches between classes in section.</p>
-                                <small>Click to view details</small>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action mb-2 rounded">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Sciense Day</h5>
-                                    <small>26 August</small>
+                            </div>
+                        </div>
+
+                        <!-- Event Card -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card shadow-sm h-100 border-0 hover-effect rounded-4">
+                                <img src="images/gallery6.jpg" class="card-img-top rounded-top-4" alt="Science Day">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-semibold">Science Day</h5>
+                                    <p class="card-text text-muted">Science exhibition from the Science section.</p>
+                                    <span class="badge bg-warning text-dark mb-2">26 August</span><br>
+                                    <a href="#" class="text-primary fw-semibold">View Details</a>
                                 </div>
-                                <p class="mb-1">Sciense exhibition fron sciense section</p>
-                                <small>Click to view details</small>
-                            </a>
+                            </div>
+                        </div>
+
+                        
+
+                        <!-- Add more cards as needed -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Events Section -->
+            <section class="bg-light py-5 text-white">
+                <div class="container">
+                    <h2 class="fw-bold text-center text-warning mb-5">Featured Events</h2>
+                    <div class="row g-4 align-items-center">
+
+                        <!-- Scout Camp -->
+                        <div class="col-md-6">
+                            <img src="images/gallery1.jpg" class="img-fluid rounded-4 shadow" alt="Scout Camp">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fw-bold">Scout Camp</h3>
+                            <p class="text-warning">Join us for a thrilling adventure night full of fun and friendship.</p>
+                            <ul class="list-unstyled">
+                                <li class="text-primary"><i class="bi bi-music-note-beamed text-warning me-2"></i> Live DJ Performance</li>
+                                <li class="text-primary"><i class="bi bi-people-fill text-warning me-2"></i> 500+ Guests Expected</li>
+                                <li class="text-primary"><i class="bi bi-lightning-fill text-warning me-2"></i> Neon Dance Floor</li>
+                            </ul>
+                        </div>
+
+                        <!-- Sport Meet -->
+                        <div class="col-md-6 order-md-2">
+                            <img src="images/gallery6.jpg" class="img-fluid rounded-4 shadow" alt="Sport Meet">
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <h3 class="fw-bold">Sport Meet</h3>
+                            <p class="text-warning">Experience energy, spirit, and sportsmanship in one grand event.</p>
+                            <ul class="list-unstyled">
+                                <li class="text-primary"><i class="bi bi-award text-warning me-2"></i> Athletic Competitions</li>
+                                <li class="text-primary"><i class="bi bi-people text-warning me-2"></i> Cheering Crowds</li>
+                                <li class="text-primary"><i class="bi bi-trophy text-warning me-2"></i> Award Ceremonies</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <!-- Featured Party Section -->
-                <div class="row mt-5 align-items-center">
-                    <div class="col-md-5">
-                        <img src="images/gallery1.jpg" alt="Upcoming Event" class="img-fluid rounded shadow">
-                    </div>
-                    <div class="col-md-7">
-                        <h3 class="fw-bold">Scout camp</h3>
-                        <p class="text-muted">
-                            Don’t miss our exclusive night with.
-                        </p>
-                        <ul class="list-unstyled">
-                            <li><i class="bi bi-music-note-beamed me-2"></i> Live DJ Performance</li>
-                            <li><i class="bi bi-people-fill me-2"></i> 500+ Guests Expected</li>
-                            <li><i class="bi bi-lightning-fill me-2"></i> Neon Dance Floor</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary mt-3">View Full Details</a>
-                    </div>
-                </div>
-
-                <div class="row mt-5 align-items-center">
-                    <div class="col-md-5">
-                        <img src="images//gallery6.jpg" alt="Upcoming Event" class="img-fluid rounded shadow">
-                    </div>
-                    <div class="col-md-7">
-                        <h3 class="fw-bold">Sport Meat</h3>
-                        <p class="text-muted">
-                            Don’t miss our exclusive night with Europe’s top RNB artists and DJs.
-                        </p>
-                        <ul class="list-unstyled">
-                            <li><i class="bi bi-music-note-beamed me-2"></i> Live DJ Performance</li>
-                            <li><i class="bi bi-people-fill me-2"></i> 500+ Guests Expected</li>
-                            <li><i class="bi bi-lightning-fill me-2"></i> Neon Dance Floor</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary mt-3">View Full Details</a>
-                    </div>
-                </div>
-            </div>
+            </section>
 
         </div>
     </div>
