@@ -92,6 +92,9 @@ window.addEventListener('load', () => {
   });
   
 
+
+
+
 // gallery page codes
 
 
