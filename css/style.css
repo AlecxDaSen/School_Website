@@ -9,6 +9,12 @@
 
 }
 
+.body{
+
+    --nav-height:70px;
+
+}
+
   /* home page css */
 
 .background {
@@ -110,7 +116,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 70px;
+    height: 70px;;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,8 +125,13 @@
     background: #86000db7; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 1000;
+    transition: transform 0.3s;
 }
 
+.navbar_hide{
+    transform: translateY(-70px);
+    /* display: none; */
+}
 /* Logo Section */
 
 
@@ -435,7 +446,7 @@
 
 .timeline-container {
     position: relative;
-    padding: 10px 50px;
+    padding: 10px 80px;
     width: 50%;
     opacity: 0;
     transform: translateY(30px);
@@ -487,18 +498,20 @@
 
 .timeline-container img {
     position: absolute;
-    height: 50px;
-    width: 50px;
+    background-color: #fff;
+    padding: 1px;
+    height: 140px;
+    width: 140px;
     border-radius: 50%;
     box-shadow: 0 0 5px 1px solid lightgray;
-    top: 32px;
-    right: -25px;
+    top: 0px;
+    right: -70px;
     z-index: 10;
 }
 
 .r-container img {
 
-    left: -25px;
+    left: -70px;
 
 }
 
@@ -534,12 +547,12 @@
     height: 0;
     width: 0;
     position: absolute;
-    top: 45px;
+    top: 25px;
     z-index: -1;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 15px solid rgb(32, 30, 30);
-    right: 43px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid rgba(0, 10, 54, 0.616);
+    right: 65px;
 
 }
 
@@ -548,12 +561,12 @@
     height: 0;
     width: 0;
     position: absolute;
-    top: 45px;
+    top: 25px;
     z-index: -1;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-right: 15px solid rgb(32, 30, 30);
-    left: 43px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid rgba(0, 10, 54, 0.616);
+    left: 65px;
 
 }
 
@@ -824,56 +837,183 @@ h2 {
 
 /* gallery page css */
 
+html{
+    scroll-behavior: smooth;
+}
+
+.float_btn{
+    position:absolute;
+    margin-bottom: 80px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-self: center;    
+
+}
+
+
 swiper-container {
     width: 100%;
     height: 100vh;
+    
   }
 
   swiper-slide {
     background-position: center;
     background-size: cover;
+    position: relative;
   }
+
+ 
 
   swiper-slide img {
     display: block;
     width: 100%;
   }
 
+
   .g_title{
     width: 100%;
     position: absolute;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     top: 200px;
   }
 
-  .g_title h1{
-    font-size: 60px;
-    padding: 20px;
-    backdrop-filter: blur(30px);
-    color: #fff;
-    border-radius:  20px;
-    animation: goupBig 2s ease-out forwards;
-  }
 
-  @keyframes goupBig {
-    0%{
-        opacity: 0;
+.card{
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 
+.clubicon{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    top: -40px;
+    padding: 1px;
+    background-color: white;
+
+
+}
+
+.card-img-top {
+    height: 320px;
+
+}
+
+.card__data{
+    width: 260px;
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -15rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* card animation */
+.card:hover .card__data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card:hover{
+    animation: remove-overflow 2s forwards;
+}
+
+.card:not(:hover){
+    animation: show-overflow 2s forwards ;
+}
+
+.card:not(:hover) .card__data{
+    animation: remove-data 1s forwards ;
+}
+@keyframes show-data {
+    50%{
+        transform: translateY(-15rem);
     }
     100%{
-        opacity: 1;
+        transform: translateY(-9rem);
     }
+}
 
-  }
+@keyframes remove-overflow {
+    to{
+        overflow: initial;
+    }
+}
+@keyframes remove-data {
+    0%{
+        transform: translateY(-9rem);
+    }
+    50%{
+        transform: translateY(-15rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow {
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+/* card animation */
 
 
 
 /* gallery page css */
 
 
+/* clubs single view css */
+
+.clubIconSingleview{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 20px;
+    background-color: #ffffff;
+    border: 4px solid #FDB52D;
+    padding: 5px;
+}
+
+/* clubs single view css */
+
+
+/* academic css */
+
+.academic_title{
+
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 500px;
+    font-size: 70px;
+
+
+}
+
+/* academic css */
 
   
 /* responsive codes */
@@ -902,6 +1042,8 @@ swiper-container {
     }
     /* navbar */
 
+
+
     /* card responsive */
     .mycard{
         height: 650px;
@@ -909,6 +1051,8 @@ swiper-container {
     /* card responsive */
   
 
+
+    /* cardlms */
     .cardlms,.cardlms1{
         height: 520px;
     }
@@ -916,6 +1060,13 @@ swiper-container {
     .college-name{
         font-size: 60px;
     }
+    /* cardlms */
+
+    /* timeline */
+    .timeline-container h2{
+        font-size: 32px;
+    }
+    /* timeline */
 
 }
 

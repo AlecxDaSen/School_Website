@@ -58,7 +58,7 @@
                 </div>
 
 
-                <h2 class="fw-bold text-secondary pt-5 pb-3 text-uppercase">Mission</h2>
+                <h2 class="fw-bold text-danger pt-5 pb-3 text-uppercase">Mission</h2>
 
                 <span class="fs-4 text-dark">Aiming to create individuals with a creative and balanced
                     personality, nourished with
@@ -315,16 +315,10 @@
 
 
                 <div class="timeline-container l-container">
-                    <img src="images/hrccbadgeicon.png" class="shadow" />
+                    <img src="images/cadets.png" class="shadow " />
                     <div class="text-center text-box">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-12">
-                                <img src="images/cadets.png" alt="">
-                            </div>
-                            <div class="col-lg-8 col-sm-12">
-                                <h2 class="text-secondary p-0">Cadets</h2>
-                            </div>
-                        </div>
+                     
+                            <h2 class="text-secondary p-0">Cadets</h2>
                         <small class="text-light fw-bold fs-5">Since - 1988</small>
                         <p class="text-white "> School Cadet Society is a disciplined and structured organization that
                             instills leadership, teamwork, and a sense of responsibility in students. It provides
@@ -336,7 +330,7 @@
 
 
                 <div class="timeline-container r-container">
-                    <img src="images/hrccbadgeicon.png" class="shadow " />
+                    <img src="images/scouts.png" class="shadow  " />
                     <div class="text-center text-box">
                         <h2 class="text-secondary p-0">Scouts </h2>
                         <small class="text-light fw-bold fs-5">Since - 1988</small>
@@ -349,7 +343,7 @@
                 </div>
 
                 <div class="timeline-container l-container">
-                    <img src="images/hrccbadgeicon.png" class="shadow " />
+                    <img src="images/photography.jpeg" class="shadow  " />
                     <div class="text-center text-box">
                         <h2 class="text-secondary p-0">Photography</h2>
                         <small class="text-light fw-bold fs-5">Since - 1988</small>
@@ -362,7 +356,7 @@
                 </div>
 
                 <div class="timeline-container r-container">
-                    <img src="images/hrccbadgeicon.png" class="shadow " />
+                    <img src="images/nature.jpeg" class="shadow  " />
                     <div class="text-center text-box">
                         <h2 class="text-secondary p-0">Nature </h2>
                         <small class="text-light fw-bold fs-5">Since - 1988</small>
@@ -376,7 +370,7 @@
 
             </div>
             <div class="col-lg-2 col-sm-12 d-grid offset-lg-5  mt-3 mb-2 ">
-                <a href="#" class="btn btn-secondary rounded-pill text-white fw-bold p-2">View All</a>
+                <a href="clubs.php" class="btn btn-secondary rounded-pill text-white fw-bold p-2">View All</a>
             </div>
 
 
