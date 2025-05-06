@@ -24,7 +24,7 @@
                     <div class="col-lg-1 text-center">
                         <img src="images/hrccbadge.png" style="height: 80px;width: auto;" alt="">
                     </div>
-                    <div class="col-lg-4 col-sm-12 text-lg-start ">
+                    <div class="col-lg-4 col-sm-12 text-lg-start text-center">
                         <span class="fs-4 text-secondary">Rajasinghe Central College</span><br>
                         <p class="text-white ">Paradise of brave students...</p>
 
@@ -36,16 +36,22 @@
                                 <ul class="list-unstyled list-inline">
 
                                     <li class="list-inline-item">
-                                        <a href="#" class="form-floating text-white">
-                                            <img src="images/socialmedia/5296499_fb_facebook_facebook logo_icon.png" width="35px" height="35px" />
+                                        <a href="https://web.facebook.com/RajiansOfficial" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
+                                            <img src="images/socialmedia/facebook.png" width="35px" height="35px" />
                                         </a>
                                     </li>
 
                                 
 
                                     <li class="list-inline-item">
-                                        <a href="#" class="form-floating text-white">
-                                            <img src="images/socialmedia/4362951_youtube_logo_social media_icon.png" width="35px" height="35px" />
+                                        <a href="https://www.youtube.com/@RajasingheCentral" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
+                                            <img src="images/socialmedia/youtube.png" width="35px" height="35px" />
+                                        </a>
+                                    </li>
+
+                                    <li class="list-inline-item">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
+                                            <img src="images/socialmedia/instergram.png" width="35px" height="35px" />
                                         </a>
                                     </li>
 
@@ -84,11 +90,10 @@
 
                     <div class="col-lg-3 ">
                         <h4 class="text-white mt-4  ">Site Info</h4>
-                        <a href="#">Gallery</a><br>
-                        <a href="#">Events</a><br>
-                        <a href="#">Gallery</a><br>
+                        <a href="gallery.php">Gallery</a><br>
+                        <a href="events.php">Events</a><br>
                         <a href="#">Academic</a><br>
-                        <a href="#">Clubs & Socities</a><br>
+                        <a href="clubs.php">Clubs & Socities</a><br>
                         <a href="#">Others</a>
                     </div>
 
@@ -105,19 +110,20 @@
                         <h4 class="text-white mt-4  ">Contact</h4>
                         <a href="">Email us : <u>rajians@gmail.com</u></a><br>
                         <a href="">Contacts : +(94) 77 0231 221</a><br>
-                        <a href="">Address us : Rajasinghe Central College , Hanwella</a><br>
+                        <a href="">Address us : Rajasinghe Central College, Hanwella.</a><br>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-3 col-lg-3 mx-auto  text-sm-center fw-bold">
-                <p class="ecrint">&copy; ECRINT 2025 | All Rights Reserved</p>
+            <div class="col-12 col-md-3 col-lg-3 mx-auto text-center text-sm-center fw-bold text-body">
+                <p class="ecrint" onclick="ecrintWeb()">&copy; ECRINT 2025 | All Rights Reserved</p>
             </div>
 
             <div class="p-1" style="background-color: #bb2d3b;"></div>
         </div>
 
         <!-- footer -->
+         
     </div>
 
     <script src="js/main.js"></script>

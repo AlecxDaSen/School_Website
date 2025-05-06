@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+<<<<<<< HEAD
  
+=======
+    <title>Clubs & Societies | HRCC</title>
+>>>>>>> f83688fec7d2e478d3452a8d5a9929683536f848
 </head>
 
 <body>
+    <?php include("loadingScreen.php"); ?>
     <?php include("header.php"); ?>
+<<<<<<< HEAD
 
     <a href="#info" class="float_btn fixed-bottom btn btn-warning text-center"><i class="bi bi-arrow-down text-white fs-4"></i></a>
 
@@ -22,6 +28,12 @@
 
         <swiper-container class="mySwiper" autoplay="true" speed="3000" loop="true" space-between="30" effect="fade">
 
+=======
+    
+    <div class="col-12">
+        <div class="col-12 fade-in2">
+            <swiper-container class="mySwiper" autoplay="true" speed="3000"  loop="true" space-between="30" effect="fade" >
+>>>>>>> f83688fec7d2e478d3452a8d5a9929683536f848
             <swiper-slide>
 
                 <div class="col-12 g_title text-center p-4">
