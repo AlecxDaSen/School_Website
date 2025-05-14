@@ -30,9 +30,8 @@
 
         <div class="nav-links ">
             <a href="index.php" class="nav-hide">Home</a>
-<<<<<<< HEAD
             <a href="gallery.php" class="nav-hide">Gallery</a>
-            <a href="#" class="nav-hide">Events</a>
+            <a href="events.php" class="nav-hide">Events</a>
             <a href="academic.php" class="nav-hide">Academic</a>
             <a href="clubs.php" class="nav-hide">Clubs & Societies</a>
             <a href="#" class="nav-hide">Others</a>
@@ -42,7 +41,6 @@
         <!-- Mobile Menu Button -->
         <div class="menu-toggle" onclick="openSidebar();">
             <i class="bi bi-list"></i>
-=======
             <a href="gallery.php"class="nav-hide">Gallery</a>
                 <a href="events.php"class="nav-hide">Events</a>
                 <a href="#"class="nav-hide">Academic</a>
@@ -67,7 +65,6 @@
             <a href="clubs.php">Clubs & Societies</a>
             <a href="#">Others</a>
             <a href="#">About Us</a>
->>>>>>> f83688fec7d2e478d3452a8d5a9929683536f848
         </div>
     </div>
 
@@ -112,6 +109,7 @@
             });
 
         }
+
 
 
 

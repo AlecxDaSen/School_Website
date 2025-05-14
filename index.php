@@ -88,7 +88,7 @@
                     </span>
 
                     <div class="col-lg-2 offset-lg-5 d-grid mt-5 mb-1 ">
-                        <a href="#" class="btn btn-outline-danger fw-bold rounded-pill">Read More...</a>
+                        <a href="history.php" class="btn btn-outline-danger fw-bold rounded-pill">Read More...</a>
                     </div>
 
                 </div>

@@ -20,29 +20,29 @@
 
 <body>
     <div class="container-fluid">
-      
-        <div class="row" style="background-image: url(images/gallery1.jpg);">
-         
+
+        <div class="row" style="background-image:url(images/clubsbg4.jpeg);background-repeat: no-repeat;background-size: cover;">
+
             <div class="col-2 offset-lg-4 text-end my-auto ">
                 <img src="images/cadets.png" class="clubIconSingleview">
-                
+
             </div>
             <div class="col-5 text-start my-auto">
                 <h1 class="fw-bold text-warning">Cadet Club</h1>
             </div>
             <div class="col-12 text-center">
-                      <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mt-3 ">
-                    <li class="breadcrumb-item "><a href="index.php">Home</a></li>
-                    <li class="breadcrumb-item "><a href="clubs.php">Clubs & Societies</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">About</li>
-                </ol>
-            </nav>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-3 ">
+                        <li class="breadcrumb-item "><a href="index.php"><i class="bi bi-house fs-6 fw-bold"></i>&nbsp;Home</a></li>
+                        <li class="breadcrumb-item "><a href="clubs.php">Clubs & Societies</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About</li>
+                    </ol>
+                </nav>
             </div>
         </div>
 
-        <div class="col-10 offset-1 ">
-            <div class="row mt-5 mb-5">
+        <div class="col-12">
+            <div class="row mt-4 mb-4">
                 <div class="col-6 ">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -68,23 +68,79 @@
                 </div>
                 <div class="col-6">
                     <div class="col-12 text-start">
-                        <h3 class="text-dark mt-0 mb-3">Know About Club</h3>
+                        <h2 class="text-warning mt-0 mb-3">Know Something about us !</h2>
                         <p class="text-dark">
-                        School Cadet Society is a disciplined and structured organization that instills leadership,
-                         teamwork, and a sense of responsibility in students. It provides training in basic military 
-                         drills, physical fitness, and survival skills while promoting patriotism and community service.
+                            School Cadet Society is a disciplined and structured organization that instills leadership,
+                            teamwork, and a sense of responsibility in students. It provides training in basic military
+                            drills, physical fitness, and survival skills while promoting patriotism and community service.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-10 offset-1 ">
-            <h2 class="text-dark fw-bold ">Acheivments</h2>
-                <div class="row">
+        <div class="col-12 ">
+            <h2 class=" fw-bold text-start " style="color: #000;" >Acheivments</h2>
+
+            <div class="col-10 offset-1">
+
+                <div class="gap-4 "  style="display: flex;flex-direction: row;height:max-content;width:100%;overflow-x: scroll;">
+                <div class="col-8">
+                        <div class="card  text-bg-dark shadow ">
+                            <img src="images/cadets.jpg" class="card-img" style="height: 20rem;">
+                            <div class="card-img-overlay card_content text-start ps-3">
+                                <h2 class="text-white mb-3 ">Award Ceramony 2025</h2>
+
+                                <div class="col-8 text-start ps-3">
+                                      <p class="text-white "> School Cadet Society is a disciplined and structured organization that instills leadership,
+                                    teamwork, and a sense of responsibility in students. It provides training in basic military
+                                    drills, physical fitness, and survival skills while promoting patriotism and community service.</p> 
+                                </div>
+                                <a href="#" class="btn btn-warning rounded-pill mt-3 ">See more</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <div class="card  text-bg-dark shadow ">
+                            <img src="images/cadets.jpg" class="card-img" style="height: 20rem;">
+                            <div class="card-img-overlay card_content text-start ps-3">
+                                <h2 class="text-white mb-3 ">Award Ceramony 2025</h2>
+
+                                <div class="col-8 text-start ps-3">
+                                      <p class="text-white "> School Cadet Society is a disciplined and structured organization that instills leadership,
+                                    teamwork, and a sense of responsibility in students. It provides training in basic military
+                                    drills, physical fitness, and survival skills while promoting patriotism and community service.</p> 
+                                </div>
+                                <a href="#" class="btn btn-warning rounded-pill mt-3 ">See more</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <div class="card  text-bg-dark shadow ">
+                            <img src="images/cadets.jpg" class="card-img" style="height: 20rem;">
+                            <div class="card-img-overlay card_content text-start ps-3">
+                                <h2 class="text-white mb-3 ">Award Ceramony 2025</h2>
+
+                                <div class="col-8 text-start ps-3">
+                                      <p class="text-white "> School Cadet Society is a disciplined and structured organization that instills leadership,
+                                    teamwork, and a sense of responsibility in students. It provides training in basic military
+                                    drills, physical fitness, and survival skills while promoting patriotism and community service.</p> 
+                                </div>
+                                <a href="#" class="btn btn-warning rounded-pill mt-3 ">See more</a>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-            
+            </div>
+
+
+
 
         </div>
 
