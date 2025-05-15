@@ -12,14 +12,14 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 100px;">
 
         <!-- footer -->
         <div class="row bg-dark">
             <div class="col-12 p-2" style="background-color: #ffb524;"></div>
             <div class="col-12 p-1" style="background-color: #bb2d3b;"></div>
 
-            <div class="col-10 offset-1  mt-5">
+            <div class="col-10 offset-1 ">
                 <div class="row">
                     <div class="col-lg-1 text-center">
                         <img src="images/hrccbadge.png" style="height: 80px;width: auto;" alt="">
