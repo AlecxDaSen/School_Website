@@ -41,7 +41,7 @@
 
 </head>
 
-<body class="evtbody">
+<body class="evtbody"  style="background-color: #eff2f1;">
     <?php include("loadingScreen.php"); ?>
 
     <?php include("header.php"); ?>

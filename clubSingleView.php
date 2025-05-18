@@ -18,7 +18,7 @@
     </head>
 </head>
 
-<body>
+<body  style="background-color: #eff2f1;">
     <div class="container-fluid">
 
         <div class="row" style="background-image:url(images/clubsbg4.jpeg);background-repeat: no-repeat;background-size: cover;">

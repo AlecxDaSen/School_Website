@@ -16,7 +16,7 @@
     </head>
 </head>
 
-<body class="bg-light">
+<body  style="background-color: #eff2f1;">
     <?php include("header.php"); ?>
     <div class="col-12">
 
@@ -90,7 +90,7 @@
 
                 <div class="col-10 offset-1">
                     <h3 class="text-dark mt-0 mb-5">Advanced Level Sections</h3>
-                    <div class="row text-center gap-4 align-items-center">
+                    <div class="row text-center gap-4 justify-content-around">
 
                         <div class="col-3 sectioncard  rounded text-center">
                             <h3 class="text-info mt-2">Mathematic</h3>
@@ -130,7 +130,7 @@
 
                 <div class="col-10 offset-1 text-center ">
 
-                    <div class="row gap-3 mx-auto">
+                    <div class="row gap-3 mx-auto justify-content-around">
 
                         <div class="card" style="width: 16rem;">
                             <img src="images/jathikapa2.jpeg" class="card-img-top mt-3" style="height: 14rem;">
@@ -294,13 +294,7 @@
                                 <img src="images/creativity.png" class="p-4">
                             </div>
                         </div>
-                        <!-- <p class="d-inline-flex gap-1">
-
-                        <div class=" col-3 p-4 shadow rounded" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"></div>
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
-                        </p> -->
+               
                         <div class="row mt-4 mb-4">
                             <div class="col-10 offset-1  mt-2 mb-2 ">
                                 <div class="collapse multi-collapse" id="rsmaths">

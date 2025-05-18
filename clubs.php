@@ -13,7 +13,7 @@
     <title>Clubs & Societies | HRCC</title>
 </head>
 
-<body>
+<body  style="background-color: #eff2f1;">
    
     <?php include("header.php"); ?>
 
