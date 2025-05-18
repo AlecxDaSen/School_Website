@@ -497,8 +497,8 @@
 
 .text-box {
   padding: 20px 30px;
-  background-color: rgba(0, 10, 54, 0.616);
-  box-shadow: 0 10px 10px 2px rgba(83, 82, 82, 0.7);
+  background-color: #023047 ;
+  box-shadow: 0 10px 10px 2px #0a6a9b8c;
   border-radius: 10px;
   margin: 10px;
 }
@@ -1241,9 +1241,13 @@ swiper-slide img {
     left: 0;
   }
 
+
+
   .r-container img,
   .l-container img {
-    left: 0px;
+    left: -15px;
+    height:80px;
+    width: 80px;
   }
 
   .right-container-arrow,

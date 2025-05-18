@@ -19,10 +19,10 @@
             <div class="col-12 p-2" style="background-color: #ffb524;"></div>
             <div class="col-12 p-1" style="background-color: #bb2d3b;"></div>
 
-            <div class="col-10 offset-1 ">
+            <div class="col-10 offset-1 mt-3">
                 <div class="row">
                     <div class="col-lg-1 text-center">
-                        <img src="images/hrccbadge.png" style="height: 80px;width: auto;" alt="">
+                        <img src="images/hrccbadge.png" style="height: 80px;width: auto;margin-top: 8px;" >
                     </div>
                     <div class="col-lg-4 col-sm-12 text-lg-start text-center">
                         <span class="fs-4 text-secondary">Rajasinghe Central College</span><br>

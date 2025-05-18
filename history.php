@@ -44,7 +44,7 @@
     </style>
 </head>
 
-<body class="bg-light">
+<body  style="background-color: #eff2f1;">
     <?php include("header.php");    ?>
     <div class="col-12">
 
