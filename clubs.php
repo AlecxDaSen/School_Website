@@ -13,25 +13,85 @@
     <title>Clubs & Societies | HRCC</title>
 </head>
 
-<body  style="background-color: #eff2f1;">
-   
+<style>
+    .hero-section {
+  background-attachment: fixed;
+  position: relative;
+}
+
+.club-card {
+  position: relative;
+  height: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.club-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.club-bg-img {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: transform 0.5s ease;
+}
+.club-card:hover .club-bg-img {
+  transform: scale(1.05);
+}
+
+.glass-card .club-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.club-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+.club-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+</style>
+
+<body>
+    <?php include("loadingScreen.php"); ?>
     <?php include("header.php"); ?>
 
-    <!-- <a href="#info" class="float_btn fixed-bottom btn btn-warning text-center"><i class="bi bi-arrow-down text-white fs-4"></i></a> -->
+    <div class="fade-in2">
     <div class="col-12">
 
         <section class="position-relative text-white" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/gallery1.jpg') center/cover no-repeat; height: 70vh; ">
             <div class="container h-100 d-flex flex-column justify-content-center align-items-start text-start">
                 <h1 class="display-4 fw-bold text-warning">Clubs & Societies</h1>
                 <p class="lead">Stay in the loop with exciting community and school activities.</p>
-                <a href="#info" class="btn btn-warning px-4 py-2 mt-3 rounded-pill">Have a Look !</a>
+                <a href="#clubs" class="btn btn-warning px-4 py-2 mt-3 rounded-pill">Have a Look !</a>
             </div>
 
         </section>
     </div>
 
     <div class="container-fluid">
-
 
             <!-- begin -->
             <div class="col-10 offset-1 text-center mb-3 ">
@@ -50,82 +110,37 @@
 
         <!-- clubs cards -->
 
-        <div class=" row justify-content-center gap-4 " id="info">
+        <section id="clubs" class="py-5 mt-3">
+            <div class="container">
+            <div class="row g-4 justify-content-center">
 
-
-            <div class="card p-0 text-center " style="width: 18rem;">
-                <img src="images/gallery7.jpg" class="card-img-top rounded " alt="...">
-
-                <div class="card__data">
-
-                    <img src="images/cadets.png" class="clubicon">
-                    <h5 class="card-title mt-3 fs-4 text-secondary">Cadets </h5>
-                    <p class="card-text text-black">The School Cadet Society is a disciplined and structured </p>
-                    <a href="clubSingleView.php" class="text-black-50 text-decoration-underline text-center ">See more</a>
+                <?php
+                $clubs = [
+                ['img' => 'gallery7.jpg', 'icon' => 'cadets.png', 'name' => 'Cadets', 'desc' => 'Discipline, duty, and national service.'],
+                ['img' => 'gallery1.jpg', 'icon' => 'scouts.png', 'name' => 'Scouts', 'desc' => 'Adventure, leadership, and global brotherhood.'],
+                ['img' => 'gallery1.jpg', 'icon' => 'photography.jpeg', 'name' => 'Photography', 'desc' => 'Storytelling through lens and light.'],
+                ['img' => 'gallery1.jpg', 'icon' => 'nature.jpeg', 'name' => 'Nature Club', 'desc' => 'Eco-awareness and sustainable living.'],
+                ['img' => 'gallery1.jpg', 'icon' => 'nature.jpeg', 'name' => 'Eco Society', 'desc' => 'Protect. Plant. Preserve.'],
+                ];
+                foreach ($clubs as $club): ?>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="club-card glass-card text-white position-relative overflow-hidden shadow-lg rounded-4 h-100">
+                    <img src="images/<?= $club['img'] ?>" class="club-bg-img" alt="<?= $club['name'] ?>">
+                    <div class="club-overlay p-4">
+                        <div class="club-icon-wrapper mb-3">
+                        <img src="images/<?= $club['icon'] ?>" class="club-icon" alt="<?= $club['name'] ?> icon">
+                        </div>
+                        <h5 class="fw-bold"><?= $club['name'] ?></h5>
+                        <p class="small"><?= $club['desc'] ?></p>
+                        <a href="clubSingleView.php" class="btn btn-outline-warning btn-sm rounded-pill mt-2">Learn More</a>
+                    </div>
+                    </div>
                 </div>
+                <?php endforeach; ?>
 
             </div>
-
-
-            <div class="card p-0 text-center " style="width: 18rem;">
-                <img src="images/gallery1.jpg" class="card-img-top rounded " alt="...">
-
-                <div class="card__data">
-
-                    <img src="images/scouts.png" class="clubicon">
-                    <h5 class="card-title mt-3 fs-4 text-secondary">Scouts </h5>
-                    <p class="card-text text-black">The School Cadet Society is a disciplined and structured...</p>
-                    <a href="#" class="text-black-50 text-decoration-underline text-center ">See more</a>
-                </div>
-
             </div>
-
-
-            <div class="card p-0 text-center " style="width: 18rem;">
-                <img src="images/gallery1.jpg" class="card-img-top rounded " alt="...">
-
-                <div class="card__data">
-
-                    <img src="images/photography.jpeg" class="clubicon">
-                    <h5 class="card-title mt-3 fs-4 text-secondary">Photography </h5>
-                    <p class="card-text text-black">The School Cadet Society is a disciplined and structured </p>
-                    <a href="#" class="text-black-50 text-decoration-underline text-center ">See more</a>
-                </div>
-
-            </div>
-
-
-            <div class="card p-0 text-center " style="width: 18rem;">
-                <img src="images/gallery1.jpg" class="card-img-top rounded " alt="...">
-
-                <div class="card__data">
-
-                    <img src="images/nature.jpeg" class="clubicon">
-                    <h5 class="card-title mt-3 fs-4 text-secondary">Nature </h5>
-                    <p class="card-text text-black">The School Cadet Society is a disciplined and structured </p>
-                    <a href="#" class="text-black-50 text-decoration-underline text-center ">See more</a>
-                </div>
-
-            </div>
-
-
-            <div class="card p-0 text-center " style="width: 18rem;">
-                <img src="images/gallery1.jpg" class="card-img-top rounded " alt="...">
-
-                <div class="card__data">
-
-                    <img src="images/nature.jpeg" class="clubicon">
-                    <h5 class="card-title mt-3 fs-4 text-secondary">Nature </h5>
-                    <p class="card-text text-black">The School Cadet Society is a disciplined and structured </p>
-                    <a href="#" class="text-black-50 text-decoration-underline text-center ">See more</a>
-                </div>
-
-            </div>
-
-
-
-
-        </div>
+        </section>
         <!-- clubs cards -->
 
         <div class=""></div>
@@ -133,7 +148,7 @@
 
 
     </div>
-
+    </div>
     <?php include("footer.php"); ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

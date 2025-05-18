@@ -81,7 +81,7 @@
                     </span>
 
                     <div class="col-lg-2 offset-lg-5 d-grid mt-5 mb-1 ">
-                        <a href="history.php" class="btn btn-outline-danger fw-bold rounded-pill">Read More...</a>
+                        <a href="aboutUs.php#history" class="btn btn-outline-danger fw-bold rounded-pill">Read More...</a>
                     </div>
 
                 </div>
@@ -247,7 +247,7 @@
                     Welcome to HRCC — where we nurture minds and shape the future. As principal, I'm proud to lead a community grounded in integrity, creativity, and excellence.
                     Join us as we build a vibrant environment where every student can shine.
                 </p>
-                <a href="#" class="btn btn-outline-warning mt-3 rounded-pill px-4">Read More</a>
+                <a href="aboutUs.php#Pmsg" class="btn btn-outline-warning mt-3 rounded-pill px-4">Read More</a>
             </div>
         </div>
     </section>
