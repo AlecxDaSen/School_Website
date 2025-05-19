@@ -232,7 +232,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-10 offset-1 mb-3">
+                            <div class="col-lg-10 offset-lg-1 col-sm-12 offset-sm-0 mb-3">
 
                                 <!-- event card -->
                                 <div class="row g-0 rounded shadow mt-2 mb-2">
@@ -240,16 +240,16 @@
                                         <div id="carouselExampleFade" class="carousel slide carousel-fade rounded" data-bs-ride="carousel">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
-                                                    <img src="images/mathday.jpg" class="d-block w-100 rounded-start" alt="...">
+                                                    <img src="images/mathday.jpg" class="d-block w-100 academCaroImg" alt="...">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="images/mathsday2.jpg" class="d-block w-100 rounded-start" alt="...">
+                                                    <img src="images/mathsday2.jpg" class="d-block w-100 academCaroImg" alt="...">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="images/mathsday3.jpg" class="d-block w-100 rounded-start" alt="...">
+                                                    <img src="images/mathsday3.jpg" class="d-block w-100 academCaroImg" alt="...">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="images/mathsday4.jpg" class="d-block w-100 rounded-start" alt="...">
+                                                    <img src="images/mathsday4.jpg" class="d-block w-100 academCaroImg" alt="...">
                                                 </div>
                                             </div>
 
