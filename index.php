@@ -267,7 +267,7 @@
                 <p class="fs-5 text-black-50">Clubs & Societies that student can develop their knowledge & quality</p>
 
 
-                <div class="timeline col-12 p-2">
+                <div class="timeline col-12 p-1">
 
 
                     <div class="timeline-container l-container">
@@ -365,33 +365,35 @@
                     </div>
                 </div>
             </div>
+<div class="col-12 text-center">
 
-            <section class="enrollment-section">
-                <div class="image-section">
-                    <img src="images/gallery1.jpg" alt="Students enrolling at a campus">
-                </div>
-                <div class="text-section">
+
+    <section class="enrollment-section">
+        <div class="image-section">
+            <img src="images/gallery1.jpg" alt="Students enrolling at a campus">
+        </div>
+        <div class="text-section">
                     <h1>Student Applications</h1>
                     <p>
                         Take the first step toward your bright future. Join our vibrant student community, access quality education, and start shaping your tomorrow today.
                     </p>
-
+                    
                     <!-- Grade Selection Tabs -->
                     <div class="grade-tabs">
                         <button class="tab-btn active" onclick="showGrade('grade6')">Grade 6</button>
                         <button class="tab-btn" onclick="showGrade('AL')">Advanced Level</button>
                     </div>
-
+                    
                     <!-- Grade 6 Download -->
                     <div id="grade6" class="download-section active">
                         <button class="download-btn pixel-corners">
                             <div class="button-content">
                                 <div class="svg-container">
                                     <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24">
+                                    viewBox="0 0 24 24">
                                         <path
-                                            d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z">
-                                        </path>
+                                        d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z">
+                                    </path>
                                     </svg>
                                 </div>
                                 <div class="text-container">
@@ -421,16 +423,17 @@
                     </div>
                 </div>
             </section>
-
-
-
+            
+        </div>
+            
+            
             <div class="col-12 mt-5 text-center">
                 <h3 class="text-danger text-uppercase">Visit our School </h3>
                 <span class="text-black-50 fs-5 fw-bold mb-3">Here's the location of paradise all willing to be a son or daughter</span>
 
                 <div class="col-10 offset-1 ">
                     <iframe class="shadow border-dark rounded mb-4 mt-4"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.6356694311858!2d80.08790474210592!3d6.908798724211914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae254a5f23fd9a9%3A0xbb14d696456a6ca1!2sHanwella%20Rajasinghe%20Central%20College!5e0!3m2!1sen!2slk!4v1743058903583!5m2!1sen!2slk"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.6356694311858!2d80.08790474210592!3d6.908798724211914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae254a5f23fd9a9%3A0xbb14d696456a6ca1!2sHanwella%20Rajasinghe%20Central%20College!5e0!3m2!1sen!2slk!4v1743058903583!5m2!1sen!2slk"
                         width="100%"
                         height="600"
                         style="border:0;"
