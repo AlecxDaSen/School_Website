@@ -57,7 +57,7 @@
 
             <div class="text-center text-lg-start mt-4 pt-2">
                 <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                style="padding-left: 2.5rem; padding-right: 2.5rem;" onclick="adminLogin();">Login</button>
             </div>
 
             </form>
@@ -73,5 +73,7 @@
         <!-- Copyright -->
     </div>
     </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
