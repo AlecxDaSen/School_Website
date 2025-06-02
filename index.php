@@ -16,6 +16,129 @@
 
 
 <body class="main-body" style="background-color: #eff2f1;">
+    <style>
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        border-bottom: 3px solid #ffc107;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .news-card,
+    .event-card {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        width: 240px;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+
+
+    .news-card {
+        background-color: #fff;
+        color: #000;
+        flex: 0 0 auto;
+        width: 250px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        scroll-snap-align: start;
+        transition: transform 0.3s;
+    }
+
+    .event-card {
+        background-color: #151d30;
+        color: #fff;
+        border: 1px solid #ffc107;
+        box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+    }
+
+    .news-img,
+    .event-img {
+        height: 140px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-body-custom {
+        padding: 0.75rem 1rem;
+    }
+
+    .card-body-custom h6 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+    }
+
+    .card-body-custom p {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .bg-news-events {
+        background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('images/gallery3.jpg') center/cover no-repeat;
+        padding: 100px 0;
+    }
+
+
+    .scroll-cards.active {
+    cursor: grabbing;
+    }
+
+    .scroll-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    cursor: grab;
+    scroll-snap-type: x mandatory;
+    }
+
+    .scroll-cards::-webkit-scrollbar {
+    display: none;
+    }
+
+    @media (max-width: 768px) {
+    .news-card {
+        width: 200px;
+    }
+    }
+
+    .news-card {
+    user-select: none;         /* Prevents text selection */
+    -webkit-user-drag: none;   /* Prevents image dragging in Safari/Chrome */
+    cursor: grab;              /* Visual feedback for drag */
+    }
+
+    .event-card {
+    user-select: none;         /* Prevents text selection */
+    -webkit-user-drag: none;   /* Prevents image dragging in Safari/Chrome */
+    cursor: grab;              /* Visual feedback for drag */
+    }
+
+    .news-card img {
+    user-select: none;           /* Prevent selecting the image */
+    -webkit-user-drag: none;     /* Prevent dragging in Safari/Chrome */
+    pointer-events: none;        /* Optional: Disable any mouse interactions (clicks, drags) */
+    }
+
+    .event-card img {
+    user-select: none;           /* Prevent selecting the image */
+    -webkit-user-drag: none;     /* Prevent dragging in Safari/Chrome */
+    pointer-events: none;        /* Optional: Disable any mouse interactions (clicks, drags) */
+    }
+    .news-card:active {
+    cursor: grabbing;
+    }
+
+
+
+    </style>
 
     <?php include("loadingScreen.php"); ?>
 
@@ -62,7 +185,185 @@
             </div>
 
         </div>
+    </div>
 
+    <section class="position-relative text-white bg-news-events mt-5">
+    <div class="container">
+
+        <!-- News Section -->
+        <div class="mb-5">
+        <div class="text-center mb-4">
+            <h2 class="section-title text-warning">Latest News</h2>
+            <p class="text-light">HRCC News and Updates</p>
+        </div>
+
+        <div class="scroll-cards">
+            <!-- Repeat as needed -->
+            <div class="news-card">
+            <img src="images/cadetsimg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Principal Appointed</h6>
+                <p><small>April 3rd, 2025</small></p>
+                <p>Mr. Athula Wijewardena was appointed principal of Royal College...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/gallery2.jpg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Junior Steward Post</h6>
+                <p><small>March 27th, 2025</small></p>
+                <p>Applications are open for the post of Junior Steward 2025...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/cadetsimg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Principal Appointed</h6>
+                <p><small>April 3rd, 2025</small></p>
+                <p>Mr. Athula Wijewardena was appointed principal of Royal College...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/gallery2.jpg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Junior Steward Post</h6>
+                <p><small>March 27th, 2025</small></p>
+                <p>Applications are open for the post of Junior Steward 2025...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/cadetsimg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Principal Appointed</h6>
+                <p><small>April 3rd, 2025</small></p>
+                <p>Mr. Athula Wijewardena was appointed principal of Royal College...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/gallery2.jpg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Junior Steward Post</h6>
+                <p><small>March 27th, 2025</small></p>
+                <p>Applications are open for the post of Junior Steward 2025...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/cadetsimg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Principal Appointed</h6>
+                <p><small>April 3rd, 2025</small></p>
+                <p>Mr. Athula Wijewardena was appointed principal of Royal College...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/gallery2.jpg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Junior Steward Post</h6>
+                <p><small>March 27th, 2025</small></p>
+                <p>Applications are open for the post of Junior Steward 2025...</p>
+            </div>
+            </div>
+
+            <!-- Add more news cards -->
+        </div>
+        </div>
+
+        <!-- Events Section -->
+        <div>
+        <div class="text-center mb-4">
+            <h2 class="section-title text-warning">Upcoming Events</h2>
+            <p class="text-light">What’s happening soon at HRCC</p>
+        </div>
+
+        <div class="scroll-cards">
+            <!-- Repeat as needed -->
+            <div class="event-card">
+            <img src="images/gallery5.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Science Exhibition</h6>
+                <p><small>June 15, 2025</small></p>
+                <p>Annual science fair where students showcase their innovations.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery2.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Founder’s Day</h6>
+                <p><small>July 1, 2025</small></p>
+                <p>Special ceremony to honor the foundation of HRCC.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery5.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Science Exhibition</h6>
+                <p><small>June 15, 2025</small></p>
+                <p>Annual science fair where students showcase their innovations.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery2.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Founder’s Day</h6>
+                <p><small>July 1, 2025</small></p>
+                <p>Special ceremony to honor the foundation of HRCC.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery5.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Science Exhibition</h6>
+                <p><small>June 15, 2025</small></p>
+                <p>Annual science fair where students showcase their innovations.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery2.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Founder’s Day</h6>
+                <p><small>July 1, 2025</small></p>
+                <p>Special ceremony to honor the foundation of HRCC.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery5.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Science Exhibition</h6>
+                <p><small>June 15, 2025</small></p>
+                <p>Annual science fair where students showcase their innovations.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery2.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Founder’s Day</h6>
+                <p><small>July 1, 2025</small></p>
+                <p>Special ceremony to honor the foundation of HRCC.</p>
+            </div>
+            </div>
+
+            <!-- Add more event cards -->
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+    <div class="container-fluid">
         <div class="col-lg-12 mt-5">
 
             <div class="col-10 offset-1 bg-body  shadow-lg p-5 pb-2 text-center" style="border-radius:15px;">
@@ -498,6 +799,60 @@
             document.getElementById(gradeId).classList.add("active");
             document.querySelector(`[onclick="showGrade('${gradeId}')"]`).classList.add("active");
         }
+
+        // Make scrollable containers draggable
+        document.querySelectorAll('.scroll-cards').forEach(container => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            container.addEventListener('mousedown', (e) => {
+            isDown = true;
+            container.classList.add('active');
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+            });
+
+            container.addEventListener('mouseleave', () => {
+            isDown = false;
+            container.classList.remove('active');
+            });
+
+            container.addEventListener('mouseup', () => {
+            isDown = false;
+            container.classList.remove('active');
+            });
+
+            container.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+            });
+
+            // Auto-slide every 4s
+            const cards = container.querySelectorAll('.news-card');
+            let currentIndex = 0;
+            const maxVisible = 9;
+            if (cards.length > maxVisible) {
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                const cardWidth = cards[0].offsetWidth + 16; // width + gap
+                container.scrollTo({
+                left: currentIndex * cardWidth,
+                behavior: 'smooth'
+                });
+            }, 2000);
+            }
+
+            // Limit to 9 cards
+            cards.forEach((card, index) => {
+            if (index >= maxVisible) card.style.display = 'none';
+            });
+        });
+
+        
     </script>
 
 </body>

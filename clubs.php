@@ -15,62 +15,62 @@
 
 <style>
     .hero-section {
-  background-attachment: fixed;
-  position: relative;
-}
+    background-attachment: fixed;
+    position: relative;
+  }
 
-.club-card {
-  position: relative;
-  height: 100%;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.club-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
-}
+  .club-card {
+    position: relative;
+    height: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .club-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+  }
 
-.club-bg-img {
-  position: absolute;
-  top: 0; left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  filter: brightness(0.6);
-  transition: transform 0.5s ease;
-}
-.club-card:hover .club-bg-img {
-  transform: scale(1.05);
-}
+  .club-bg-img {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+    transition: transform 0.5s ease;
+  }
+  .club-card:hover .club-bg-img {
+    transform: scale(1.05);
+  }
 
-.glass-card .club-overlay {
-  position: relative;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 1rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 2rem;
-  text-align: center;
-}
+  .glass-card .club-overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
 
-.club-icon-wrapper {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto;
-  background: white;
-  padding: 5px;
-  border-radius: 50%;
-}
-.club-icon {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
+  .club-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  .club-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
 </style>
 
