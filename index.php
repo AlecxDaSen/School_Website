@@ -136,7 +136,33 @@
     cursor: grabbing;
     }
 
+    .glass-card {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
+    .glass-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-bg {
+        background: linear-gradient(135deg, #f8f9fa, #ffffff);
+        padding: 60px 0;
+    }
+
+    .icon-box {
+        width: 60px;
+        height: 60px;
+        display: grid;
+        place-items: center;
+        font-size: 1.75rem;
+        border-radius: 50%;
+    }
+
+    
 
     </style>
 
@@ -185,6 +211,148 @@
             </div>
 
         </div>
+
+
+        <div class="container my-5">
+        <div class="row g-4 justify-content-center">
+
+            <!-- Vision Card -->
+            <div class="col-md-6">
+            <div class="bg-white border-0 shadow-lg rounded-4 p-4 h-100">
+                <h2 class="text-uppercase fw-semibold text-secondary border-bottom pb-2 mb-3" style="letter-spacing: 1px;">
+                Our Vision
+                </h2>
+                <p class="fs-5 text-dark m-0">
+                To produce excellent, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+            </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="col-md-6">
+            <div class="bg-light border-0 shadow-sm rounded-4 p-4 h-100">
+                <h2 class="text-uppercase fw-semibold text-danger border-bottom pb-2 mb-3" style="letter-spacing: 1px;">
+                Mission
+                </h2>
+                <p class="fs-5 text-dark m-0">
+                Aiming to create individuals with a creative and balanced personality, nourished with competencies based on self-esteem and identity, and capable of involving in sustainable development.
+                </p>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+
+        <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 bg-light border-0 shadow-lg rounded-4 p-5">
+            
+            <div class="mb-5">
+                <h2 class="text-uppercase fw-semibold text-secondary border-bottom pb-2 mb-3" style="letter-spacing: 1px;">
+                Our Vision
+                </h2>
+                <p class="fs-5 text-dark m-0">
+                To produce excellent, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-uppercase fw-semibold text-danger border-bottom pb-2 mb-3" style="letter-spacing: 1px;">
+                Mission
+                </h2>
+                <p class="fs-5 text-dark m-0">
+                Aiming to create individuals with a creative and balanced personality, nourished with competencies based on self-esteem and identity, and capable of involving in sustainable development.
+                </p>
+            </div>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="container my-5">
+        <div class="row g-4 justify-content-center">
+
+            <!-- Vision Card -->
+            <div class="col-md-6">
+            <div class="card border-0 shadow-sm h-100 rounded-4">
+                <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="bg-secondary-subtle text-secondary rounded-circle p-3 me-3">
+                    <i class="bi bi-eye-fill fs-4"></i>
+                    </div>
+                    <h4 class="text-uppercase fw-bold m-0 text-secondary">Our Vision</h4>
+                </div>
+                <p class="fs-5 text-dark">
+                    To produce excellent, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="col-md-6">
+            <div class="card border-0 shadow-sm h-100 rounded-4">
+                <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="bg-danger-subtle text-danger rounded-circle p-3 me-3">
+                    <i class="bi bi-bullseye fs-4"></i>
+                    </div>
+                    <h4 class="text-uppercase fw-bold m-0 text-danger">Mission</h4>
+                </div>
+                <p class="fs-5 text-dark">
+                    Aiming to create individuals with a creative and balanced personality, nourished with competencies based on self-esteem and identity, and capable of involving in sustainable development.
+                </p>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+        <section class="section-bg">
+        <div class="container text-center mb-5">
+            <h2 class="fw-bold text-uppercase text-dark mb-3">Vision & Mission</h2>
+            <p class="text-muted fs-5">Our guiding principles that shape the future of Rajasinghe Central College.</p>
+        </div>
+
+        <div class="container">
+            <div class="row g-4">
+
+            <!-- Vision Card -->
+            <div class="col-md-6">
+                <div class="p-4 rounded-4 glass-card h-100 text-start">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="icon-box bg-secondary-subtle text-secondary me-3">
+                    <i class="bi bi-eye-fill"></i>
+                    </div>
+                    <h4 class="text-uppercase fw-bold mb-0 text-secondary">Our Vision</h4>
+                </div>
+                <p class="fs-5 text-dark mt-2">
+                    To produce excellent, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+                </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="col-md-6">
+                <div class="p-4 rounded-4 glass-card h-100 text-start">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="icon-box bg-danger-subtle text-danger me-3">
+                    <i class="bi bi-bullseye"></i>
+                    </div>
+                    <h4 class="text-uppercase fw-bold mb-0 text-danger">Mission</h4>
+                </div>
+                <p class="fs-5 text-dark mt-2">
+                    Aiming to create individuals with a creative and balanced personality, nourished with competencies based on self-esteem and identity, and capable of involving in sustainable development.
+                </p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
     </div>
 
     <section class="position-relative text-white bg-news-events mt-5">
@@ -366,7 +534,7 @@
     <div class="container-fluid">
         <div class="col-lg-12 mt-5">
 
-            <div class="col-10 offset-1 bg-body  shadow-lg p-5 pb-2 text-center" style="border-radius:15px;">
+            <!-- <div class="col-10 offset-1 bg-body  shadow-lg p-5 pb-2 text-center" style="border-radius:15px;">
 
                 <div class="col-12 d-flex flex-column justify-content-end">
 
@@ -388,6 +556,67 @@
                 </div>
 
 
+            </div> -->
+
+
+            <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 bg-white shadow-lg p-5 text-center" style="border-radius: 15px;">
+
+                <h2 class="text-danger fw-semibold text-uppercase border-bottom pb-3 mb-4">
+                    History
+                </h2>
+
+                <p class="fs-5 text-dark">
+                    The school was established in 1886 and was initially named Hanwella Bilingual School. It was later renamed Hanwella Madhya Maha Vidyalaya when free education was introduced from primary level to university by Dr. C.W.W. Kannangara.
+                </p>
+
+                <p class="fs-5 text-dark d-none d-md-block">
+                    The school motto, <strong>“With Faith and Strength,”</strong> reflects its commitment to producing knowledgeable and virtuous individuals. Rajasinghe Central College is part of the Seethawaka division and the Homagama zone in the Western Province. The school’s vision is to produce excellent, dignified, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+
+                <div class="mt-4">
+                    <a href="aboutUs.php#history" class="btn btn-outline-danger fw-semibold rounded-pill px-4 py-2">
+                    Read More...
+                    </a>
+                </div>
+
+                </div>
+            </div>
+            </div>
+
+            <div class="container my-5">
+            <div class="row align-items-center bg-white shadow-sm shadow-lg overflow-hidden" style="border-radius: 15px;">
+
+                <!-- Image Column -->
+                <div class="col-md-6 p-0">
+                <img src="images/gallery3.jpg" 
+                    alt="Rajasinghe School History" 
+                    class="img-fluid w-100 h-100 object-fit-cover">
+                </div>
+
+                <!-- Text Column -->
+                <div class="col-md-6 p-4 p-md-5 text-start">
+                <h2 class="text-danger fw-bold text-uppercase border-start border-4 border-danger ps-3 mb-4">
+                    History
+                </h2>
+
+                <p class="fs-5 text-secondary">
+                    The school was established in 1886 and was initially named Hanwella Bilingual School. It was later renamed Hanwella Madhya Maha Vidyalaya when free education was introduced from primary level to university by Dr. C.W.W. Kannangara.
+                </p>
+
+                <!-- Second paragraph hidden on small screens -->
+                <p class="fs-6 text-muted d-none d-md-block">
+                    “With Faith and Strength” reflects the school's commitment to producing knowledgeable and virtuous individuals. Rajasinghe Central College is part of the Seethawaka division and the Homagama zone in the Western Province. The school’s vision is to produce excellent, dignified, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+
+                <a href="aboutUs.php#history" class="btn btn-outline-danger fw-semibold rounded-pill mt-3 px-4">
+                    Read More...
+                </a>
+                
+                </div>
+
+            </div>
             </div>
 
         </div>
@@ -398,41 +627,44 @@
 
                     <div class="col-lg-3 col-sm-6 gap-1 mb-3 ">
                         <div class="stat-box bg-body">
-                            <h2 data-target="3000">0</h2>
+                            <h2 data-target="2700">0</h2>
                             <div class="label">
                                 <p class="text">Students</p>
                             </div>
-                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                            <p class="description">Currently enrolled at Rajasinghe Central College.</p>
                         </div>
                     </div>
+                    
+
 
                     <div class="col-lg-3 col-sm-6 gap-1 mb-3 ">
                         <div class="stat-box bg-body">
-                            <h2 data-target="2500">0</h2>
+                            <h2 data-target="250">0</h2>
                             <div class="label">
                                 <p class="text">Teachers</p>
                             </div>
-                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                             <p class="description">Currently worked at Rajasinghe Central College.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-sm-6 gap-1 mb-3 ">
                         <div class="stat-box bg-body">
-                            <h2 data-target="1800">0</h2>
+                            <h2 data-target="100">0</span></h2>
                             <div class="label">
-                                <p class="text">Graduates</p>
+                                <p class="text">Odinary Level Exam Results  &percnt;</p>
                             </div>
-                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                             <p class="description">According to <br>the latest exam results.</p>
                         </div>
                     </div>
+                    
 
                     <div class="col-lg-3 col-sm-6 gap-1 mb-3 ">
                         <div class="stat-box bg-body">
-                            <h2 data-target="1800">0</h2>
+                            <h2 data-target="400">0</h2>
                             <div class="label">
-                                <p class="text">Graduates</p>
+                                <p class="text">Univercity Selected Students</p>
                             </div>
-                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                             <p class="description">According to <br>the latest exam results.</p>
                         </div>
                     </div>
 
@@ -526,11 +758,6 @@
 
 
         </div>
-
-        <!-- latest news -->
-
-
-
 
     </div>
 

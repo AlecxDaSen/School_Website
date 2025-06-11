@@ -107,31 +107,133 @@
         <div id="home" class="content-section active">
           <h2>Home&nbsp;&nbsp;<i class="bi bi-house-door"></i></h2>
           <p>Welcome to the homepage!</p>
-          <div class="row g-3">
-            <div class="col-md-6 col-lg-3">
-                <div class="card text-center p-3 shadow-sm border-0 rounded-4">
-                <i class="bi bi-person-fill-gear text-primary fs-1"></i>
-                <p class="mt-2 mb-0">Update Student/teacher counter</p>
+
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                <!-- Student/Teacher Counters -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#counterSection" aria-expanded="true" aria-controls="counterSection">
+                            <i class="bi bi-person-fill-gear text-primary fs-2"></i>&nbsp;&nbsp;Update Student/Teacher Counter
+                        </button>
+                    </h2>
+                    <div id="counterSection" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <!-- Student Counter -->
+                                <div class="col-lg-6">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Student Counter">
+                                        <button type="submit" name="update_student_counter" class="btn btn-outline-secondary"><i class="bi bi-save2"></i> Update</button>
+                                    </div>
+                                </div>
+                                <!-- Teacher Counter -->
+                                <div class="col-lg-6">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Teacher Counter">
+                                        <button type="submit" name="update_teacher_counter" class="btn btn-outline-secondary"><i class="bi bi-save2"></i> Update</button>
+                                    </div>
+                                </div>
+                                <!-- O/L Results Counter -->
+                                <div class="col-lg-6">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="O/L Results Counter">
+                                        <button type="submit" name="update_ol_results_counter" class="btn btn-outline-secondary"><i class="bi bi-save2"></i> Update</button>
+                                    </div>
+                                </div>
+                                <!-- University Students Counter -->
+                                <div class="col-lg-6">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="University Students Counter">
+                                        <button type="submit" name="update_university_students_counter" class="btn btn-outline-secondary"><i class="bi bi-save2"></i> Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card text-center p-3 shadow-sm border-0 rounded-4">
-                <i class="bi bi-chat-left-text text-success fs-1"></i>
-                <p class="mt-2 mb-0">Update Principles Message</p>
+
+                <!-- Principal Message -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#principalMsgSection" aria-expanded="false" aria-controls="principalMsgSection">
+                            <i class="bi bi-chat-left-text text-success fs-2"></i>&nbsp;&nbsp;Update Principal's Message
+                        </button>
+                    </h2>
+                    <div id="principalMsgSection" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <div class="form-floating mb-2">
+                                <textarea class="form-control" id="principalMsgTextarea" name="principal_message" placeholder="Add principal message..." style="height: 150px;" required></textarea>
+                                <label for="principalMsgTextarea"><i class="bi bi-chat-left-text"></i> Principal Message</label>
+                                <div class="invalid-feedback">Please enter the principal's message.</div>
+                            </div>
+                            <div class="text-end mb-2">
+                                <button type="submit" name="update_principal_message" class="btn btn-outline-secondary"><i class="bi bi-save2"></i> Update</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card text-center p-3 shadow-sm border-0 rounded-4">
-                <i class="bi bi-house-gear-fill text-primary fs-1"></i>
-                <p class="mt-2 mb-0">Update Clubs Summary</p>
+
+                <!-- Clubs Summary -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#clubsSummarySection" aria-expanded="false" aria-controls="clubsSummarySection">
+                            <i class="bi bi-house-gear-fill text-primary fs-2"></i>&nbsp;&nbsp;Update Clubs Summary
+                        </button>
+                    </h2>
+                    <div id="clubsSummarySection" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="clubSelector" name="club">
+                                    <option selected disabled>Select a club</option>
+                                    <option value="club1">Club One</option>
+                                    <option value="club2">Club Two</option>
+                                    <option value="club3">Club Three</option>
+                                </select>
+                                <label for="clubSelector">Select Club</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <textarea class="form-control" id="clubSummaryTextarea" name="club_summary" placeholder="Add club summary..." style="height: 150px;" required></textarea>
+                                <label for="clubSummaryTextarea"><i class="bi bi-chat-left-text"></i> Club Summary</label>
+                                <div class="invalid-feedback">Please enter the club summary.</div>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" name="update_club_summary" class="btn btn-outline-secondary"><i class="bi bi-save2"></i> Update</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card text-center p-3 shadow-sm border-0 rounded-4">
-                <i class="bi bi-file-text text-success fs-1"></i>
-                <p class="mt-2 mb-0">Update Student Applications</p>
+
+                <!-- Student Applications -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#studentAppSection" aria-expanded="false" aria-controls="studentAppSection">
+                            <i class="bi bi-file-text text-success fs-2"></i>&nbsp;&nbsp;Update Student Applications
+                        </button>
+                    </h2>
+                    <div id="studentAppSection" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <!-- Application File 1 -->
+                                <div class="col-lg-6">
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="studentAppFile1" name="student_app_file_1">
+                                        <button class="btn btn-outline-secondary" type="button">Upload</button>
+                                    </div>
+                                </div>
+                                <!-- Application File 2 -->
+                                <div class="col-lg-6">
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="studentAppFile2" name="student_app_file_2">
+                                        <button class="btn btn-outline-secondary" type="button">Upload</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
             </div>
         </div>
 
@@ -605,65 +707,65 @@
 
         <div id="about" class="content-section">
           <h2>About Us&nbsp;&nbsp;<i class="bi bi-chat-right-text"></i></h2>
-<form action="update-about.php" method="POST" enctype="multipart/form-data" novalidate class="p-4 bg-light rounded shadow-sm">
+            <form action="update-about.php" method="POST" enctype="multipart/form-data" novalidate class="p-4 bg-light rounded shadow-sm">
 
-    <input type="hidden" name="event_id" value="">
+                <input type="hidden" name="event_id" value="">
 
-    <!-- ========== History Section ========== -->
-    <h4 class="text-dark mb-3"><i class="bi bi-journal-text"></i> History Section</h4>
-    <hr class="mb-4">
+                <!-- ========== History Section ========== -->
+                <h4 class="text-dark mb-3"><i class="bi bi-journal-text"></i> History Section</h4>
+                <hr class="mb-4">
 
-    <!-- History Summary -->
-    <div class="form-floating mb-4">
-        <textarea class="form-control" id="historySum" name="history_summary" placeholder="Add summary..." style="height: 150px;" required></textarea>
-        <label for="historySum"><i class="bi bi-card-text"></i> History Summary</label>
-        <div class="invalid-feedback">Please add a summary description.</div>
-    </div>
-    <div class="text-end mb-5">
-        <button type="submit" name="update_summary" class="btn btn-outline-primary px-4"><i class="bi bi-save2"></i> Update Summary</button>
-    </div>
+                <!-- History Summary -->
+                <div class="form-floating mb-4">
+                    <textarea class="form-control" id="historySum" name="history_summary" placeholder="Add summary..." style="height: 150px;" required></textarea>
+                    <label for="historySum"><i class="bi bi-card-text"></i> History Summary</label>
+                    <div class="invalid-feedback">Please add a summary description.</div>
+                </div>
+                <div class="text-end mb-5">
+                    <button type="submit" name="update_summary" class="btn btn-outline-primary px-4"><i class="bi bi-save2"></i> Update Summary</button>
+                </div>
 
-    <!-- Full History -->
-    <div class="form-floating mb-4">
-        <textarea class="form-control" id="history" name="full_history" placeholder="Add full history..." style="height: 150px;" required></textarea>
-        <label for="history"><i class="bi bi-book"></i> Full History</label>
-        <div class="invalid-feedback">Please add the full history description.</div>
-    </div>
-    <div class="text-end mb-5">
-        <button type="submit" name="update_history" class="btn btn-outline-primary px-4"><i class="bi bi-save2"></i> Update History</button>
-    </div>
+                <!-- Full History -->
+                <div class="form-floating mb-4">
+                    <textarea class="form-control" id="history" name="full_history" placeholder="Add full history..." style="height: 150px;" required></textarea>
+                    <label for="history"><i class="bi bi-book"></i> Full History</label>
+                    <div class="invalid-feedback">Please add the full history description.</div>
+                </div>
+                <div class="text-end mb-5">
+                    <button type="submit" name="update_history" class="btn btn-outline-primary px-4"><i class="bi bi-save2"></i> Update History</button>
+                </div>
 
-    <!-- ========== Add New Principal ========== -->
-    <h4 class="text-dark mb-3"><i class="bi bi-person-plus-fill"></i> Add New Principal</h4>
-    <hr class="mb-4">
+                <!-- ========== Add New Principal ========== -->
+                <h4 class="text-dark mb-3"><i class="bi bi-person-plus-fill"></i> Add New Principal</h4>
+                <hr class="mb-4">
 
-    <!-- Principal Name -->
-    <div class="form-floating mb-4">
-        <input type="text" class="form-control" id="newPrincipalName" name="new_principal_name" placeholder="Principal Name" required>
-        <label for="newPrincipalName"><i class="bi bi-person"></i> Principal Name</label>
-        <div class="invalid-feedback">Please enter the principal's name.</div>
-    </div>
+                <!-- Principal Name -->
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="newPrincipalName" name="new_principal_name" placeholder="Principal Name" required>
+                    <label for="newPrincipalName"><i class="bi bi-person"></i> Principal Name</label>
+                    <div class="invalid-feedback">Please enter the principal's name.</div>
+                </div>
 
-    <!-- Principal Image -->
-    <div class="mb-4">
-        <label for="newPrincipalImage" class="form-label"><i class="bi bi-image"></i> Upload Principal Photo</label>
-        <input type="file" class="form-control" id="newPrincipalImage" name="new_principal_image" accept="image/*" required>
-        <div class="invalid-feedback">Please upload a photo.</div>
-    </div>
+                <!-- Principal Image -->
+                <div class="mb-4">
+                    <label for="newPrincipalImage" class="form-label"><i class="bi bi-image"></i> Upload Principal Photo</label>
+                    <input type="file" class="form-control" id="newPrincipalImage" name="new_principal_image" accept="image/*" required>
+                    <div class="invalid-feedback">Please upload a photo.</div>
+                </div>
 
-    <!-- Principal Message -->
-    <div class="form-floating mb-4">
-        <textarea class="form-control" id="newPrincipalMsg" name="new_principal_message" placeholder="Add principal message..." style="height: 150px;" required></textarea>
-        <label for="newPrincipalMsg"><i class="bi bi-chat-left-text"></i> Principal Message</label>
-        <div class="invalid-feedback">Please enter the principal's message.</div>
-    </div>
+                <!-- Principal Message -->
+                <div class="form-floating mb-4">
+                    <textarea class="form-control" id="newPrincipalMsg" name="new_principal_message" placeholder="Add principal message..." style="height: 150px;" required></textarea>
+                    <label for="newPrincipalMsg"><i class="bi bi-chat-left-text"></i> Principal Message</label>
+                    <div class="invalid-feedback">Please enter the principal's message.</div>
+                </div>
 
-    <!-- Submit -->
-    <div class="text-end">
-        <button type="submit" name="add_principal" class="btn btn-success px-4"><i class="bi bi-plus-circle"></i> Add Principal</button>
-    </div>
+                <!-- Submit -->
+                <div class="text-end">
+                    <button type="submit" name="add_principal" class="btn btn-success px-4"><i class="bi bi-plus-circle"></i> Add Principal</button>
+                </div>
 
-</form>
+            </form>
 
             </div>
         </div>
