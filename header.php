@@ -30,57 +30,30 @@
 
         <div class="nav-links ">
             <a href="index.php" class="nav-hide">Home</a>
+            <a href="aboutUs.php" class="nav-hide">About Us</a>
             <a href="gallery.php" class="nav-hide">Gallery</a>
             <a href="events.php" class="nav-hide">Events</a>
             <a href="academic.php" class="nav-hide">Academic</a>
             <a href="clubs.php" class="nav-hide">Clubs & Societies</a>
-            <a href="#" class="nav-hide">Others</a>
-            <a href="#" class="nav-hide">About Us</a>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <div class="menu-toggle" onclick="openSidebar();">
-            <i class="bi bi-list"></i>
-            <a href="gallery.php"class="nav-hide">Gallery</a>
-                <a href="events.php"class="nav-hide">Events</a>
-                <a href="academic.php"class="nav-hide">Academic</a>
-                <a href="clubs.php"class="nav-hide">Clubs & Societies</a>
-                <a href="#"class="nav-hide">Others</a>
-                <a href="aboutUs.php"class="nav-hide">About Us</a>
-            </div>
-        
+    
             <!-- Mobile Menu Button -->
             <div class="menu-toggle" onclick="openSidebar();">
                 <i class="bi bi-list"></i>
             </div>
-        </div>
         
         <!-- Sidebar (Mobile Navigation) -->
         <div class="sidebar" id="sidebar">
             <span class="close-btn" onclick="closeSidebar();">&times;</span>
             <a href="index.php">Home</a>
+            <a href="aboutUs.php">About Us</a>
             <a href="gallery.php">Gallery</a>
             <a href="events.php">Events</a>
             <a href="academic.php">Academic</a>
             <a href="clubs.php">Clubs & Societies</a>
-            <a href="#">Others</a>
-            <a href="aboutUs.php">About Us</a>
         </div>
     </div>
-
-    <!-- Sidebar (Mobile Navigation) -->
-    <div class="sidebar" id="sidebar">
-        <span class="close-btn" onclick="closeSidebar();">&times;</span>
-        <a href="index.php">Home</a>
-        <a href="gallery.php">Gallery</a>
-        <a href="events.php">Events</a>
-        <a href="academic.php">Academic</a>
-        <a href="clubs.php">Clubs & Societies</a>
-        <a href="#">Others</a>
-        <a href="aboutUs.php">About Us</a>
-    </div>
-
-    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar();"></div>
 
 
     <!-- navigator -->
