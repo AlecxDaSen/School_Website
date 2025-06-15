@@ -107,3 +107,8 @@ $('#toggle').click(function() {
 function ecrintWeb(){
     window.open("#", "_blank", "noopener,noreferrer");
 }
+
+
+function adminLogin(){
+    window.location = "adminPanel.php";
+}
