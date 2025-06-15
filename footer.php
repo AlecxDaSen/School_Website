@@ -36,7 +36,7 @@
                                 <ul class="list-unstyled list-inline">
 
                                     <li class="list-inline-item">
-                                        <a href="https://web.facebook.com/RajiansOfficial" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
+                                        <a href="https://web.facebook.com/hrcc.edu.lk" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
                                             <img src="images/socialmedia/facebook.png" width="35px" height="35px" />
                                         </a>
                                     </li>
@@ -50,7 +50,7 @@
                                     </li>
 
                                     <li class="list-inline-item">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
+                                        <a href="https://www.instagram.com/hrcc.official/" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
                                             <img src="images/socialmedia/instergram.png" width="35px" height="35px" />
                                         </a>
                                     </li>
@@ -94,7 +94,7 @@
                         <a href="events.php">Events</a><br>
                         <a href="#">Academic</a><br>
                         <a href="clubs.php">Clubs & Socities</a><br>
-                        <a href="#">Others</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Donations</a>
                     </div>
 
                     <div class="col-lg-3">
@@ -103,7 +103,7 @@
                         <a href="#">Exam Result Search</a><br>
                         <a href="#">Feedbacks</a><br>
                         <a href="#">Ticket Booking</a><br>
-                        <a href="#">Donations</a><br>
+                        <a href="#">Other</a><br>
                     </div>
 
                     <div class="col-lg-3 ">
@@ -122,6 +122,8 @@
             <div class="p-1" style="background-color: #bb2d3b;"></div>
         </div>
 
+
+        <?php include("donation.php"); ?>
         <!-- footer -->
          
     </div>

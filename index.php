@@ -16,6 +16,155 @@
 
 
 <body class="main-body" style="background-color: #eff2f1;">
+    <style>
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        border-bottom: 3px solid #ffc107;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .news-card,
+    .event-card {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        width: 240px;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+
+
+    .news-card {
+        background-color: #fff;
+        color: #000;
+        flex: 0 0 auto;
+        width: 250px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        scroll-snap-align: start;
+        transition: transform 0.3s;
+    }
+
+    .event-card {
+        background-color: #151d30;
+        color: #fff;
+        border: 1px solid #ffc107;
+        box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+    }
+
+    .news-img,
+    .event-img {
+        height: 140px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-body-custom {
+        padding: 0.75rem 1rem;
+    }
+
+    .card-body-custom h6 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+    }
+
+    .card-body-custom p {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .bg-news-events {
+        background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('images/gallery3.jpg') center/cover no-repeat;
+        padding: 100px 0;
+    }
+
+
+    .scroll-cards.active {
+    cursor: grabbing;
+    }
+
+    .scroll-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    cursor: grab;
+    scroll-snap-type: x mandatory;
+    }
+
+    .scroll-cards::-webkit-scrollbar {
+    display: none;
+    }
+
+    @media (max-width: 768px) {
+    .news-card {
+        width: 200px;
+    }
+    }
+
+    .news-card {
+    user-select: none;         /* Prevents text selection */
+    -webkit-user-drag: none;   /* Prevents image dragging in Safari/Chrome */
+    cursor: grab;              /* Visual feedback for drag */
+    }
+
+    .event-card {
+    user-select: none;         /* Prevents text selection */
+    -webkit-user-drag: none;   /* Prevents image dragging in Safari/Chrome */
+    cursor: grab;              /* Visual feedback for drag */
+    }
+
+    .news-card img {
+    user-select: none;           /* Prevent selecting the image */
+    -webkit-user-drag: none;     /* Prevent dragging in Safari/Chrome */
+    pointer-events: none;        /* Optional: Disable any mouse interactions (clicks, drags) */
+    }
+
+    .event-card img {
+    user-select: none;           /* Prevent selecting the image */
+    -webkit-user-drag: none;     /* Prevent dragging in Safari/Chrome */
+    pointer-events: none;        /* Optional: Disable any mouse interactions (clicks, drags) */
+    }
+    .news-card:active {
+    cursor: grabbing;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glass-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-bg {
+        background: linear-gradient(135deg, #f8f9fa, #ffffff);
+        padding: 60px 0;
+    }
+
+    .icon-box {
+        width: 60px;
+        height: 60px;
+        display: grid;
+        place-items: center;
+        font-size: 1.75rem;
+        border-radius: 50%;
+    }
+
+    
+
+    </style>
 
     <?php include("loadingScreen.php"); ?>
 
@@ -63,9 +212,329 @@
 
         </div>
 
+
+        <div class="container my-5">
+        <div class="row g-4 justify-content-center">
+
+            <!-- Vision Card -->
+            <div class="col-md-6">
+            <div class="bg-white border-0 shadow-lg rounded-4 p-4 h-100">
+                <h2 class="text-uppercase fw-semibold text-secondary border-bottom pb-2 mb-3" style="letter-spacing: 1px;">
+                Our Vision
+                </h2>
+                <p class="fs-5 text-dark m-0">
+                To produce excellent, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+            </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="col-md-6">
+            <div class="bg-light border-0 shadow-sm rounded-4 p-4 h-100">
+                <h2 class="text-uppercase fw-semibold text-danger border-bottom pb-2 mb-3" style="letter-spacing: 1px;">
+                Mission
+                </h2>
+                <p class="fs-5 text-dark m-0">
+                Aiming to create individuals with a creative and balanced personality, nourished with competencies based on self-esteem and identity, and capable of involving in sustainable development.
+                </p>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+
+        <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 bg-light border-0 shadow-lg rounded-4 p-5">
+            
+            <div class="mb-5">
+                <h2 class="text-uppercase fw-semibold text-secondary border-bottom pb-2 mb-3" style="letter-spacing: 1px;">
+                Our Vision
+                </h2>
+                <p class="fs-5 text-dark m-0">
+                To produce excellent, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-uppercase fw-semibold text-danger border-bottom pb-2 mb-3" style="letter-spacing: 1px;">
+                Mission
+                </h2>
+                <p class="fs-5 text-dark m-0">
+                Aiming to create individuals with a creative and balanced personality, nourished with competencies based on self-esteem and identity, and capable of involving in sustainable development.
+                </p>
+            </div>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="container my-5">
+        <div class="row g-4 justify-content-center">
+
+            <!-- Vision Card -->
+            <div class="col-md-6">
+            <div class="card border-0 shadow-sm h-100 rounded-4">
+                <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="bg-secondary-subtle text-secondary rounded-circle p-3 me-3">
+                    <i class="bi bi-eye-fill fs-4"></i>
+                    </div>
+                    <h4 class="text-uppercase fw-bold m-0 text-secondary">Our Vision</h4>
+                </div>
+                <p class="fs-5 text-dark">
+                    To produce excellent, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="col-md-6">
+            <div class="card border-0 shadow-sm h-100 rounded-4">
+                <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="bg-danger-subtle text-danger rounded-circle p-3 me-3">
+                    <i class="bi bi-bullseye fs-4"></i>
+                    </div>
+                    <h4 class="text-uppercase fw-bold m-0 text-danger">Mission</h4>
+                </div>
+                <p class="fs-5 text-dark">
+                    Aiming to create individuals with a creative and balanced personality, nourished with competencies based on self-esteem and identity, and capable of involving in sustainable development.
+                </p>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+        <section class="section-bg">
+        <div class="container text-center mb-5">
+            <h2 class="fw-bold text-uppercase text-dark mb-3">Vision & Mission</h2>
+            <p class="text-muted fs-5">Our guiding principles that shape the future of Rajasinghe Central College.</p>
+        </div>
+
+        <div class="container">
+            <div class="row g-4">
+
+            <!-- Vision Card -->
+            <div class="col-md-6">
+                <div class="p-4 rounded-4 glass-card h-100 text-start">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="icon-box bg-secondary-subtle text-secondary me-3">
+                    <i class="bi bi-eye-fill"></i>
+                    </div>
+                    <h4 class="text-uppercase fw-bold mb-0 text-secondary">Our Vision</h4>
+                </div>
+                <p class="fs-5 text-dark mt-2">
+                    To produce excellent, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+                </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="col-md-6">
+                <div class="p-4 rounded-4 glass-card h-100 text-start">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="icon-box bg-danger-subtle text-danger me-3">
+                    <i class="bi bi-bullseye"></i>
+                    </div>
+                    <h4 class="text-uppercase fw-bold mb-0 text-danger">Mission</h4>
+                </div>
+                <p class="fs-5 text-dark mt-2">
+                    Aiming to create individuals with a creative and balanced personality, nourished with competencies based on self-esteem and identity, and capable of involving in sustainable development.
+                </p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+    </div>
+
+    <section class="position-relative text-white bg-news-events mt-5">
+    <div class="container">
+
+        <!-- News Section -->
+        <div class="mb-5">
+        <div class="text-center mb-4">
+            <h2 class="section-title text-warning">Latest News</h2>
+            <p class="text-light">HRCC News and Updates</p>
+        </div>
+
+        <div class="scroll-cards">
+            <!-- Repeat as needed -->
+            <div class="news-card">
+            <img src="images/cadetsimg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Principal Appointed</h6>
+                <p><small>April 3rd, 2025</small></p>
+                <p>Mr. Athula Wijewardena was appointed principal of Royal College...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/gallery2.jpg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Junior Steward Post</h6>
+                <p><small>March 27th, 2025</small></p>
+                <p>Applications are open for the post of Junior Steward 2025...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/cadetsimg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Principal Appointed</h6>
+                <p><small>April 3rd, 2025</small></p>
+                <p>Mr. Athula Wijewardena was appointed principal of Royal College...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/gallery2.jpg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Junior Steward Post</h6>
+                <p><small>March 27th, 2025</small></p>
+                <p>Applications are open for the post of Junior Steward 2025...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/cadetsimg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Principal Appointed</h6>
+                <p><small>April 3rd, 2025</small></p>
+                <p>Mr. Athula Wijewardena was appointed principal of Royal College...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/gallery2.jpg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Junior Steward Post</h6>
+                <p><small>March 27th, 2025</small></p>
+                <p>Applications are open for the post of Junior Steward 2025...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/cadetsimg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Principal Appointed</h6>
+                <p><small>April 3rd, 2025</small></p>
+                <p>Mr. Athula Wijewardena was appointed principal of Royal College...</p>
+            </div>
+            </div>
+
+            <div class="news-card">
+            <img src="images/gallery2.jpg" class="news-img" alt="News Image">
+            <div class="card-body-custom">
+                <h6>Junior Steward Post</h6>
+                <p><small>March 27th, 2025</small></p>
+                <p>Applications are open for the post of Junior Steward 2025...</p>
+            </div>
+            </div>
+
+            <!-- Add more news cards -->
+        </div>
+        </div>
+
+        <!-- Events Section -->
+        <div>
+        <div class="text-center mb-4">
+            <h2 class="section-title text-warning">Upcoming Events</h2>
+            <p class="text-light">What’s happening soon at HRCC</p>
+        </div>
+
+        <div class="scroll-cards">
+            <!-- Repeat as needed -->
+            <div class="event-card">
+            <img src="images/gallery5.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Science Exhibition</h6>
+                <p><small>June 15, 2025</small></p>
+                <p>Annual science fair where students showcase their innovations.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery2.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Founder’s Day</h6>
+                <p><small>July 1, 2025</small></p>
+                <p>Special ceremony to honor the foundation of HRCC.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery5.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Science Exhibition</h6>
+                <p><small>June 15, 2025</small></p>
+                <p>Annual science fair where students showcase their innovations.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery2.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Founder’s Day</h6>
+                <p><small>July 1, 2025</small></p>
+                <p>Special ceremony to honor the foundation of HRCC.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery5.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Science Exhibition</h6>
+                <p><small>June 15, 2025</small></p>
+                <p>Annual science fair where students showcase their innovations.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery2.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Founder’s Day</h6>
+                <p><small>July 1, 2025</small></p>
+                <p>Special ceremony to honor the foundation of HRCC.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery5.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Science Exhibition</h6>
+                <p><small>June 15, 2025</small></p>
+                <p>Annual science fair where students showcase their innovations.</p>
+            </div>
+            </div>
+
+            <div class="event-card">
+            <img src="images/gallery2.jpg" class="event-img" alt="Event Image">
+            <div class="card-body-custom">
+                <h6>Founder’s Day</h6>
+                <p><small>July 1, 2025</small></p>
+                <p>Special ceremony to honor the foundation of HRCC.</p>
+            </div>
+            </div>
+
+            <!-- Add more event cards -->
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+    <div class="container-fluid">
         <div class="col-lg-12 mt-5">
 
-            <div class="col-lg-10 offset-lg-1 col-sm-12 bg-body  shadow-lg p-5 pb-2 text-center " style="border-radius:15px;">
+            <div class="col-10 offset-1 bg-body  shadow-lg p-5 pb-2 text-center" style="border-radius:15px;">
 
                 <h2 class="text-danger fw-bold text-uppercase pb-3">History</h2>
                 <div class="col-12 d-flex flex-column justify-content-end">
@@ -82,6 +551,8 @@
                 <div class="col-lg-2 offset-lg-5 d-grid mt-5 mb-1 ">
                     <a href="aboutUs.php#history" class="btn btn-outline-danger fw-bold rounded-pill">Read More...</a>
                 </div>
+
+
             </div>
 
         </div>
@@ -92,41 +563,44 @@
 
                     <div class="col-lg-3 col-sm-6 gap-1 mb-3 ">
                         <div class="stat-box bg-body">
-                            <h2 data-target="3000">0</h2>
+                            <h2 data-target="2700">0</h2>
                             <div class="label">
                                 <p class="text">Students</p>
                             </div>
-                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                            <p class="description">Currently enrolled at Rajasinghe Central College.</p>
                         </div>
                     </div>
+                    
+
 
                     <div class="col-lg-3 col-sm-6 gap-1 mb-3 ">
                         <div class="stat-box bg-body">
-                            <h2 data-target="2500">0</h2>
+                            <h2 data-target="250">0</h2>
                             <div class="label">
                                 <p class="text">Teachers</p>
                             </div>
-                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                             <p class="description">Currently worked at Rajasinghe Central College.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-sm-6 gap-1 mb-3 ">
                         <div class="stat-box bg-body">
-                            <h2 data-target="1800">0</h2>
+                            <h2 data-target="100">0</span></h2>
                             <div class="label">
-                                <p class="text">Graduates</p>
+                                <p class="text">Odinary Level Exam Results  &percnt;</p>
                             </div>
-                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                             <p class="description">According to <br>the latest exam results.</p>
                         </div>
                     </div>
+                    
 
                     <div class="col-lg-3 col-sm-6 gap-1 mb-3 ">
                         <div class="stat-box bg-body">
-                            <h2 data-target="1800">0</h2>
+                            <h2 data-target="400">0</h2>
                             <div class="label">
-                                <p class="text">Graduates</p>
+                                <p class="text">Univercity Selected Students</p>
                             </div>
-                            <p class="description">Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
+                             <p class="description">According to <br>the latest exam results.</p>
                         </div>
                     </div>
 
@@ -220,11 +694,6 @@
 
 
         </div>
-
-        <!-- latest news -->
-
-
-
 
     </div>
 
@@ -493,6 +962,60 @@
             document.getElementById(gradeId).classList.add("active");
             document.querySelector(`[onclick="showGrade('${gradeId}')"]`).classList.add("active");
         }
+
+        // Make scrollable containers draggable
+        document.querySelectorAll('.scroll-cards').forEach(container => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            container.addEventListener('mousedown', (e) => {
+            isDown = true;
+            container.classList.add('active');
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+            });
+
+            container.addEventListener('mouseleave', () => {
+            isDown = false;
+            container.classList.remove('active');
+            });
+
+            container.addEventListener('mouseup', () => {
+            isDown = false;
+            container.classList.remove('active');
+            });
+
+            container.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+            });
+
+            // Auto-slide every 4s
+            const cards = container.querySelectorAll('.news-card');
+            let currentIndex = 0;
+            const maxVisible = 9;
+            if (cards.length > maxVisible) {
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                const cardWidth = cards[0].offsetWidth + 16; // width + gap
+                container.scrollTo({
+                left: currentIndex * cardWidth,
+                behavior: 'smooth'
+                });
+            }, 2000);
+            }
+
+            // Limit to 9 cards
+            cards.forEach((card, index) => {
+            if (index >= maxVisible) card.style.display = 'none';
+            });
+        });
+
+        
     </script>
 
 </body>

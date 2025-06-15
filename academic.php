@@ -285,29 +285,58 @@
 
 
 
+
+
                     <!-- Results Tab -->
                     <div class="tab-pane fade" id="tab-results">
                         <div class="text-center py-5">
                             <div class="col-10 offset-1 ">
                                 <div class="row mt-2 mb-3">
                                     <!-- RESULTS SECTION -->
-                                    <section class="py-5 bg-dark text-white" style="border-radius: 20px;">
+                                    <h5 class="fw-bold text-warning"> A/L Exam Results</h5>
+                                    <div id="carouselExample" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                        <img src="images/techrs.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="images/techrs.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="images/techrs.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                    </div>
+
+                                    <section class="py-5 bg-dark text-white mt-5" style="border-radius: 20px;">
                                         <div class="container">
                                             <div class="text-center mb-4">
-                                                <h2 class="fw-bold text-warning">Check Your Results</h2>
-                                                <p class="text-light">Use your exam number to view results instantly</p>
+                                                <h2 class="fw-bold text-warning">Check A/L Exam Results Of Past Years</h2>
                                             </div>
                                             <div class="row justify-content-center g-3">
                                                 <div class="col-md-3">
                                                     <select class="form-select rounded-pill">
-                                                        <option>A/L 2024</option>
-                                                        <option>O/L 2023</option>
+                                                        <option>2024</option>
+                                                        <option>2023</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-4">
-                                                    <input type="text" class="form-control rounded-pill ps-4" placeholder="Enter Index No.">
+                                                <div class="col-md-3">
+                                                    <select class="form-select rounded-pill form-control rounded-pill ps-4">
+                                                        <option>Mathematics</option>
+                                                        <option>Commerce</option>
+                                                        <option>Art</option>
+                                                        <option>Technology</option>
+                                                    </select>
                                                 </div>
-                                                <div class="col-md-2 d-grid">
+                                                <div class="col-md-3 d-grid">
                                                     <button class="btn btn-warning rounded-pill fw-bold"><i class="bi bi-search me-1"></i>Search</button>
                                                 </div>
                                             </div>
@@ -316,9 +345,7 @@
                                 </div>
 
                                 <div class="col-12 text-center mt-3 mb-3">
-                                    <h2 class="text-black-50 ">Exam results of past years </h2>
-                                    <div class="col-12 text-start">
-                                        <h4 class=" ">O/L Results 2023 </h4>
+                                    <div class="col-12 text-start mb-3">
                                         <div class="col-10 offset-1  mt-2 mb-2 ">
                                             <div class=" bg-light">
                                                 <img src="images/techrs.jpg" class="rs_img">
@@ -326,82 +353,6 @@
                                         </div>
 
                                     </div>
-                                    <div class="col-12 text-start mt-5 mb-2">
-                                        <h4 class="">A/L Results 2024 </h4>
-                                        <p class="text-black-50">Click & View</p>
-                                        <div class="row text-center gap-4 justify-content-around">
-
-                                            <!-- carousel -->
-                                            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                                                <div class="carousel-inner">
-                                                    <div class="carousel-item active">
-                                                        <img src="images/mathsrs.jpg" class="d-block w-100" alt="...">
-                                                    </div>
-                                                    <div class="carousel-item">
-                                                        <img src="images/techrs.jpg" class="d-block w-100" alt="...">
-                                                    </div>
-                                                    <div class="carousel-item">
-                                                        <img src="images/techrs.jpg" class="d-block w-100" alt="...">
-                                                    </div>
-                                                </div>
-                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                    <span class="visually-hidden">Previous</span>
-                                                </button>
-                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                    <span class="visually-hidden">Next</span>
-                                                </button>
-                                            </div>
-
-                                            <!-- carousel -->
-
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="glass-card text-center p-4 rounded-4 shadow-sm hover-scale"
-                                                    type="button" data-bs-toggle="modal" data-bs-target="#resultsModal" data-section="maths">
-                                                    <div class="icon-wrapper mx-auto mb-3">
-                                                        <img src="images/function.png" alt="Mathematics" class="img-fluid" style="width: 60px;">
-                                                    </div>
-                                                    <h5 class="fw-bold text-dark">Mathematics</h5>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="glass-card text-center p-4 rounded-4 shadow-sm hover-scale"
-                                                    type="button" data-bs-toggle="modal" data-bs-target="#resultsModal" data-section="tech">
-                                                    <div class="icon-wrapper mx-auto mb-3">
-                                                        <img src="images/connection.png" alt="Technology" class="img-fluid" style="width: 60px;">
-                                                    </div>
-                                                    <h5 class="fw-bold text-dark">Technology</h5>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="glass-card text-center p-4  rounded-4 shadow-sm hover-scale"
-                                                    type="button" data-bs-toggle="modal" data-bs-target="#resultsModal" data-section="commerce">
-                                                    <div class="icon-wrapper mx-auto mb-3">
-                                                        <img src="images/presentation.png" alt="Commerce" class="img-fluid" style="width: 60px;">
-                                                    </div>
-                                                    <h5 class="fw-bold text-dark">Commerce</h5>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="glass-card text-center p-4 h-100 rounded-4 shadow-sm hover-scale"
-                                                    type="button" data-bs-toggle="modal" data-bs-target="#resultsModal" data-section="art">
-                                                    <div class="icon-wrapper mx-auto mb-3">
-                                                        <img src="images/creativity.png" alt="Art" class="img-fluid" style="width: 60px;">
-                                                    </div>
-                                                    <h5 class="fw-bold text-dark">Art</h5>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-
 
                                 </div>
                             </div>
@@ -517,24 +468,7 @@
             }
         };
 
-        const resultsModal = document.getElementById('resultsModal');
-        const modalTitle = resultsModal.querySelector('.modal-title');
-        const modalBody = resultsModal.querySelector('.modal-body');
-        const modalFooterLink = resultsModal.querySelector('.modal-footer a');
 
-        resultsModal.addEventListener('show.bs.modal', event => {
-            const trigger = event.relatedTarget; // element that triggered the modal
-            const section = trigger.getAttribute('data-section');
-
-            if (section && resultsData[section]) {
-                const data = resultsData[section];
-                modalTitle.textContent = data.title;
-                modalBody.innerHTML = < img src = "${data.imgSrc}"
-                alt = "${data.title}"
-                class = "img-fluid rounded" > ;
-                modalFooterLink.href = data.viewAllLink;
-            }
-        });
     </script>
     <?php include("footer.php"); ?>
 </body>
