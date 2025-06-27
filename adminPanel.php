@@ -78,6 +78,8 @@
 
 <body style="background-color: #eff2f1;">
 
+<?php require "connection.php";?>
+
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
@@ -514,44 +516,106 @@
                     </button>
                 </div>
             </div>
-           <!-- <div class="col-md-6 col-xl-3 mb-4">
-            <div class="card shadow-sm border-0 rounded-4 p-3 text-center">
-                <h6 class="text-muted">Total Users</h6>
-                <h3 class="fw-bold">1,245</h3>
-                <i class="bi bi-people-fill fs-2 text-primary"></i>
-            </div>
-          </div> -->
-          <div class="row g-3 mt-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="card text-center p-3 shadow-sm border-0 rounded-4">
-                <i class="bi bi-person-fill-gear text-primary fs-1"></i>
-                <p class="mt-2 mb-0">Cadets</p>
+                              
+            <div class="row g-3 mt-4">
+            <?php
+            $club_rs = Database::search("SELECT * FROM `clubs`");
+            $club_num = $club_rs->num_rows;
+
+            for ($z = 0; $z < $club_num; $z++) {
+                $club_data = $club_rs->fetch_assoc();
+                $club_id = $club_data["club_id"];
+                $modal_id = "clubsUpdateModal_" . $club_id;
+            ?>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center p-3 shadow-sm border-0 rounded-4" data-bs-toggle="modal" data-bs-target="#<?php echo $modal_id; ?>">
+                        <i class="bi bi-house-gear-fill text-primary fs-1"></i>
+                        <p class="mt-2 mb-0"><?php echo $club_data["title"]; ?></p>
+                    </div>
+
+                    <!-- Update Club Modal -->
+                    <div class="modal fade" id="<?php echo $modal_id; ?>" tabindex="-1" aria-labelledby="<?php echo $modal_id; ?>Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content border-0 rounded-4 shadow-lg">
+                                <div class="modal-body p-5">
+                                    <h4 class="mb-4 text-primary d-flex align-items-center gap-2">
+                                        <i class="bi bi-people-fill"></i> Update Club
+                                    </h4>
+
+                                    <form action="submit-club.php" method="POST" enctype="multipart/form-data" novalidate>
+                                        <input type="hidden" name="club_id" value="<?php echo $club_id; ?>">
+
+                                        <!-- Club Name -->
+                                        <div class="form-floating mb-4">
+                                            <input type="text" class="form-control" name="club_name" value="<?php echo $club_data["title"]; ?>" id="title_<?php echo $club_id; ?>" placeholder="Club Name" required>
+                                            <label for="title_<?php echo $club_id; ?>"><i class="bi bi-type"></i> Club Name</label>
+                                            <div class="invalid-feedback">Please enter the club name.</div>
+                                        </div>
+
+                                        <!-- Club Description -->
+                                        <div class="form-floating mb-4">
+                                            <textarea class="form-control" id="description_<?php echo $club_id; ?>" name="description" placeholder="Write about the club..." style="height: 150px;" required><?php echo $club_data["description"]; ?></textarea>
+                                            <label for="description_<?php echo $club_id; ?>"><i class="bi bi-info-circle"></i> Description</label>
+                                            <div class="invalid-feedback">Please enter a description.</div>
+                                        </div>
+
+                                        <!-- Upload Club Logo -->
+                                        <div class="mb-4">
+                                            <label for="clubLogo_<?php echo $club_id; ?>" class="form-label text-secondary"><i class="bi bi-image"></i> Upload Club Logo</label>
+                                            <label class="custum-file-upload w-100 p-4 border rounded-3 text-center" for="clubLogo_<?php echo $club_id; ?>" style="cursor:pointer;">
+                                                <div class="icon mb-2 text-primary">
+                                                    <i class="bi bi-cloud-arrow-up fs-1"></i>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="d-block">Click to upload logo</span>
+                                                    <small class="text-muted">Supported: JPG, PNG, SVG</small>
+                                                </div>
+                                                <input class="d-none" type="file" id="clubLogo_<?php echo $club_id; ?>" name="logo" accept="image/*">
+                                            </label>
+                                        </div>
+
+                                        <!-- Upload Club Images -->
+                                        <div class="mb-4">
+                                            <label for="clubImages_<?php echo $club_id; ?>" class="form-label text-secondary"><i class="bi bi-image"></i> Upload Club Images</label>
+                                            <label class="custum-file-upload w-100 p-4 border rounded-3 text-center" for="clubImages_<?php echo $club_id; ?>" style="cursor:pointer;">
+                                                <div class="icon mb-2 text-primary">
+                                                    <i class="bi bi-cloud-arrow-up fs-1"></i>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="d-block">Click to upload image</span>
+                                                    <small class="text-muted">Supported: JPG, PNG, SVG</small>
+                                                </div>
+                                                <input class="d-none" type="file" id="clubImages_<?php echo $club_id; ?>" name="images[]" accept="image/*" multiple>
+                                            </label>
+                                        </div>
+
+                                        <!-- Active Status Switch -->
+                                        <div class="form-check form-switch form-check-lg mb-4">
+                                            <!-- Hidden input ensures value is sent even if unchecked -->
+                                            <input type="hidden" name="is_active" value="2">
+                                            <input class="form-check-input" type="checkbox" id="activeSwitch_<?php echo $club_id; ?>" name="is_active" value="1" <?php echo ($club_data["status_sid"] == '1') ? 'checked' : ''; ?>>
+                                            <label class="form-check-label fw-medium" for="activeSwitch_<?php echo $club_id; ?>">Active Club</label>
+                                        </div>
+
+                                        <!-- Submit Button -->
+                                        <div class="d-flex justify-content-end gap-2 pt-3">
+                                        <button type="button" class="btn btn-success rounded-pill px-4" onclick="updateClub(<?php echo $club_id; ?>)">
+                                            <i class="bi bi-check-circle"></i> Update Club
+                                        </button>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card text-center p-3 shadow-sm border-0 rounded-4">
-                <i class="bi bi-chat-left-text text-success fs-1"></i>
-                <p class="mt-2 mb-0">scouts</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card text-center p-3 shadow-sm border-0 rounded-4">
-                <i class="bi bi-house-gear-fill text-primary fs-1"></i>
-                <p class="mt-2 mb-0">Photography</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card text-center p-3 shadow-sm border-0 rounded-4">
-                <i class="bi bi-file-text text-success fs-1"></i>
-                <p class="mt-2 mb-0">Nature club</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card text-center p-3 shadow-sm border-0 rounded-4">
-                <i class="bi bi-file-text text-success fs-1"></i>
-                <p class="mt-2 mb-0">Eco socity</p>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
+
+
+
             </div>
 
 
@@ -563,9 +627,6 @@
                     <h4 class="mb-4 text-primary d-flex align-items-center gap-2">
                     <i class="bi bi-people-fill"></i> Add New Club
                     </h4>
-
-                    <form action="submit-club.php" method="POST" enctype="multipart/form-data" novalidate>
-                    <input type="hidden" name="club_id" value="">
 
                     <!-- Club Name -->
                     <div class="form-floating mb-4">
@@ -579,20 +640,6 @@
                         <textarea class="form-control" placeholder="Write about the club..." id="clubDescription" name="description" style="height: 150px;" required></textarea>
                         <label for="clubDescription"><i class="bi bi-info-circle"></i> Description</label>
                         <div class="invalid-feedback">Please enter a description.</div>
-                    </div>
-
-                    <!-- Club Leader -->
-                    <!-- <div class="form-floating mb-4">
-                        <input type="text" class="form-control" id="clubLeader" name="leader" placeholder="Club Leader Name" required>
-                        <label for="clubLeader"><i class="bi bi-person-badge"></i> Club Leader</label>
-                        <div class="invalid-feedback">Please enter the club leader's name.</div>
-                    </div> -->
-
-                    <!-- Establishment Date -->
-                    <div class="form-floating mb-4">
-                        <input type="date" class="form-control" id="establishedDate" name="established_date" required>
-                        <label for="establishedDate"><i class="bi bi-calendar-check"></i> Established Date</label>
-                        <div class="invalid-feedback">Please provide the establishment date.</div>
                     </div>
 
                     <!-- Upload Club Logo -->
@@ -613,7 +660,7 @@
                     
                     <!-- Upload Club imags -->
                     <div class="mb-4">
-                        <label for="clubimages" class="form-label text-secondary"><i class="bi bi-image"></i> Upload Club Images</label>
+                        <label for="clubimage" class="form-label text-secondary"><i class="bi bi-image"></i> Upload Club Images</label>
                         <label class="custum-file-upload w-100 p-4 border rounded-3 text-center" for="clubimages" style="cursor:pointer; transition: all 0.3s;">
                         <div class="icon mb-2 text-primary">
                             <i class="bi bi-cloud-arrow-up fs-1"></i>
@@ -622,22 +669,14 @@
                             <span class="d-block">Click to upload Image</span>
                             <small class="text-muted">Supported: JPG, PNG, SVG</small>
                         </div>
-                        <input class="d-none" type="file" id="clubLogo" name="logo" accept="image/*">
+                        <input class="d-none" type="file" id="clubimage" name="logo" accept="image/*">
                         </label>
                     </div>
 
-                    <!-- Active Status -->
-                    <div class="form-check form-switch form-check-lg mb-4">
-                        <input class="form-check-input" type="checkbox" id="activeSwitch" name="is_active" checked>
-                        <label class="form-check-label fw-medium" for="activeSwitch">Active Club</label>
-                    </div>
 
                     <!-- Buttons -->
                     <div class="d-flex justify-content-end gap-2 pt-3">
-                        <button type="reset" class="btn btn-outline-secondary rounded-pill px-4">
-                        <i class="bi bi-x-circle"></i> Reset
-                        </button>
-                        <button type="submit" class="btn btn-success rounded-pill px-4">
+                        <button type="submit" class="btn btn-success rounded-pill px-4" onclick="addClub()">
                         <i class="bi bi-check-circle"></i> Add Club
                         </button>
                     </div>
@@ -653,6 +692,153 @@
 
         <div id="academic" class="content-section">
           <h2>Academic&nbsp;&nbsp;</h2>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Update Results
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <form action="save-science-results.php" method="POST" class="p-4 bg-light rounded shadow-sm">
+
+                                
+
+                        </form>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Add/Update Past Papers
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <form action="upload-past-paper.php" method="POST" enctype="multipart/form-data" class="p-4 bg-light rounded shadow-sm">
+                                <h4 class="mb-4 text-primary"><i class="bi bi-journal-arrow-up"></i> Add / Update Past Papers</h4>
+
+                                <!-- GRADE -->
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="gradeSelectPaper" required onchange="handleGradeChange('Paper')">
+                                    <option value="" disabled selected>Select Grade</option>
+                                    </select>
+                                    <label for="gradeSelectPaper">Grade</label>
+                                </div>
+
+                                <!-- STREAM -->
+                                <div class="form-floating mb-3" id="streamContainerPaper" style="display: none;">
+                                    <select class="form-select" id="streamSelectPaper" onchange="handleStreamChange('Paper')">
+                                    <option value="" disabled selected>Select Stream</option>
+                                    </select>
+                                    <label for="streamSelectPaper">Stream</label>
+                                </div>
+
+                                <!-- SUBJECT -->
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="subjectSelectPaper" required>
+                                    <option value="" disabled selected>Select Subject</option>
+                                    </select>
+                                    <label for="subjectSelectPaper">Subject</label>
+                                </div>
+
+                                <!-- Year -->
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="year" name="year" placeholder="Exam Year" min="2000" max="2099" required>
+                                    <label for="year"><i class="bi bi-calendar3"></i> Year</label>
+                                </div>
+
+                                <!-- Term -->
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="term" name="term" required>
+                                        <option value="0" disabled selected>Select Term</option>
+                                        <option value="1">1st term</option>
+                                        <option value="2">2nd term</option>
+                                        <option value="3">3rd term</option>
+                                    </select>
+                                    <label for="term"><i class="bi bi-tags"></i> Term</label>
+                                </div>
+
+                                <!-- Upload PDF -->
+                                <div class="mb-4">
+                                    <label for="paper" class="form-label"><i class="bi bi-file-earmark-pdf"></i> Upload Paper (PDF)</label>
+                                    <input type="file" class="form-control" id="paper" name="paper_file" accept="application/pdf" required>
+                                </div>
+
+                                <!-- Submit -->
+                                <div class="text-end">
+                                    <button type="submit" class="btn btn-primary px-4"><i class="bi bi-upload"></i> Upload Paper</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion: Add/Update Videos -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Add/Update Videos
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <form action="upload-video.php" method="POST" enctype="multipart/form-data" class="p-4 bg-light rounded shadow-sm">
+                                <h4 class="mb-4 text-dark"><i class="bi bi-camera-video"></i> Add / Update Educational Videos</h4>
+
+                                 <!-- GRADE -->
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="gradeSelectVideo" required onchange="handleGradeChange('Video')">
+                                    <option value="" disabled selected>Select Grade</option>
+                                    </select>
+                                    <label for="gradeSelectVideo">Grade</label>
+                                </div>
+
+                                <!-- STREAM -->
+                                <div class="form-floating mb-3" id="streamContainerVideo" style="display: none;">
+                                    <select class="form-select" id="streamSelectVideo" onchange="handleStreamChange('Video')">
+                                    <option value="" disabled selected>Select Stream</option>
+                                    </select>
+                                    <label for="streamSelectVideo">Stream</label>
+                                </div>
+
+                                <!-- SUBJECT -->
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="subjectSelectVideo" required>
+                                    <option value="" disabled selected>Select Subject</option>
+                                    </select>
+                                    <label for="subjectSelectVideo">Subject</label>
+                                </div>
+
+                                <!-- Title -->
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="videoTitle" name="video_title" placeholder="Video Title" required>
+                                    <label for="videoTitle"><i class="bi bi-type"></i> Video Title</label>
+                                </div>
+
+                                <!-- Upload Video -->
+                                <div class="mb-4">
+                                    <label for="videoFile" class="form-label"><i class="bi bi-cloud-upload"></i> Upload Video File</label>
+                                    <input type="file" class="form-control" id="videoFile" name="video_file" accept="video/*" required>
+                                </div>
+
+                                <!-- Submit -->
+                                <div class="text-end">
+                                    <button type="submit" class="btn btn-dark px-4"><i class="bi bi-upload"></i> Upload Video</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
 
@@ -703,72 +889,80 @@
 
         </div>
 
+        <?php
+        $json = file_get_contents("about-data.json");
+        $data = json_decode($json, true);
+        ?>
 
 
         <div id="about" class="content-section">
-          <h2>About Us&nbsp;&nbsp;<i class="bi bi-chat-right-text"></i></h2>
-            <form action="update-about.php" method="POST" enctype="multipart/form-data" novalidate class="p-4 bg-light rounded shadow-sm">
+        <h2>About Us&nbsp;&nbsp;<i class="bi bi-chat-right-text"></i></h2>
 
-                <input type="hidden" name="event_id" value="">
+        <form id="aboutForm" action="update-about.php" method="POST" enctype="multipart/form-data" novalidate class="p-4 bg-light rounded shadow-sm">
 
-                <!-- ========== History Section ========== -->
-                <h4 class="text-dark mb-3"><i class="bi bi-journal-text"></i> History Section</h4>
-                <hr class="mb-4">
+            <!-- ========== Hidden Event ID (if needed) ========== -->
+            <input type="hidden" name="event_id" value="">
 
-                <!-- History Summary -->
-                <div class="form-floating mb-4">
-                    <textarea class="form-control" id="historySum" name="history_summary" placeholder="Add summary..." style="height: 150px;" required></textarea>
-                    <label for="historySum"><i class="bi bi-card-text"></i> History Summary</label>
-                    <div class="invalid-feedback">Please add a summary description.</div>
-                </div>
-                <div class="text-end mb-5">
-                    <button type="submit" name="update_summary" class="btn btn-outline-primary px-4"><i class="bi bi-save2"></i> Update Summary</button>
-                </div>
+            <!-- ========== History Section ========== -->
+            <h4 class="text-dark mb-3"><i class="bi bi-journal-text"></i> History Section</h4>
+            <hr class="mb-4">
 
-                <!-- Full History -->
-                <div class="form-floating mb-4">
-                    <textarea class="form-control" id="history" name="full_history" placeholder="Add full history..." style="height: 150px;" required></textarea>
-                    <label for="history"><i class="bi bi-book"></i> Full History</label>
-                    <div class="invalid-feedback">Please add the full history description.</div>
-                </div>
-                <div class="text-end mb-5">
-                    <button type="submit" name="update_history" class="btn btn-outline-primary px-4"><i class="bi bi-save2"></i> Update History</button>
-                </div>
-
-                <!-- ========== Add New Principal ========== -->
-                <h4 class="text-dark mb-3"><i class="bi bi-person-plus-fill"></i> Add New Principal</h4>
-                <hr class="mb-4">
-
-                <!-- Principal Name -->
-                <div class="form-floating mb-4">
-                    <input type="text" class="form-control" id="newPrincipalName" name="new_principal_name" placeholder="Principal Name" required>
-                    <label for="newPrincipalName"><i class="bi bi-person"></i> Principal Name</label>
-                    <div class="invalid-feedback">Please enter the principal's name.</div>
-                </div>
-
-                <!-- Principal Image -->
-                <div class="mb-4">
-                    <label for="newPrincipalImage" class="form-label"><i class="bi bi-image"></i> Upload Principal Photo</label>
-                    <input type="file" class="form-control" id="newPrincipalImage" name="new_principal_image" accept="image/*" required>
-                    <div class="invalid-feedback">Please upload a photo.</div>
-                </div>
-
-                <!-- Principal Message -->
-                <div class="form-floating mb-4">
-                    <textarea class="form-control" id="newPrincipalMsg" name="new_principal_message" placeholder="Add principal message..." style="height: 150px;" required></textarea>
-                    <label for="newPrincipalMsg"><i class="bi bi-chat-left-text"></i> Principal Message</label>
-                    <div class="invalid-feedback">Please enter the principal's message.</div>
-                </div>
-
-                <!-- Submit -->
-                <div class="text-end">
-                    <button type="submit" name="add_principal" class="btn btn-success px-4"><i class="bi bi-plus-circle"></i> Add Principal</button>
-                </div>
-
-            </form>
-
+            <!-- History Summary -->
+            <div class="form-floating mb-4">
+                <textarea class="form-control" id="historySum" name="history_summary" placeholder="Add summary..." style="height: 150px;" required><?php echo htmlspecialchars($data["history_summary"] ?? ""); ?></textarea>
+                <label for="historySum"><i class="bi bi-card-text"></i> History Summary</label>
             </div>
+
+            <div class="text-end mb-5">
+            <button type="button" class="btn btn-outline-primary px-4" onclick="submitSummary()">
+                <i class="bi bi-save2"></i> Update Summary
+            </button>
+            </div>
+
+            <!-- Full History -->
+            <div class="form-floating mb-4">
+                <textarea class="form-control" id="history" name="full_history" placeholder="Add full history..." style="height: 150px;" required><?php echo htmlspecialchars($data["full_history"] ?? ""); ?></textarea>
+                <label for="history"><i class="bi bi-book"></i> Full History</label>
+            </div>
+            <div class="text-end mb-5">
+            <button type="button" class="btn btn-outline-primary px-4" onclick="submitHistory()">
+                <i class="bi bi-save2"></i> Update History
+            </button>
+            </div>
+
+            <!-- ========== Add New Principal ========== -->
+            <h4 class="text-dark mb-3"><i class="bi bi-person-plus-fill"></i> Add New Principal</h4>
+            <hr class="mb-4">
+
+            <!-- Principal Name -->
+            <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="newPrincipalName" name="new_principal_name" value="<?php echo $data["principal"]["name"]; ?>" placeholder="Principal Name" required>
+            <label for="newPrincipalName"><i class="bi bi-person"></i> Principal Name</label>
+            <div class="invalid-feedback">Please enter the principal's name.</div>
+            </div>
+            <img src="<?php echo $data["principal"]["image"]; ?>" width="150" class="mb-3">
+            <!-- Principal Image -->
+            <div class="mb-4">
+            <label for="newPrincipalImage" class="form-label"><i class="bi bi-image"></i> Upload Principal Photo</label>
+            <input type="file" class="form-control" id="newPrincipalImage" name="new_principal_image" accept="image/*" required>
+            <div class="invalid-feedback">Please upload a photo.</div>
+            </div>
+
+            <!-- Principal Message -->
+            <div class="form-floating mb-4">
+                <textarea class="form-control" id="newPrincipalMsg" name="new_principal_message" placeholder="Add principal message..." style="height: 150px;" required><?php echo htmlspecialchars($data["principal"]["message"] ?? ""); ?></textarea>
+                <label for="newPrincipalMsg"><i class="bi bi-chat-left-text"></i> Principal Message</label>
+            </div>
+
+            <!-- Submit -->
+            <div class="text-end">
+            <button type="button" class="btn btn-success px-4" onclick="submitPrincipal()">
+                <i class="bi bi-plus-circle"></i> Add Principal
+            </button>
+            </div>
+        </form>
         </div>
+
 
       </div>
     </div>
@@ -862,9 +1056,87 @@
         }
     }
     });
-
   </script>
 
+    <script>
+    const subjectData = {
+        "Grade 10": {
+        "All": ["Mathematics", "Science", "Sinhala", "English", "History"]
+        },
+        "Grade 11": {
+        "All": ["Mathematics", "Science", "Sinhala", "English", "History"]
+        },
+        "A/L": {
+        "Science": ["Physics", "Chemistry", "Biology", "Combined Maths"],
+        "Commerce": ["Accounting", "Business Studies", "Economics"],
+        "Arts": ["Sinhala", "Political Science", "Geography", "Logic"],
+        "Technology": ["Engineering Tech", "ICT", "Science for Tech"]
+        }
+    };
+
+    // On page load, populate grade dropdowns
+    window.onload = () => {
+        ['Paper', 'Video'].forEach(type => {
+        const gradeSelect = document.getElementById(`gradeSelect${type}`);
+        Object.keys(subjectData).forEach(grade => {
+            const opt = document.createElement("option");
+            opt.value = grade;
+            opt.textContent = grade;
+            gradeSelect.appendChild(opt);
+        });
+        });
+    };
+
+    function handleGradeChange(type) {
+        const gradeSelect = document.getElementById(`gradeSelect${type}`);
+        const streamContainer = document.getElementById(`streamContainer${type}`);
+        const streamSelect = document.getElementById(`streamSelect${type}`);
+        const subjectSelect = document.getElementById(`subjectSelect${type}`);
+
+        const grade = gradeSelect.value;
+
+        // Reset
+        subjectSelect.innerHTML = `<option disabled selected>Select Subject</option>`;
+        streamSelect.innerHTML = `<option disabled selected>Select Stream</option>`;
+        streamContainer.style.display = "none";
+
+        if (grade === "A/L") {
+        streamContainer.style.display = "block";
+        Object.keys(subjectData["A/L"]).forEach(stream => {
+            const opt = document.createElement("option");
+            opt.value = stream;
+            opt.textContent = stream;
+            streamSelect.appendChild(opt);
+        });
+        } else {
+        const subjects = subjectData[grade]["All"];
+        subjects.forEach(sub => {
+            const opt = document.createElement("option");
+            opt.value = sub;
+            opt.textContent = sub;
+            subjectSelect.appendChild(opt);
+        });
+        }
+    }
+
+    function handleStreamChange(type) {
+        const streamSelect = document.getElementById(`streamSelect${type}`);
+        const subjectSelect = document.getElementById(`subjectSelect${type}`);
+        const stream = streamSelect.value;
+
+        subjectSelect.innerHTML = `<option disabled selected>Select Subject</option>`;
+
+        const subjects = subjectData["A/L"][stream] || [];
+        subjects.forEach(sub => {
+        const opt = document.createElement("option");
+        opt.value = sub;
+        opt.textContent = sub;
+        subjectSelect.appendChild(opt);
+        });
+    }
+    </script>
+
+  <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
