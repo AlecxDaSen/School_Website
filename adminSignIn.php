@@ -29,17 +29,30 @@
             <div class="divider d-flex align-items-center my-4">
                 <p class="text-center fw-bold mx-3 mb-0">Admin Sign In</p>
             </div>
+            <?php
+            
+            $email = "";
+            $password = "";
 
+            if(isset($_COOKIE["email"])){
+                $email = $_COOKIE["email"];
+            }
+            if(isset($_COOKIE["password"])){
+                $password = $_COOKIE["password"];
+            }
+
+            
+            ?>
             <!-- Email input -->
             <div data-mdb-input-init class="form-outline mb-4">
-                <input type="email" id="email" class="form-control form-control-lg"
+                <input type="email" id="email" class="form-control form-control-lg" value="<?php echo($email)?>"
                 placeholder="Enter a valid email address" />
                 <label class="form-label" for="email">Email address</label>
             </div>
 
             <!-- Password input -->
             <div data-mdb-input-init class="form-outline mb-3">
-                <input type="password" id="password" class="form-control form-control-lg"
+                <input type="password" id="password" class="form-control form-control-lg" value="<?php echo($password)?>"
                 placeholder="Enter password" />
                 <label class="form-label" for="password">Password</label>
             </div>
