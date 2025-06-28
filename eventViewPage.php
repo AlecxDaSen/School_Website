@@ -19,6 +19,17 @@
             font-family: 'Times New Roman', Times, serif;
 
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width:420px) {
+            .evtTitle {
+                font-size: 36px;
+            }
+        }
     </style>
 </head>
 
@@ -58,9 +69,9 @@
     ?>
 
         <section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<?php echo ($imagePaths[0]) ?>') center/cover no-repeat; height: 60vh; ">
-            <div class="col-10 offset-1 text-start p-4">
+            <div class="col-lg-10 offset-lg-1 col-sm-12  text-start p-4">
                 <h1 class=" mt-2 mb-1 text-warning evtTitle "><?php echo ($evtData["title"]) ?> </h1>
-                <h5 class="mt-5 text-white"><i class="bi bi-calendar2-week-fill fs-5"></i>&nbsp;&nbsp;&nbsp; Events &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-calendar3 fs-5">&nbsp;&nbsp;&nbsp; <?php echo ($date) ?> </i> </h5>
+                <h5 class="mt-4  text-white"><i class="bi bi-calendar2-week-fill fs-5"></i>&nbsp;&nbsp;&nbsp; Events &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-calendar3 fs-5">&nbsp;&nbsp;&nbsp; <?php echo ($date) ?> </i> </h5>
                 <h5 class="mt-4 text-white"> <i class="bi bi-geo-alt-fill fs-5"></i>&nbsp;&nbsp;&nbsp; <?php echo ($evtData["venue"]) ?></h5>
                 <h5 class="mt-4 text-white"><i class="bi bi-stopwatch fs-5"></i>&nbsp;&nbsp;&nbsp; <?php echo ($evtData["time"]) ?></h5>
             </div>
@@ -76,15 +87,15 @@
 
 
                         <div class="carousel-item text-center bg-light active">
-                            <img src="<?php echo ($imagePaths[1]) ?>" class=" rounded" style="height: 500px;width: auto;" alt="...">
+                            <img src="<?php echo ($imagePaths[1]) ?>" class="img-fluid rounded shadow" alt="Event Images">
                         </div>
 
                         <div class="carousel-item text-center bg-light ">
-                            <img src="<?php echo ($imagePaths[2]) ?>" class=" rounded" style="height: 500px;width: auto;" alt="...">
+                            <img src="<?php echo ($imagePaths[2]) ?>" class="img-fluid rounded shadow" alt="Event Images">
                         </div>
 
                         <div class="carousel-item text-center bg-light ">
-                            <img src="<?php echo ($imagePaths[3]) ?>" class=" rounded" style="height: 500px;width: auto;" alt="...">
+                            <img src="<?php echo ($imagePaths[3]) ?>" class="img-fluid rounded shadow" alt="Event Images">
                         </div>
 
 
@@ -110,7 +121,7 @@
 
             <!-- remind images -->
 
-            <div class="col-lg-10 offset-lg-1 col-sm-12 offset-sm-0 mb-5">
+            <div class="col-lg-10 offset-lg-1 d-lg-block  mb-5 bg-light">
                 <?php
 
                 $length = $ImgRs->num_rows;
@@ -121,7 +132,7 @@
                     for ($i = 4; $i < $length; $i++) {
 
                 ?>
-                        <img src="<?php echo ($imagePaths[$i]) ?>" class="rounded" style="height: 500px;width: 100%;" alt="">
+                        <img src="<?php echo ($imagePaths[$i]) ?>" class="img-fluid rounded shadow" alt="Event Images">
 
                 <?php
 
@@ -132,7 +143,7 @@
 
             </div>
 
-            
+
             <!-- remind images -->
         </div>
 

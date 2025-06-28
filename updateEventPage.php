@@ -156,17 +156,28 @@ if (isset($_SESSION["au"])) {
                             </div> -->
 
                                 <!-- Action Buttons -->
-                                <div class="d-flex justify-content-end gap-2 pt-3">
+                                <div class="pt-3">
 
-                                    <a href="adminPanel.php#events" class="btn btn-dark rounded-pill px-4">
-                                        <i class="bi bi-arrow-left"></i> Go Back
-                                    </a>
-                                    <button class="btn btn-warning rounded-pill px-4" onclick="updateEvent(1)">
-                                        <i class="bi bi-upload"></i> Update
-                                    </button>
-                                    <button class="btn btn-primary rounded-pill px-4" onclick="updateEvent(0)">
-                                        <i class="bi bi-save2"></i> Draft
-                                    </button>
+                                    <div class="row g-1">
+                                        <div class="col-lg-2 col-sm-12">
+                                            <a href="adminPanel.php#events" class="btn btn-dark rounded-pill w-100 px-4">
+                                                <i class="bi bi-arrow-left"></i> Go Back
+                                            </a>
+
+                                        </div>
+                                        <div class="col-lg-2 col-sm-12 ">
+                                            <button class="btn btn-warning rounded-pill w-100 px-4" onclick="updateEvent(1)">
+                                                <i class="bi bi-upload"></i> Update
+                                            </button>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-12 ">
+
+                                            <button class="btn btn-primary rounded-pill w-100 px-4" onclick="updateEvent(0)">
+                                                <i class="bi bi-save2"></i> Draft
+                                            </button>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

@@ -141,6 +141,107 @@ function adminLogin() {
 
 }
 
+//admin login function end here 
+
+// admin forgot password function starts here
+
+ var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+
+function sendAdminMailCode() {
+
+    var email = document.getElementById("email").value.trim();
+
+    // alert(email)
+    f = new FormData();
+    f.append("email", email);
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+
+            if (t == "success") {
+
+                showToast("Please check your mail for Verification Code , Thank you !", "info");
+
+               
+                myModal.show();
+
+            } else {
+                alert(t);
+            }
+
+
+
+        }
+    }
+    r.open("POST", "sendAdimVerifyCode.php", true);
+    r.send(f);
+}
+
+function updateAdminPassword(){
+
+    var email = document.getElementById("email").value.trim();
+    var npw = document.getElementById("newPw").value.trim();
+    var otp = document.getElementById("otp").value.trim();
+
+    // alert(email)
+    f = new FormData();
+    f.append("email", email);
+    f.append("npw", npw);
+    f.append("otp", otp);
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+
+            if (t == "success") {
+
+                showToast(" New Password Updated !", "info");
+                //  var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                myModal.hide();
+
+            } else {
+                alert(t);
+            }
+
+
+
+        }
+    }
+    r.open("POST", "updateAdimPassword.php", true);
+    r.send(f);
+
+
+}
+
+
+
+function showToast(message, type) {
+    let bgColor = {
+        success: "#28a745",
+        error: "#dc3545",
+        warning: "#ffc107",
+        info: "#007bff"
+    }[type] || "#343a40";
+
+    Toastify({
+        text: message,
+        duration: 4000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: bgColor,
+        stopOnFocus: true,
+    }).showToast();
+}
+
+// admin forgot password function end here
+
+
 
 // functions of admin panel start hrom here 
 
@@ -781,8 +882,8 @@ function previewUEventImages() {
 
             previewContainer.innerHTML = ""; // Clear old previews
 
-            if (files.length < 4) {
-                alert("Please select more than 4 images (600x600).");
+            if (files.length == 0) {
+                alert("Please select images (600x600).");
                 document.getElementById("eUdivHide").classList.remove("d-none");
 
                 return;
@@ -933,41 +1034,41 @@ function deleteEvent(eid) {
 
 }
 
-function searchNews(){
+function searchNews() {
 
     var sort = document.getElementById("sortNews").value;
     var search = document.getElementById("newsSearch").value;
 
     var req = new XMLHttpRequest();
 
-    req.onreadystatechange = function(){
-        if(req.readyState == 4){
+    req.onreadystatechange = function () {
+        if (req.readyState == 4) {
 
             document.getElementById("newsResult").innerHTML = req.responseText;
 
         }
     }
 
-    req.open("GET","newsSearch.php?st="+sort+"&search="+search,true);
+    req.open("GET", "newsSearch.php?st=" + sort + "&search=" + search, true);
     req.send();
 
 }
-function searchEvents(){
+function searchEvents() {
 
     var sort = document.getElementById("sortEvents").value;
     var search = document.getElementById("eventSearch").value;
 
     var req = new XMLHttpRequest();
 
-    req.onreadystatechange = function(){
-        if(req.readyState == 4){
+    req.onreadystatechange = function () {
+        if (req.readyState == 4) {
 
             document.getElementById("eventResult").innerHTML = req.responseText;
 
         }
     }
 
-    req.open("GET","eventSearch.php?st="+sort+"&search="+search,true);
+    req.open("GET", "eventSearch.php?st=" + sort + "&search=" + search, true);
     req.send();
 
 }
@@ -978,11 +1079,11 @@ function searchEvents(){
 
 // home page (index.php) news viewing fuction start here 
 
-function sendNewsId(nid){
-    
-    window.location = "newsViewPage.php?nid="+nid;
-    
-    
+function sendNewsId(nid) {
+
+    window.location = "newsViewPage.php?nid=" + nid;
+
+
 }
 
 // home page (index.php) news viewing fuction end here 
@@ -992,15 +1093,15 @@ function sendNewsId(nid){
 
 
 
-function sendEvtIdUpcoming(eid){
+function sendEvtIdUpcoming(eid) {
 
-    window.location = "upcomingEventPage.php?eid="+eid;
+    window.location = "upcomingEventPage.php?eid=" + eid;
 
 }
 
-function sendEvtId(eid){
+function sendEvtId(eid) {
 
-    window.location = "eventViewPage.php?eid="+eid;
+    window.location = "eventViewPage.php?eid=" + eid;
 
 }
 

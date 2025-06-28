@@ -63,7 +63,7 @@
 
                 <div class="row">
                     <div class="col-lg-6 col-sm-12">
-                        <img src="<?php echo ($newsData['nimg_path']) ?>" style="width: 100%;height:450px;background-repeat: no-repeat;background-size: contain;" alt="">
+                        <img src="<?php echo ($newsData['nimg_path']) ?>" class="img-fluid rounde shadow" style="width: 100%;height:auto;background-repeat: no-repeat;background-size: contain;" alt="">
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <h1 class=" mb-1 text-warning "><?php echo ($newsData['title']) ?></h1>

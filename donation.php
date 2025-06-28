@@ -26,81 +26,94 @@
 <body>
 
     <style>
+        /* Glass form and donate button (reuse from main style.css) */
+        .glass-form {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-    /* Glass form and donate button (reuse from main style.css) */
-    .glass-form {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+        .donation-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            overflow: hidden;
+            width: 100%;
+        }
 
-    .donation-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    overflow: hidden;
-    width: 100%;
-    }
+        .donate-btn {
+            background: linear-gradient(45deg, rgb(77, 255, 124), rgb(209, 255, 139));
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            transition: all 0.3s ease;
+        }
 
-    .donate-btn {
-    background: linear-gradient(45deg,rgb(77, 255, 124),rgb(209, 255, 139));
-    color: white;
-    font-weight: bold;
-    padding: 12px;
-    border-radius: 12px;
-    border: none;
-    transition: all 0.3s ease;
-    }
-
-    .donate-btn:hover {
-    background: linear-gradient(45deg,rgb(77, 255, 124),rgb(209, 255, 139));
-    transform: scale(1.05);
-    }
-
+        .donate-btn:hover {
+            background: linear-gradient(45deg, rgb(77, 255, 124), rgb(209, 255, 139));
+            transform: scale(1.05);
+        }
     </style>
 
 
     <!-- Payment Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-transparent border-0">
-        <div class="row donation-card mx-0 shadow-lg">
-            <div class="col-md-12 glass-form p-4">
-            <h3 class="text-center mb-3 text-white">Make a Donation</h3>
-            <form id="donationFormModal">
-                <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Full Name" id="name" />
+    <div class=" modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content bg-transparent border-0">
+                <div class="row donation-card mx-0 shadow-lg">
+                    <div class="col-md-12 glass-form p-4">
+                        <h3 class="text-center mb-3 text-white">Make a Donation </h3>
+
+                        <form id="donationForm">
+                            <div class="col-12 mt-1 mb-2">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="firstName" placeholder="Sahan">
+                                            <label for="firstName"><i class="bi bi-pen"></i> First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="lastName" placeholder="Kumara">
+                                            <label for="lastName"><i class="bi bi-pen"></i> Last Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                    <label for="email"><i class="bi bi-envelope-at-fill"></i> Email address</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" id="mobile" placeholder="0** *** ****">
+                                    <label for="mobile"><i class="bi bi-phone"></i> Mobile</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" oninput="this.value = Math.abs(this.value)" class="form-control" id="amount" placeholder="0** *** ****">
+                                    <label for="amount"><i class="bi bi-dollar"></i> Amount</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="message"></textarea>
+                                    <label for="message"> <i class="bi bi-chat-left-text-fill"></i> Message</label>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                        <button type="button" class="btn btn-success text-white w-100 rounded-pill" id="payhere-payment" onclick="payNow();">Pay Now</button>
+
+                    </div>
                 </div>
-                <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email Address" id="email" />
-                </div>
-                <div class="mb-3">
-                <!-- <select class="form-select" required>
-                    <option disabled selected>Select Donation Purpose</option>
-                    <option>School Supplies</option>
-                    <option>Student Scholarships</option>
-                    <option>Library Upgrade</option>
-                    <option>Sports Equipment</option>
-                </select> -->
-                </div>
-                <div class="mb-3">
-                <input type="number" class="form-control" placeholder="Amount (LKR)" id="amount" />
-                </div>
-                <div class="mb-3">
-                <textarea class="form-control" rows="3" placeholder="Leave a message" id="msg"></textarea>
-                </div>
-                <button type="button" id="payhere-payment" class="btn donate-btn w-100" onclick="payNow();">Donate Now</button>
-                
-                <!-- <button type="submit" id="payhere-payment" >PayHere Pay</button> -->
-                
-            </form>
             </div>
         </div>
-        </div>
     </div>
-    </div>
-    
+
     <script src="js/donations.js"></script>
     <script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
 

@@ -1016,7 +1016,6 @@ $countData = json_decode(file_get_contents('homepageData.json'), true);
             });
         });
     </script>
-
 </body>
 
 </html>

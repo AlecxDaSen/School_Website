@@ -86,9 +86,6 @@ if (isset($_SESSION["au"])) {
 
 ?>
 
-
-
-
     <body style="background-color: #eff2f1;">
 
         <!-- Navbar -->
@@ -113,6 +110,7 @@ if (isset($_SESSION["au"])) {
                     <a class="sidebar-link" data-target="academic"><i class="bi bi-file-text"></i> Academic</a>
                     <a class="sidebar-link" data-target="gallery"><i class="bi bi-file-earmark-image"></i> Gallery</a>
                     <a class="sidebar-link" data-target="about"><i class="bi bi-chat-right-text"></i> About Us</a>
+                    <a class="sidebar-link" data-target="donation"><i class="bi bi-cash-coin"></i> Donations</a>
                 </div>
 
                 <!-- Main Content -->
@@ -269,8 +267,8 @@ if (isset($_SESSION["au"])) {
                         <div class="card shadow-sm border-0 rounded-4 p-4 my-4">
                             <h4 class="mb-3"><i class="bi bi-clock-history"></i>&nbsp;News History</h4>
 
-                            <div class="row bg-light m-1 p-2 justify-content-end">
-                                <div class="col-3">
+                            <div class="row bg-light m-1 justify-content-end p-lg-2 just">
+                                <div class="col-lg-3 col-sm-12 pt-2">
                                     <select class="form-select rounded-pill" id="sortNews">
                                         <option value="0">Sort By</option>
                                         <option value="1">Published</option>
@@ -280,7 +278,7 @@ if (isset($_SESSION["au"])) {
                                     </select>
                                 </div>
 
-                                <div class="col-5">
+                                <div class="col-lg-5 col-sm-12 pt-2">
                                     <div class="input-group">
                                         <input type="text" id="newsSearch" class="form-control rounded-pill" placeholder="Search" aria-label="Recipient’s username" aria-describedby="button-addon2">
                                         <button class="btn btn-info rounded-pill" type="button" id="button-addon2" onclick="searchNews();">Search</button>
@@ -314,13 +312,13 @@ if (isset($_SESSION["au"])) {
                                         }
 
                                         $search = Database::search("SELECT * FROM `news` 
-                                        INNER JOIN `news_images` ON `news`.`news_id`=`news_images`.`news_news_id` ORDER BY `datetime` DESC");
+                                        INNER JOIN `news_images` ON `news`.`news_id`=`news_images`.`news_news_id` ORDER BY `datetime` ASC");
 
                                         if ($search->num_rows != 0) {
                                             for ($n = 0; $n < $search->num_rows; $n++) {
                                                 $newsData = $search->fetch_assoc();
-                                                
-                                               $newsTitle =  limitWords($newsData['title'],5);
+
+                                                $newsTitle =  limitWords($newsData['title'], 5);
 
                                                 $news = new stdClass();
                                                 $news->news_id = $newsData['news_id'];
@@ -557,7 +555,7 @@ if (isset($_SESSION["au"])) {
                             <h4 class="mb-3"><i class="bi bi-clock-history"></i> Event History</h4>
 
                             <div class="row bg-light m-1 p-2 justify-content-end">
-                                <div class="col-3">
+                                <div class="col-lg-3 col-sm-12 pt-sm-2">
                                     <select class="form-select rounded-pill" id="sortEvents">
                                         <option value="0">Sort By</option>
                                         <option value="1">Published</option>
@@ -567,7 +565,7 @@ if (isset($_SESSION["au"])) {
                                     </select>
                                 </div>
 
-                                <div class="col-5">
+                                <div class="col-lg-5 col-sm-12 pt-sm-2">
                                     <div class="input-group">
                                         <input type="text" id="eventSearch" class="form-control rounded-pill" placeholder="Search" aria-label="Recipient’s username" aria-describedby="button-addon2">
                                         <button class="btn btn-info rounded-pill" type="button" id="button-addon2" onclick="searchEvents();">Search</button>
@@ -591,14 +589,14 @@ if (isset($_SESSION["au"])) {
 
                                         <?php
 
-                                        $eventSearch = Database::search("SELECT * FROM `events` ORDER BY `date` DESC");
+                                        $eventSearch = Database::search("SELECT * FROM `events` ORDER BY `date` ASC");
 
                                         if ($eventSearch->num_rows != 0) {
 
                                             for ($e = 0; $e < $eventSearch->num_rows; $e++) {
                                                 $eventData = $eventSearch->fetch_assoc();
 
-                                                $evtTitle = limitWords($eventData["title"],5);
+                                                $evtTitle = limitWords($eventData["title"], 5);
 
                                         ?>
                                                 <tr>
@@ -1041,6 +1039,76 @@ if (isset($_SESSION["au"])) {
                         </form>
 
                     </div>
+
+
+                    <div id="donation" class="content-section">
+                        <h2>Donation History&nbsp;&nbsp;<i class="bi bi-cash-coin"></i></h2>
+                        <div class="scrollblock container fade-in2">
+                            <div class="container-fluid pt-5" >
+
+                                <div class="card shadow-sm border-0 rounded-4 p-4 my-2">
+                                    <h4 class="mb-3"><i class="bi bi-clock-history"></i>&nbsp;Donation History</h4>
+
+                                    <div class="table-responsive" style="overflow-y: scroll;">
+                                        <table class="table table-striped">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th class="d-none d-md-table-cell">ID</th>
+                                                    <th>Donator Name</th>
+                                                    <th>Email</th>
+                                                    <th>Contact</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <?php
+
+                                                $donation  = Database::search("SELECT * FROM `donations` ORDER BY `date` DESC");
+
+                                                if ($donation->num_rows != 0) {
+
+                                                    for ($i = 0; $i < $donation->num_rows; $i++) {
+                                                        $donationData = $donation->fetch_assoc();
+
+                                                ?>
+                                                        <tr>
+                                                            <td class="d-none d-md-table-cell">#<?php echo ($i + 1) ?></td>
+                                                            <td><?php echo ($donationData["name"]) ?></td>
+                                                            <td><?php    echo ($donationData["email"]) ?> </td>
+                                                            <td><?php  echo ($donationData["mobile"]) ?></td>
+                                                            <td>Rs. <?php  echo (htmlspecialchars(number_format($donationData["amount"], 2))) ?></td>
+                          
+                                                        </tr>
+
+
+                                                    <?php
+                                                    }
+                                                } else {
+                                                    ?>
+                                                    <tr>
+                                                        <td>No Donations yet ?</td>
+                                                    </tr>
+                                                <?php
+
+                                                }
+
+                                                ?>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
                 </div>
 
             </div>
@@ -1084,6 +1152,10 @@ if (isset($_SESSION["au"])) {
                     <a class="sidebar-link d-flex align-items-center px-4 py-3 text-white text-decoration-none"
                         data-bs-dismiss="offcanvas" data-target="about">
                         <i class="bi bi-chat-right-text me-2"></i> About Us
+                    </a>
+                    <a class="sidebar-link d-flex align-items-center px-4 py-3 text-white text-decoration-none"
+                        data-bs-dismiss="offcanvas" data-target="donation">
+                        <i class="bi bi-cash-coin me-2"></i> Donation
                     </a>
                 </div>
             </div>
