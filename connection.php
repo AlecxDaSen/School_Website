@@ -3,22 +3,23 @@
 class Database{
 
     public static $connection;
-
-    public static function setUpConnection(){
+    public static function setConnection(){
         if(!isset(Database::$connection)){
-            Database::$connection = new mysqli("localhost","root","snd@2005","school_db","3306");
+            Database::$connection = new mysqli("localhost","root","Dana@2005","school_db","3306");
+
         }
     }
 
     public static function iud($q){
-        Database::setUpConnection();
+        Database::setConnection();
         Database::$connection->query($q);
     }
 
     public static function search($q){
-        Database::setUpConnection();
-        $resultset = Database::$connection->query($q);
-        return $resultset;
+        Database::setConnection();
+       $result = Database::$connection->query($q);
+       return $result;
+       
     }
 
 }
