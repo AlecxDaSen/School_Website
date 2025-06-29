@@ -208,13 +208,11 @@ $countData = json_decode(file_get_contents('homepageData.json'), true);
 
     <div class="container-fluid">
 
-
-
-        <section class="section-bg">
-            <div class="container text-center mb-5">
-                <h2 class="fw-bold text-uppercase text-dark mb-3">Vision & Mission</h2>
-                <p class="text-muted fs-5">Our guiding principles that shape the future of Rajasinghe Central College.</p>
-            </div>
+        <section class="section-bg shadow-lg rounded-2 mt-5">
+        <div class="container text-center mb-5">
+            <h2 class="fw-bold text-uppercase text-dark mb-3">Vision & Mission</h2>
+            <p class="text-muted fs-5">Our guiding principles that shape the future of Rajasinghe Central College.</p>
+        </div>
 
             <div class="container">
                 <div class="row g-4">
@@ -536,25 +534,31 @@ $countData = json_decode(file_get_contents('homepageData.json'), true);
     <div class="container-fluid">
         <div class="col-lg-12 mt-5">
 
-            <div class="col-10 offset-1 bg-body  shadow-lg p-5 pb-2 text-center" style="border-radius:15px;">
 
-                <h2 class="text-danger fw-bold text-uppercase pb-3">History</h2>
-                <div class="col-12 d-flex flex-column justify-content-end">
-                    <span class="fs-5 text-dark">The school was established in 1886 and was initially
-                        named Hanwella Bilingual School.It was later renamed Hanwella Madhya Maha
-                        Vidyalaya when free education was introduced from primary level to university by
-                        Dr. C.W.W. Kannangara.The school motto, "With Faith and Strength," reflects its
-                        commitment to producing knowledgeable and virtuous individuals . Rajasinghe Central College is
-                        part of the Seethawaka division and the Homagama zone in the Western province.
-                    </span>
+            <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 bg-white shadow-lg p-5 text-center" style="border-radius: 15px;">
 
+                <h2 class="text-danger fw-semibold text-uppercase border-bottom pb-3 mb-4">
+                    History
+                </h2>
+
+                <p class="fs-5 text-dark">
+                    The school was established in 1886 and was initially named Hanwella Bilingual School. It was later renamed Hanwella Madhya Maha Vidyalaya when free education was introduced from primary level to university by Dr. C.W.W. Kannangara.
+                </p>
+
+                <p class="fs-5 text-dark d-none d-md-block">
+                    The school motto, <strong>“With Faith and Strength,”</strong> reflects its commitment to producing knowledgeable and virtuous individuals. Rajasinghe Central College is part of the Seethawaka division and the Homagama zone in the Western Province. The school’s vision is to produce excellent, dignified, virtuous, and knowledgeable sons and daughters of Mother Rajasinghe.
+                </p>
+
+                <div class="mt-4">
+                    <a href="aboutUs.php#history" class="btn btn-outline-danger fw-semibold rounded-pill px-4 py-2">
+                    Read More...
+                    </a>
                 </div>
 
-                <div class="col-lg-2 offset-lg-5 d-grid mt-5 mb-1 ">
-                    <a href="aboutUs.php#history" class="btn btn-outline-danger fw-bold rounded-pill">Read More...</a>
                 </div>
-
-
+            </div>
             </div>
 
         </div>

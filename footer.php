@@ -107,7 +107,7 @@
                     </div>
 
                     <div class="col-lg-3 ">
-                        <h4 class="text-white mt-4  ">Contact</h4>
+                        <h4 class="text-white mt-4 ">Contact</h4>
                         <a href="">Email us : <u>rajians@gmail.com</u></a><br>
                         <a href="">Contacts : +(94) 77 0231 221</a><br>
                         <a href="">Address us : Rajasinghe Central College, Hanwella.</a><br>
@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-3 col-lg-3 mx-auto text-center text-sm-center fw-bold text-body">
+            <div class="col-12 col-md-3 col-lg-3 mx-auto text-center text-sm-center fw-bold" style="color: #bfbfbf;">
                 <p class="ecrint" onclick="ecrintWeb()">&copy; ECRINT 2025 | All Rights Reserved</p>
             </div>
 
